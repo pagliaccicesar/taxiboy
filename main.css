@@ -420,7 +420,7 @@ section {
     margin-top: 50px;
   }*/
 
- /* .hero-header {
+  .hero-header {
     grid-row: 2/3;
     display: grid;
     place-items: center;
@@ -431,7 +431,7 @@ section {
     inline-size: var(--icon-btn-inline-size);
     block-size: var(--icon-btn-block-size);
     display: inline-grid;
-    color: var(--text-1);
+    color: var(--text-invert);
     grid-row: 3/-1;
     border: var(--border-thin) solid var(--surface-invert);
     padding: 15px;
@@ -440,10 +440,10 @@ section {
     transition: background-color 0.2s var(--ease-1), color 0.2s var(--ease-1);
 
     &:hover {
-      background-color: var(--surface-invert);
-      color: var(--text-invert);
+      background-color: var(--surface-1);
+      color: var(--text-1);
     }
-  }*/
+  }
 }
 
 @keyframes animate-ratio {
