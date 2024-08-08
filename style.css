@@ -19,6 +19,7 @@ html {
 }
 
 body {
+  font-family: "Poppins", sans-serif;
   min-block-size: 100%;
   display: grid;
   place-content: center;

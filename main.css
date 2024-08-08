@@ -15,7 +15,8 @@
 @layer base {
   :root {
     color-scheme: dark;
-    font-family: 'Inter', sans-serif;
+    font-family: "Poppins", sans-serif;
+    /*font-family: 'Inter', sans-serif;*/
 
     --palette-hue: 249;
     --palette-hue-rotate-by: 0;
@@ -480,7 +481,7 @@ section {
     inline-size: 100%;
 }
    .sobreelproyecto {
-      font-family: Arial, sans-serif;
+      font-family: "Poppins", sans-serif;
       margin: 0;
       padding: 0;
       display: flex;
