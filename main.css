@@ -15,8 +15,7 @@
 @layer base {
   :root {
     color-scheme: dark;
-    font-family: "Poppins", sans-serif;
-    /*font-family: 'Inter', sans-serif;*/
+    font-family: "Poppins", sans-serif;    
 
     --palette-hue: 249;
     --palette-hue-rotate-by: 0;
@@ -319,6 +318,8 @@ section {
     gap: var(--space-lg);
     inline-size: 100%;
     background-image: url("./img/cielo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   /*.hero-visual-wrapper {
@@ -409,7 +410,7 @@ section {
     border-radius: 30px; /* Forma cilíndrica */      
 }
   h2 {    
-      font-family: "Montserrat", Arial, sans-serif;
+      font-family: "Poppins", sans-serif;
       font-size: 1.4rem;
       font-weight: 500;
       line-height: 1.2;
@@ -859,8 +860,7 @@ input[type="date"],
 input[type="number"],
 #country,
 input[type="email"],
-input[type="password"],
-textarea {
+input[type="password"] {
   border: 1px solid #9645c1;
   display: block;
   margin: 10px auto;
@@ -902,6 +902,12 @@ input[type="radio"] {
 
 textarea {
   resize: none;
+  border: 1px solid #9645c1;
+  display: block;
+  margin: 10px auto;
+  padding: 2%;
+  width: 100%;
+  border-radius: 10px;
 }
 
 .contacto .social-icons {
