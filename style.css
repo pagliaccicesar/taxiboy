@@ -25,11 +25,18 @@ body {
   place-content: center;
 }
 
+.logo-img {
+  width: 160px;
+  height: auto;
+  left: 0;
+  right: 0;
+}
+
 button {
   padding: 0.5rem 1rem;
-  background: black;
+  background: #1D1D1B;
   border: none;
-  color: #fff;
+  color: #ffffff;
   font-size: 1.5rem;
   font-weight: bold;
   border-radius: 8px;

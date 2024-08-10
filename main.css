@@ -24,10 +24,10 @@
     --red: #e81155;
     --extend-font-size-fluid-4: clamp(3.5rem, 4.333vw, 4.5rem);
 
-    --surface-1: black;
-    --surface-invert: white;
-    --text-1: white;
-    --text-invert: black;
+    --surface-1: #1D1D1B;
+    --surface-invert: #ffffff;
+    --text-1: #ffffff;
+    --text-invert: #1D1D1B;
     --brand: var(--red);
 
     --space-xxs: var(--size-1);
@@ -95,7 +95,7 @@
 }
 
 section {
-  padding-top: 80px;
+  padding-top: 120px;
 }
 
 @layer App {
@@ -318,6 +318,7 @@ section {
     display: grid;
     gap: var(--space-lg);
     inline-size: 100%;
+    background-image: url("./img/cielo.jpg");
   }
 
   /*.hero-visual-wrapper {
@@ -383,6 +384,7 @@ section {
     place-items: end center;
     padding: var(--space-md);
     overflow: hidden;
+    
   }
 
   .hero-content h1 {
@@ -735,7 +737,7 @@ div[data-pos='4'] { transform: translate(585px,155px); }
 }*/
   
 /*****  seccion recursos  *****/
-.recursos  {
+/*.recursos  {
   block-size: max(490px, calc(100dvb - var(--nav-block-size)));
   display: grid;
   gap: var(--space-lg);
@@ -743,7 +745,7 @@ div[data-pos='4'] { transform: translate(585px,155px); }
 
  
   
-}
+}*/
 /* li {
   background-color: black;
   color: white;
@@ -754,19 +756,59 @@ div[data-pos='4'] { transform: translate(585px,155px); }
   border-radius: 30px; 
   transition: background-color 0.3s ease, transform 0.3s ease;
   pad.recursosding: 8px;
-}*/
-.menu_recursos {
+}*/             /****************************
+/*.menu_recursos {
   display: block;
   gap: 8px; 
 }
 .recursos a:link, a:visited, a:active {
   text-decoration:none;   
-}
+}*/                              /************************
 
 /*@media (width < 800) {
 .recursos {
   margin: 500px 0;
 }}*/
+
+.recursos .heading {
+  /*margin-top: 20px;*/
+  margin-bottom: 120px;
+}
+
+.recursos .menu2 {
+  display: flex;
+  gap: 40px; 
+  flex-direction: column;  
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.recursos .menu2-button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  flex: 1; /* Ocupa todo el ancho disponible */
+  transition: background-color 0.3s;
+}
+
+.menu2-button a {
+  text-decoration: none;
+  /*color: white;*/
+}
+
+.recursos .menu2-button:hover {
+  background-color: grey; /* Cambia a blanco al pasar el mouse */
+  color: black; /* Cambia el texto a negro */
+}
+
+
+
+
+
 
 
 
