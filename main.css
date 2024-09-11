@@ -20,7 +20,7 @@
     --palette-hue: 249;
     --palette-hue-rotate-by: 0;
     --palette-chroma: 0;
-    --red: #e81155;
+    --black: black;
     --extend-font-size-fluid-4: clamp(3.5rem, 4.333vw, 4.5rem);
 
     --surface-1: #1D1D1B;
@@ -48,7 +48,7 @@
     --button-link-block-size: 3.25em;
     --button-link-min-inline-size: 7em;
     --button-link-border: var(--border-size-1) solid currentColor;
-    --button-link-face: transparent;
+    /*--button-link-face: transparent;*/
     --button-link-text: white;
     --button-link-hover-face: color-mix(in oklch, white, transparent 80%);
     --button-link-primary-text: white;
@@ -56,7 +56,7 @@
     --button-link-primary-border: none;
     --button-link-primary-hover-face: color-mix(
       in oklch,
-      var(--red),
+      var(--black),
       transparent 20%
     );
     --button-link-border-radius: var(--radius-round);
@@ -75,7 +75,7 @@
 
     --nav-link-font-size: var(--font-size-1);
     @media (width < 1056px) {
-      --nav-link-font-size: var(--font-size-3);
+      --nav-link-font-size: var(--font-size-2);
     }
 
     --nav-block-size: 100px;
@@ -93,9 +93,9 @@
   }
 }
 
-section {
+/*section {
   padding-top: 120px;
-}
+}*/
 
 @layer App {
   .nav {
@@ -228,6 +228,7 @@ section {
     }
   }
 
+  /*****    redes sociales    *****/
   .actions {
     display: grid;
     grid-auto-flow: column;
@@ -242,19 +243,20 @@ section {
       justify-self: end;
     }
   }
-/*****    redes sociales    *****/
+
   .social-icons {
     display: flex;
-    margin-top: 0.5rem;   
+    /*margin-top: 0.2rem;*/
   }  
   .social-icons a {
-    width: 35px;
-    height: 35px;
-    border-radius: 5px;
+    width: 27px;
+    height: 27px;
+    border-radius: 50px;
     background: linear-gradient(45deg, grey, black);
+    
     color: #fff;
     text-align: center;
-    line-height: 35px;
+    line-height: 27px;
     margin-right: 0.5rem;
     transition: 0.3s;
   }  
@@ -277,11 +279,26 @@ section {
       display: none;
     }
   }
+
+  @media (width < 1200px) and (width > 1056px) {
+    .social-icons a {
+      width: 20px;
+      height: 20px;
+      border-radius: 50px;      
+      text-align: center;
+      line-height: 20px;
+      margin-right: 0.2rem;
+      transition: 0.3s;
+    }  
+  }
+
+
+
+
   /****   boton central   *****/
-  .button-link {
-    
+  .button-link {    
     text-decoration: none;
-    font-size: var(--button-link-font-size);
+    font-size: x-large;   
     font-weight: var(--button-link-font-weight);
     padding-inline: var(--space-md);
     padding-block: var(--space-md);
@@ -289,15 +306,16 @@ section {
     block-size: var(--button-link-block-size);
     transition: background-color 0.2s var(--timing-function-slow-ease);
     color: var(--button-link-text);
-    border: var(--button-link-border);
-    background-color: var(--button-link-face);
+    /*order: var(--button-link-border);*/
+    /*background-color: var(--button-link-face);*/
+    background-color: #1a1a1a;
     min-inline-size: var(--button-link-min-inline-size);
     display: inline-grid;
     place-items: center;
-    font-weight: var(--button-link-font-weight);
+    font-weight: var(--headline5-font-weight);
     white-space: nowrap;
     text-overflow: ellipsis;
-    &:hover {
+    /*&:hover {
       background-color: var(--button-link-hover-face);
     }
     &.primary {
@@ -307,7 +325,7 @@ section {
       &:hover {
         background-color: var(--button-link-primary-hover-face);
       }
-    }
+    }*/
   }
 
   /* Main */
@@ -318,10 +336,11 @@ section {
     gap: var(--space-lg);
     inline-size: 100%;
     background-image: url("./img/cielo.jpg");
+    /*background-position: center;*/
     background-repeat: no-repeat;
     background-size: cover;
   }
-
+  
   /*.hero-visual-wrapper {
     block-size: 100%;
     inline-size: 100%;
@@ -331,13 +350,13 @@ section {
     animation-delay: 10s;
     animation-timing-function: var(--timing-function-fast-ease-in-out);
     animation-fill-mode: forwards;
-  }
+  }*/
 
-  .hero-header {
+  /*.hero-header {
     inline-size: 100%;
-  }
+  }*/
 
-  .headline1 {
+  /*.headline1 {
     font-size: var(--headline1-font-size);
     font-weight: var(--headline1-font-weight);
     text-align: center;
@@ -389,18 +408,21 @@ section {
   }
 
   .hero-content h1 {
+    font-size: 3.4rem;
+      /*font-weight: 500;*/
+      line-height: 1.2;
     
-    font-size: var(--headline1-font-size);
-    font-weight: var(--headline1-font-weight);
+    /*font-size: var(--headline1-font-size);*/
+    font-weight: var(--headline5-font-weight);
     text-align: center;
     display: inline-grid;
     inline-size: 100%;
     white-space: nowrap;
-    color: black;
+    color: white;
   }
 
   .heading {
-    position: absolute;
+    position: absolute;    
     margin-left: 10px;
     padding: 6px 35px;
     background-color: #1D1D1B;
@@ -475,9 +497,345 @@ section {
   }
 }
 
+@media (max-width: 1045px) {
+  .hero-content h1 {
+    font-size: 2.4rem;     
+    line-height: 1.2;  
+    text-align: center;
+  }
+}
+@media (max-width: 700px) {
+  .hero {
+    block-size: max(490px, calc(100dvb - var(--nav-block-size)));
+    display: grid;
+    /*gap: var(--space-lg);*/
+    inline-size: 100%;   
+    background-position: center;
+   
+  }
+  
+  .hero-content h1 {
+    font-size: 1.4rem;     
+    line-height: 1.5;    
+  }
+  .button-link {    
+    text-decoration: none;
+    font-size: medium;   
+  }
+}
+@media (max-width: 430px) {
+  .hero-content h1 {
+    font-size: 1.1rem;     
+    line-height: 1.5;   
+  }
+}
+
+
+
+
+/*****   recursos    *****/
+
+/*.container {
+  text-align: left; 
+}*/
+
+.recursos {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;    
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  gap: 20px;
+  max-width: 1300px;
+}
+
+
+.recursos h2 {
+  position: absolute;
+  left: 72px;
+  font-size: 17px;
+  font-weight: 400;
+  color: #000000;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.rec {
+  display: grid;
+  padding-top: 50px;
+  width: 90%;
+  max-width: 1270px;
+  gap: 5px;
+}
+
+.recursos .item {
+  display: block;  
+  font-size: 2.1em;
+  color: #000000;
+  text-decoration: none;
+  /*margin-bottom: 15px;*/
+  /*position: relative;*/
+}
+
+/*.recursos .item svg {
+  margin-top: 10px;
+}*/
+
+@media (max-width: 600px) {
+  .recursos .item {
+      font-size: 1.8em;
+  }
+}
+
+
+/*****  CONTACTO   *******/
+.contacto {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;    
+}
+
+.contacto h2 {
+  background-color: #f9f9f9;
+  position: absolute;
+  left: 72px;
+  font-size: 17px;
+  font-weight: 400;
+  color: #000000;
+  text-align: left;
+  text-transform: uppercase; 
+}
+/*.contacto .line_contact svg {
+  position: absolute; 
+  max-width: 100%; 
+}*/
+
+/****  formulario nuevo   ******/
+
+.form_contacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: #000000;
+}
+.form-container {
+  width: 80%;
+  max-width: 1000px;
+  padding: 20px;  
+}
+
+form {
+  display: flex;
+  flex-direction: column;  
+}
+
+label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  color: #000000;
+  background-color: white;
+  border-radius: 20px; /* Bordes redondeados */
+  font-size: 1rem;
+}
+
+textarea {
+  resize: none;
+}
+
+.form_contacto button {  
+  margin: 20px auto;
+  padding: 10px;
+  border: none;
+  background-color: #333;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+/******************   aportes   ********************/
+.aportes {
+  font-family: 'Poppins', sans-serif;  
+  position: relative;
+  top: 215px;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 5px;
+  width: 100%; 
+}
+
+.aportes h3 {
+  color: #000000;
+  font-size: 25px;
+  font-weight:400;
+}
+.aportes .flex-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.aportes .flex-container img {
+  width: 50%;
+}
+.aportes .flex-container > div { 
+  margin: 10px;  
+  text-align: center;
+  line-height: 35px;  
+}
+
+@media (max-width: 1000px) {
+.aportes h3 {   
+    font-size: 17px;
+    font-weight:400;
+  }
+.aportes .flex-container img {
+    width: 40%;
+  }
+}
+
+@media (max-width: 885px) {
+  .aportes .flex-container {
+    display: grid;
+    row-gap: 8px;
+    grid-template-rows: auto auto auto;
+  }
+}
+
+/****  nuevo footer   ****/
+
+section footer {
+  position: relative;
+  top: 265px;
+  background-color: #111; /* Color de fondo oscuro */
+  color: white; /* Texto en blanco */
+  display: flex;
+  flex-direction: column;
+  height: 28vh;
+}
+
+footer {
+  margin-top: auto;
+  background-color: #111; /* Asegura que el footer tenga un fondo oscuro */
+  padding: 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 20px auto;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo img {
+  height: 90px;
+  margin-right: 20px;
+}
+
+.footer-logo span {
+  font-size: 14px;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 32px;
+}
+.footer-icons a {
+  color: #fff;
+}
+
+.footer-icons a img {  
+  height: 95px;
+  width: 95px;  
+  filter: invert(1); /* Hace los iconos blancos */
+  transition: transform 0.3s ease;
+}
+.footer-icons a:hover img {
+  transform: scale(1.2); /* Efecto de zoom al pasar el cursor */
+}
+@media (max-width: 777px) {
+  section footer {
+    height: 35vh;   
+  }
+  .footer-container  {
+    display: grid;
+    row-gap: 28px;
+    grid-template-rows: auto auto ;   
+  }
+  .footer-logo img {
+    width: 60%;
+    height: auto;
+  }
+  .footer-icons, .footer-logo {
+    margin: 0 auto;
+  }
+}
+
+/*.flex-container {
+  display: flex;
+  align-items: center; 
+  background-color: black;
+}
+
+.flex-container > div { 
+  color: white;
+  margin: 10px;
+  text-align: left;
+  line-height: 15px;
+  font-size: 20px;
+}
+.flex-container img {
+  width: 25%;
+  height: auto;
+}*/
+
+
+
+
+
+
+
+
 /****   seccion SobreElProyecto  ****/
 
-.sobreelproyecto {
+/*.sobreelproyecto {
     block-size: max(490px, calc(100dvb - var(--nav-block-size)));
     display: grid;
     gap: var(--space-lg);
@@ -499,7 +857,7 @@ section {
       flex-direction: column;
       align-items: center;
       width: 90%;
-      gap: 130px;
+      gap: 100px;
       max-width: 1300px;
   }
   
@@ -522,8 +880,7 @@ section {
   .logo {
       text-align: center;
   }
-  .logo img {
-      /*max-width: 290px;*/
+  .logo img {      
       width: 40%;
       height: auto;
   }
@@ -574,8 +931,6 @@ section {
   }
   .pie_proyecto img {
       max-width: 400px;
-      /*width: 20%;
-      height: auto;*/
      
   }
   @media (max-width: 1080px) {
@@ -595,9 +950,7 @@ section {
         align-items: center;
       }
     .pie_proyecto img {
-        max-width: 150px;
-        /*width: 15%;
-        height: auto;*/
+        max-width: 150px;       
     }
     }
     .description {
@@ -628,11 +981,9 @@ section {
       max-width: 280px;        
     }
     .pie_proyecto img {
-      max-width: 250px;
-      /*width: 15%;
-      height: auto;*/
+      max-width: 250px;      
   }
-}
+}*/
 
 
 /*****  seccion muestravirtual  *****/
@@ -649,7 +1000,7 @@ section {
 }*/
 
 
-.muestravirtual {
+/*.muestravirtual {
   height: 100vh;
   height: 100svh;
   display: grid;
@@ -713,7 +1064,7 @@ div[data-pos='4'] { transform: translate(585px,155px); }
   div[data-pos='2'] { transform: translate(0,510px); }
   div[data-pos='3'] { transform: translate(205px,355px); }
   div[data-pos='4'] { transform: translate(205px,510px); }
-}
+}*/
 
 
 
@@ -800,8 +1151,7 @@ div[data-pos='4'] { transform: translate(585px,155px); }
   margin: 500px 0;
 }}*/
 
-.recursos .heading {
-  /*margin-top: 20px;*/
+/*.recursos .heading { 
   margin-bottom: 120px;
 }
 
@@ -823,7 +1173,7 @@ div[data-pos='4'] { transform: translate(585px,155px); }
   padding: 15px;
   font-size: 18px;
   cursor: pointer;
-  flex: 1; /* Ocupa todo el ancho disponible */
+  flex: 1; 
   transition: background-color 0.3s;
 }
 
@@ -841,7 +1191,7 @@ div[data-pos='4'] { transform: translate(585px,155px); }
 .recursos button:hover a {  
   color:#1D1D1B;
   
-}
+}*/
 
 
 
@@ -866,10 +1216,9 @@ div[data-pos='4'] { transform: translate(585px,155px); }
 
 
 /*****  seccion contacto  *****/
-.contacto {
+/*.contacto {
   block-size: max(490px, calc(100dvb - var(--nav-block-size)));
-  display: grid;
-  /*gap: var(--space-lg);*/
+  display: grid; 
   inline-size: 100%;
   background-color: #ffffff;
  
@@ -880,9 +1229,8 @@ div[data-pos='4'] { transform: translate(585px,155px); }
   background: #ffffff;
   width: 80%;
   margin: 15px auto;
-  /*border: 1px solid;
-  border-radius: .5%;*/
-}
+  
+}*/
 
 /*header {
   background: #9645c1;
@@ -891,15 +1239,12 @@ div[data-pos='4'] { transform: translate(585px,155px); }
   color: white;
 }*/
 
-form {
+/*form {
   margin: 5%;
   width: 80%;
 }
 
-/*fieldset {
-  border: 0px;
-}
-*/
+
 input[type="text"],
 input[type="date"],
 input[type="number"],
@@ -956,8 +1301,7 @@ textarea {
 }
 
 .contacto .social-icons {
- /* display: flex;
-  margin-bottom: 0.5rem;*/
+ 
   position: relative;
  
   margin-left: 45%;
@@ -976,7 +1320,7 @@ textarea {
 }  
 .contacto .social-icons a:hover {
   transform: scale(1.05);
-}
+}*/
 
 /*Media Query */
 
@@ -1013,251 +1357,3 @@ textarea {
       margin-top: 7%;
   }  
 }
-
-/***
-<option value="DZ">Algeria</option>
-            <option value="AS">American Samoa</option>
-            <option value="AD">Andorra</option>
-            <option value="AO">Angola</option>
-            <option value="AI">Anguilla</option>
-            <option value="AQ">Antarctica</option>
-            <option value="AG">Antigua and Barbuda</option>
-            <option value="AR">Argentina</option>
-            <option value="AM">Armenia</option>
-            <option value="AW">Aruba</option>
-            <option value="AU">Australia</option>
-            <option value="AT">Austria</option>
-            <option value="AZ">Azerbaijan</option>
-            <option value="BS">Bahamas</option>
-            <option value="BH">Bahrain</option>
-            <option value="BD">Bangladesh</option>
-            <option value="BB">Barbados</option>
-            <option value="BY">Belarus</option>
-            <option value="BE">Belgium</option>
-            <option value="BZ">Belize</option>
-            <option value="BJ">Benin</option>
-            <option value="BM">Bermuda</option>
-            <option value="BT">Bhutan</option>
-            <option value="BO">Bolivia, Plurinational State of</option>
-            <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
-            <option value="BA">Bosnia and Herzegovina</option>
-            <option value="BW">Botswana</option>
-            <option value="BV">Bouvet Island</option>
-            <option value="BR">Brazil</option>
-            <option value="IO">British Indian Ocean Territory</option>
-            <option value="BN">Brunei Darussalam</option>
-            <option value="BG">Bulgaria</option>
-            <option value="BF">Burkina Faso</option>
-            <option value="BI">Burundi</option>
-            <option value="KH">Cambodia</option>
-            <option value="CM">Cameroon</option>
-            <option value="CA">Canada</option>
-            <option value="CV">Cape Verde</option>
-            <option value="KY">Cayman Islands</option>
-            <option value="CF">Central African Republic</option>
-            <option value="TD">Chad</option>
-            <option value="CL">Chile</option>
-            <option value="CN">China</option>
-            <option value="CX">Christmas Island</option>
-            <option value="CC">Cocos (Keeling) Islands</option>
-            <option value="CO">Colombia</option>
-            <option value="KM">Comoros</option>
-            <option value="CG">Congo</option>
-            <option value="CD">Congo, the Democratic Republic of the</option>
-            <option value="CK">Cook Islands</option>
-            <option value="CR">Costa Rica</option>
-            <option value="CI">Côte d'Ivoire</option>
-            <option value="HR">Croatia</option>
-            <option value="CU">Cuba</option>
-            <option value="CW">Curaçao</option>
-            <option value="CY">Cyprus</option>
-            <option value="CZ">Czech Republic</option>
-            <option value="DK">Denmark</option>
-            <option value="DJ">Djibouti</option>
-            <option value="DM">Dominica</option>
-            <option value="DO">Dominican Republic</option>
-            <option value="EC">Ecuador</option>
-            <option value="EG">Egypt</option>
-            <option value="SV">El Salvador</option>
-            <option value="GQ">Equatorial Guinea</option>
-            <option value="ER">Eritrea</option>
-            <option value="EE">Estonia</option>
-            <option value="ET">Ethiopia</option>
-            <option value="FK">Falkland Islands (Malvinas)</option>
-            <option value="FO">Faroe Islands</option>
-            <option value="FJ">Fiji</option>
-            <option value="FI">Finland</option>
-            <option value="FR">France</option>
-            <option value="GF">French Guiana</option>
-            <option value="PF">French Polynesia</option>
-            <option value="TF">French Southern Territories</option>
-            <option value="GA">Gabon</option>
-            <option value="GM">Gambia</option>
-            <option value="GE">Georgia</option>
-            <option value="DE">Germany</option>
-            <option value="GH">Ghana</option>
-            <option value="GI">Gibraltar</option>
-            <option value="GR">Greece</option>
-            <option value="GL">Greenland</option>
-            <option value="GD">Grenada</option>
-            <option value="GP">Guadeloupe</option>
-            <option value="GU">Guam</option>
-            <option value="GT">Guatemala</option>
-            <option value="GG">Guernsey</option>
-            <option value="GN">Guinea</option>
-            <option value="GW">Guinea-Bissau</option>
-            <option value="GY">Guyana</option>
-            <option value="HT">Haiti</option>
-            <option value="HM">Heard Island and McDonald Islands</option>
-            <option value="VA">Holy See (Vatican City State)</option>
-            <option value="HN">Honduras</option>
-            <option value="HK">Hong Kong</option>
-            <option value="HU">Hungary</option>
-            <option value="IS">Iceland</option>
-            <option value="IN">India</option>
-            <option value="ID">Indonesia</option>
-            <option value="IR">Iran, Islamic Republic of</option>
-            <option value="IQ">Iraq</option>
-            <option value="IE">Ireland</option>
-            <option value="IM">Isle of Man</option>
-            <option value="IL">Israel</option>
-            <option value="IT">Italy</option>
-            <option value="JM">Jamaica</option>
-            <option value="JP">Japan</option>
-            <option value="JE">Jersey</option>
-            <option value="JO">Jordan</option>
-            <option value="KZ">Kazakhstan</option>
-            <option value="KE">Kenya</option>
-            <option value="KI">Kiribati</option>
-            <option value="KP">Korea, Democratic People's Republic of</option>
-            <option value="KR">Korea, Republic of</option>
-            <option value="KW">Kuwait</option>
-            <option value="KG">Kyrgyzstan</option>
-            <option value="LA">Lao People's Democratic Republic</option>
-            <option value="LV">Latvia</option>
-            <option value="LB">Lebanon</option>
-            <option value="LS">Lesotho</option>
-            <option value="LR">Liberia</option>
-            <option value="LY">Libya</option>
-            <option value="LI">Liechtenstein</option>
-            <option value="LT">Lithuania</option>
-            <option value="LU">Luxembourg</option>
-            <option value="MO">Macao</option>
-            <option value="MK">Macedonia, the former Yugoslav Republic of</option>
-            <option value="MG">Madagascar</option>
-            <option value="MW">Malawi</option>
-            <option value="MY">Malaysia</option>
-            <option value="MV">Maldives</option>
-            <option value="ML">Mali</option>
-            <option value="MT">Malta</option>
-            <option value="MH">Marshall Islands</option>
-            <option value="MQ">Martinique</option>
-            <option value="MR">Mauritania</option>
-            <option value="MU">Mauritius</option>
-            <option value="YT">Mayotte</option>
-            <option value="MX">Mexico</option>
-            <option value="FM">Micronesia, Federated States of</option>
-            <option value="MD">Moldova, Republic of</option>
-            <option value="MC">Monaco</option>
-            <option value="MN">Mongolia</option>
-            <option value="ME">Montenegro</option>
-            <option value="MS">Montserrat</option>
-            <option value="MA">Morocco</option>
-            <option value="MZ">Mozambique</option>
-            <option value="MM">Myanmar</option>
-            <option value="NA">Namibia</option>
-            <option value="NR">Nauru</option>
-            <option value="NP">Nepal</option>
-            <option value="NL">Netherlands</option>
-            <option value="NC">New Caledonia</option>
-            <option value="NZ">New Zealand</option>
-            <option value="NI">Nicaragua</option>
-            <option value="NE">Niger</option>
-            <option value="NG">Nigeria</option>
-            <option value="NU">Niue</option>
-            <option value="NF">Norfolk Island</option>
-            <option value="MP">Northern Mariana Islands</option>
-            <option value="NO">Norway</option>
-            <option value="OM">Oman</option>
-            <option value="PK">Pakistan</option>
-            <option value="PW">Palau</option>
-            <option value="PS">Palestinian Territory, Occupied</option>
-            <option value="PA">Panama</option>
-            <option value="PG">Papua New Guinea</option>
-            <option value="PY">Paraguay</option>
-            <option value="PE">Peru</option>
-            <option value="PH">Philippines</option>
-            <option value="PN">Pitcairn</option>
-            <option value="PL">Poland</option>
-            <option value="PT">Portugal</option>
-            <option value="PR">Puerto Rico</option>
-            <option value="QA">Qatar</option>
-            <option value="RE">Réunion</option>
-            <option value="RO">Romania</option>
-            <option value="RU">Russian Federation</option>
-            <option value="RW">Rwanda</option>
-            <option value="BL">Saint Barthélemy</option>
-            <option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
-            <option value="KN">Saint Kitts and Nevis</option>
-            <option value="LC">Saint Lucia</option>
-            <option value="MF">Saint Martin (French part)</option>
-            <option value="PM">Saint Pierre and Miquelon</option>
-            <option value="VC">Saint Vincent and the Grenadines</option>
-            <option value="WS">Samoa</option>
-            <option value="SM">San Marino</option>
-            <option value="ST">Sao Tome and Principe</option>
-            <option value="SA">Saudi Arabia</option>
-            <option value="SN">Senegal</option>
-            <option value="RS">Serbia</option>
-            <option value="SC">Seychelles</option>
-            <option value="SL">Sierra Leone</option>
-            <option value="SG">Singapore</option>
-            <option value="SX">Sint Maarten (Dutch part)</option>
-            <option value="SK">Slovakia</option>
-            <option value="SI">Slovenia</option>
-            <option value="SB">Solomon Islands</option>
-            <option value="SO">Somalia</option>
-            <option value="ZA">South Africa</option>
-            <option value="GS">South Georgia and the South Sandwich Islands</option>
-            <option value="SS">South Sudan</option>
-            <option value="ES">Spain</option>
-            <option value="LK">Sri Lanka</option>
-            <option value="SD">Sudan</option>
-            <option value="SR">Suriname</option>
-            <option value="SJ">Svalbard and Jan Mayen</option>
-            <option value="SZ">Swaziland</option>
-            <option value="SE">Sweden</option>
-            <option value="CH">Switzerland</option>
-            <option value="SY">Syrian Arab Republic</option>
-            <option value="TW">Taiwan, Province of China</option>
-            <option value="TJ">Tajikistan</option>
-            <option value="TZ">Tanzania, United Republic of</option>
-            <option value="TH">Thailand</option>
-            <option value="TL">Timor-Leste</option>
-            <option value="TG">Togo</option>
-            <option value="TK">Tokelau</option>
-            <option value="TO">Tonga</option>
-            <option value="TT">Trinidad and Tobago</option>
-            <option value="TN">Tunisia</option>
-            <option value="TR">Turkey</option>
-            <option value="TM">Turkmenistan</option>
-            <option value="TC">Turks and Caicos Islands</option>
-            <option value="TV">Tuvalu</option>
-            <option value="UG">Uganda</option>
-            <option value="UA">Ukraine</option>
-            <option value="AE">United Arab Emirates</option>
-            <option value="GB">United Kingdom</option>
-            <option value="US">United States</option>
-            <option value="UM">United States Minor Outlying Islands</option>
-            <option value="UY">Uruguay</option>
-            <option value="UZ">Uzbekistan</option>
-            <option value="VU">Vanuatu</option>
-            <option value="VE">Venezuela, Bolivarian Republic of</option>
-            <option value="VN">Viet Nam</option>
-            <option value="VG">Virgin Islands, British</option>
-            <option value="VI">Virgin Islands, U.S.</option>
-            <option value="WF">Wallis and Futuna</option>
-            <option value="EH">Western Sahara</option>
-            <option value="YE">Yemen</option>
-            <option value="ZM">Zambia</option>
-*/
