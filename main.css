@@ -189,6 +189,8 @@
     }
   }
 
+
+
   .menu {
     display: grid;
     grid-auto-flow: column;
@@ -228,6 +230,35 @@
     }
   }
 
+  /*****    idiomas   *******/
+  
+
+  .idioms {
+    display: grid;
+    grid-auto-flow: column;
+    gap: var(--space-md);
+
+    @media (width < 1056px) {
+      grid-auto-flow: row;
+      /*padding-inline: var(--space-md);*/
+    }
+    @media (width >=1056px) {
+      justify-self: start;
+    }
+  }
+
+  .idioms  p {
+    /*width: 27px;
+    height: 27px;*/
+    
+    /*background: #000000;    */
+    color: #000000;
+    text-align: center;
+    line-height: 27px;
+    margin-right: 0.5rem;
+    transition: 0.3s;
+}
+
   /*****    redes sociales    *****/
   .actions {
     display: grid;
@@ -246,23 +277,39 @@
 
   .social-icons {
     display: flex;
-    /*margin-top: 0.2rem;*/
-  }  
+}
+
   .social-icons a {
     width: 27px;
     height: 27px;
-    border-radius: 50px;
-    background: linear-gradient(45deg, grey, black);
-    
+    border-radius: 50%;
+    background: #000000;    
     color: #fff;
     text-align: center;
     line-height: 27px;
     margin-right: 0.5rem;
     transition: 0.3s;
-  }  
-  .social-icons a:hover {
-    transform: scale(1.05);
-  }
+}
+
+#face:hover {  
+    background: #1877F2; 
+}
+#tw:hover {
+    background-color: grey; 
+}
+#ig:hover {
+    background-color: #E1306C;
+}
+#you:hover {
+    background-color: #FF0000; 
+}
+#mail:hover {
+    background-color: #FFC0CB; 
+}
+#link:hover {
+    background-color: grey; 
+}
+
   /****   boton hamburguesa   *****/
   .icon-btn {
     position: absolute;
@@ -341,59 +388,7 @@
     background-size: cover;
   }
   
-  /*.hero-visual-wrapper {
-    block-size: 100%;
-    inline-size: 100%;
-
-    animation-name: push-up;
-    animation-duration: 5s;
-    animation-delay: 10s;
-    animation-timing-function: var(--timing-function-fast-ease-in-out);
-    animation-fill-mode: forwards;
-  }*/
-
-  /*.hero-header {
-    inline-size: 100%;
-  }*/
-
-  /*.headline1 {
-    font-size: var(--headline1-font-size);
-    font-weight: var(--headline1-font-weight);
-    text-align: center;
-    display: inline-grid;
-    inline-size: 100%;
-    white-space: nowrap;
-  }
-
-  .headline-container {
-    display: block;
-    block-size: 1lh;
-    overflow-y: clip;
-    position: relative;
-  }
-
-  .headline-scroller {
-    display: grid;
-    position: absolute;
-    text-align: center;
-    inline-size: 100%;
-    inset: 0;
-    animation-name: push-up;
-    animation-duration: 5s;
-    animation-delay: 11s;
-    animation-timing-function: var(--timing-function-fast-ease-in-out);
-    animation-fill-mode: forwards;
-  }
-
-  .scroll-item {
-    color: var(--text-invert);
-    display: block;
-    white-space: nowrap;
-    min-inline-size: 100%;
-    overflow: clip;
-    text-overflow: ellipsis;
-  }*/
-
+  
 
 
   .hero-content {
@@ -530,6 +525,47 @@
   }
 }
 
+/******  programas *******/
+.programas { 
+  position: relative;
+  top: 45px;
+  padding-bottom: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+  width: 100%; 
+}
+
+.programas .flex-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.programas .flex-container img {
+  width: 60%;
+}
+.programas .flex-container > div { 
+  margin: 10px;  
+  text-align: center;
+  line-height: 35px;  
+}
+
+@media (max-width: 1000px) {
+  .programas .flex-container img {
+    width: 40%;
+  }
+}
+
+@media (max-width: 885px) {
+  .programas .flex-container {
+    display: grid;
+    row-gap: 8px;
+    grid-template-rows: auto auto auto;
+  }
+}
+
+
 
 
 
@@ -562,7 +598,7 @@
 .recursos h2 {
   position: absolute;
   left: 72px;
-  font-size: 17px;
+  font-size: 12px;
   font-weight: 400;
   color: #000000;
   text-align: left;
@@ -580,7 +616,7 @@
 
 .recursos .item {
   display: block;  
-  font-size: 2.1em;
+  font-size: 1.8em;
   color: #000000;
   text-decoration: none;
   /*margin-bottom: 15px;*/
@@ -612,8 +648,9 @@
 .contacto h2 {
   background-color: #f9f9f9;
   position: absolute;
+  padding-top: 3px;
   left: 72px;
-  font-size: 17px;
+  font-size: 12px;
   font-weight: 400;
   color: #000000;
   text-align: left;
