@@ -194,16 +194,22 @@
   .menu {
     display: grid;
     grid-auto-flow: column;
-    gap: var(--space-lg);
+    gap: 10px;
+    /*gap: var(--space-lg);*/
     list-style: none;
     padding: 0;
 
     @media (width < 1056px) {
       grid-auto-flow: row;
       gap: var(--space-md);
-      padding-inline: var(--space-md);
+      padding-inline: var(--space-md);     
     }
   }
+    @media (max-width: 1056px) {
+      .menu p {
+        display: none;        
+      }
+    }
 
   .nav-link {
     padding: 0 20px;
@@ -212,6 +218,7 @@
     color: var(--text-invert);
     text-decoration: none;
     padding-block: var(--space-sm);
+    /*font-size: smaller;*/
     font-size: var(--nav-link-font-size);
 
     &:hover {      
@@ -229,17 +236,28 @@
       padding-block: var(--space-sm);
     }
   }
+  .nav-link p {
+    background-color: red
+  }
+  .menu p  {
+    color: #1D1D1B ;
+    background-color:white;
+    &:hover {      
+      background-color: white;
+      color: #1D1D1B
+  }}
 
   /*****    idiomas   *******/
   
 
   .idioms {
+   padding-bottom: 11px;
     display: grid;
     grid-auto-flow: column;
-    gap: var(--space-md);
+    /*gap: var(--space-md);*/
 
     @media (width < 1056px) {
-      grid-auto-flow: row;
+      grid-auto-flow: column;
       /*padding-inline: var(--space-md);*/
     }
     @media (width >=1056px) {
@@ -247,23 +265,27 @@
     }
   }
 
-  .idioms  p {
+  .idioms p {
     /*width: 27px;
-    height: 27px;*/
-    
+    height: 27px;*/    
     /*background: #000000;    */
+   
     color: #000000;
+    font-size: smaller;
     text-align: center;
     line-height: 27px;
     margin-right: 0.5rem;
     transition: 0.3s;
-}
+  }
+  
+
 
   /*****    redes sociales    *****/
   .actions {
     display: grid;
     grid-auto-flow: column;
     gap: var(--space-md);
+    padding-bottom: 11px;
 
     @media (width < 1056px) {
       grid-auto-flow: row;
@@ -646,7 +668,7 @@
 }
 
 .contacto h2 {
-  background-color: #f9f9f9;
+  background-color: #ffffff;
   position: absolute;
   padding-top: 3px;
   left: 72px;
@@ -704,7 +726,8 @@ textarea {
   resize: none;
 }
 
-.form_contacto button {  
+.form_contacto button { 
+  width: 170px;
   margin: 20px auto;
   padding: 10px;
   border: none;
@@ -735,7 +758,7 @@ button:hover {
 
 .aportes h3 {
   color: #000000;
-  font-size: 25px;
+  font-size: 21px;
   font-weight:400;
 }
 .aportes .flex-container {

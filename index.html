@@ -62,17 +62,12 @@
                 </div>                
 
                 <menu class="menu">
-                    <li><a href="#SobreElProyecto" class="nav-link">SOBRE EL PROYECTO</a></li>                    
+                    <li><a href="#SobreElProyecto" class="nav-link">SOBRE EL PROYECTO</a></li>
+                        <p class="nav-link">│</p>                
                     <li><a href="#Contacto" class="nav-link">CONTACTO</a></li>                    
-                        <a href="#" class="logo-wrapper">
-                            <img
-                                class="logo-img" src="./img/TAXIBOY_LOGO-NEGRO.png"                
-                                alt="Taxiboy logo"
-                                width="160"
-                                height="29.44"
-                            />
-                        </a>                    
-                    <li><a href="#MuestraVirtual" class="nav-link">MUESTRA VIRTUAL</a></li>                    
+                    <a href="#" class="logo-wrapper"><img class="logo-img" src="./img/TAXIBOY_LOGO-NEGRO.png" alt="Taxiboy logo" width="160" height="29.44"/></a>                    
+                    <li><a href="#MuestraVirtual" class="nav-link">MUESTRA VIRTUAL</a></li>
+                    <li><p class="nav-link">│</p></li>                  
                     <li><a href="#Recursos" class="nav-link">RECURSOS</a></li>         
                 </menu>
             </div>
@@ -120,16 +115,17 @@
             </div>
 
             <div class="idioms">               
-                <!--<div class="social-media">                    
-                    <div class="social-icons">-->
-                      <a href="#" target="_blank">
+                <!--<div class="social-media"> -->                   
+                    <!--<div class="idiomas">-->
+                      <a href="#" target="_blank" style="text-decoration: none;">
                         <p>ES</p>
-                      </a>                      
-                      <a href="#" target="_blank">
+                      </a>
+                      <p>│</p>                     
+                      <a href="#" target="_blank" style="text-decoration: none;">
                         <p>EN</p>
                       </a>                          
-                    <!--</div>
-                  </div>-->
+                    <!--</div>-->
+                  <!--</div>-->
                
             </div>
            
@@ -200,11 +196,31 @@
                 <h2>RECURSOS E INFORMACIÓN SOBRE TRABAJO SEXUAL MASCULINO</h2>
                 <div class="rec">
                     <a href="./entrevistas.html" class="item">
-                        entrevistas
+                        entrevistas</a>
+                        <!--<svg height="50" width="100%" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="0" y1="10" x2="100%" y2="10" style="stroke:black;stroke-width:1" /> 
+                            <path d="M 845 30 A 5 5 0 0 0 875 30" fill="transparent" stroke="black" stroke-width="1" />                       
+                        </svg>-->
+
                         <svg height="50" width="100%" xmlns="http://www.w3.org/2000/svg">
-                            <line x1="0" y1="10" x2="100%" y2="10" style="stroke:black;stroke-width:1" />                        
-                        </svg>
-                    </a>
+                            <!-- Línea izquierda antes del semicírculo -->
+                            <line x1="0" y1="10" x2="47%" y2="10" style="stroke:black;stroke-width:1" />
+                          
+                            <!-- Semicírculo hacia arriba, unido a la línea principal -->
+                            <path d="M 47 10 A 5 5 0 0 1 53 10" fill="transparent" stroke="black" stroke-width="1" />
+                          
+                            <!-- Línea derecha después del semicírculo -->
+                            <line x1="53%" y1="10" x2="100%" y2="10" style="stroke:black;stroke-width:1" />
+                          </svg>
+                          
+                        
+                          
+                       
+                          
+                          
+                        
+                        
+                    
                     <a href="./textos.html" class="item">
                         textos
                         <svg height="50" width="100%" xmlns="http://www.w3.org/2000/svg">
@@ -249,7 +265,7 @@
                     <label for="mensaje">Déjanos tu mensaje:</label>
                     <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
         
-                    <button style="width: 120px;" type="submit">Enviar</button>
+                    <button  type="submit">Enviar</button>
                 </form>
             </div>           
 
