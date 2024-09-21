@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,49 +11,23 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"/>
-    <!--link tipografia--> 
+    <!--<script src="./ingles.js"></script>-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"/>    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">  
-    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+    
     
 </head>
     <body>
         <nav id="nav" class="nav">
-        <div class="nav-container">
-            <!--<a href="#" class="logo-wrapper">
-            <img
-                class="logo-img" src="./img/TAXIBOY_LOGO-NEGRO.png"                
-                alt="Taxiboy logo"
-                width="160"
-                height="29.44"
-            />
-            </a>-->
+        <div class="nav-container">           
             <div class="menu-wrapper">
             <div class="mobile-wrapper">
-                <div class="mobile-mobile-head">
-                    <!--<a href="#" class="logo-wrapper">
-                        <img
-                        class="logo-img"
-                        src="./img/TAXIBOY_LOGO-NEGRO.png"
-                        alt="Taxiboy logo"
-                        width="160"
-                        height="29.44"
-                        />
-                    </a>-->
+                <div class="mobile-mobile-head">                   
                     <button
-                        class="icon-btn"
-                        aria-label="Close Menu"
-                        onclick="nav.classList.remove('open')"
-                    >
-                        <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        >
+                        class="icon-btn" aria-label="Close Menu" onclick="nav.classList.remove('open')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                         <path
                             d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"
                         ></path>
@@ -62,31 +36,20 @@
                 </div>                
 
                 <menu class="menu">
-                    <li><a href="#SobreElProyecto" class="nav-link">SOBRE EL PROYECTO</a></li>
-                        <p class="nav-link">│</p>                
-                    <li><a href="#Contacto" class="nav-link">CONTACTO</a></li>                    
+                    <li><a href="#SobreElProyecto" id="sp_lang" class="nav-link">SOBRE EL PROYECTO</a></li>
+                    <li><a href="#SobreElProyecto" id="en_lang" class="nav-link">ABOUT THE PROJECT</a></li>
+                    <p class="nav-link">│</p>                
+                    <li><a href="#Contacto" id="sp_lang" class="nav-link">CONTACTO</a></li>
+                    <li><a href="#Contacto" id="en_lang" class="nav-link">CONTACT</a></li>                     
                     <a href="#" class="logo-wrapper"><img class="logo-img" src="./img/TAXIBOY_LOGO-NEGRO.png" alt="Taxiboy logo" width="160" height="29.44"/></a>                    
-                    <li><a href="#MuestraVirtual" class="nav-link">MUESTRA VIRTUAL</a></li>
+                    <li><a href="#MuestraVirtual" id="sp_lang" class="nav-link">MUESTRA VIRTUAL</a></li>
+                    <li><a href="#MuestraVirtual" id="en_lang" class="nav-link">VIRTUAL EXHIBITION</a></li>
                     <li><p class="nav-link">│</p></li>                  
-                    <li><a href="#Recursos" class="nav-link">RECURSOS</a></li>         
+                    <li><a href="#Recursos" id="sp_lang" class="nav-link">RECURSOS</a></li>
+                    <li><a href="#Recursos" id="en_lang" class="nav-link">RESOURCES</a></li>         
                 </menu>
             </div>
-
-            <!--<div class="idioms">               
-                <div class="social-media">                    
-                    <div class="social-icons">
-                      <a href="#" target="_blank">
-                        <i class="fab fa-facebook"></i>
-                      </a>                      
-                      <a href="#" target="_blank">
-                        <i class="fa-brands fa-x-twitter"></i>
-                      </a>                          
-                    </div>
-                  </div>
-                </div>
-            </div>-->
-            
-
+           
             <div class="actions">               
                 <div class="social-media">                    
                     <div class="social-icons">
@@ -98,8 +61,7 @@
                       </a>
                       <a href="#" target="_blank"  id="ig">
                         <i class="fab fa-instagram"></i>
-                      </a>
-                     
+                      </a>                     
                       <a href="#" target="_blank"id="you">
                         <i class="fab fa-youtube" ></i>
                       </a>
@@ -114,21 +76,12 @@
                 </div>
             </div>
 
-            <div class="idioms">               
-                <!--<div class="social-media"> -->                   
-                    <!--<div class="idiomas">-->
-                      <a href="#" target="_blank" style="text-decoration: none;">
-                        <p>ES</p>
-                      </a>
+            <div class="idioms">                    
+                      <p class="sp">ES</p>
                       <p>│</p>                     
-                      <a href="#" target="_blank" style="text-decoration: none;">
-                        <p>EN</p>
-                      </a>                          
-                    <!--</div>-->
-                  <!--</div>-->
+                      <p class="en">EN</p>           
                
-            </div>
-           
+            </div>           
 
             <button class="icon-btn" aria-label="Open Menu" onclick="nav.classList.add('open')">
             <svg
@@ -139,42 +92,25 @@
         </div>
         </nav>
 
-        <!--   index   -->
-
         <main class="main">
-        <section class="hero">
-           
+        <section class="hero">           
 
             <div class="hero-content">
             <header class="hero-header">
                 <div class="headline1">
                 <span class="headline-container">
-                    <div class="headline-scroller">
-                    <!--<span class="scroll-item">Elevate your brand</span>
-                    <span class="scroll-item"> Increase Sales</span>
-                    <span class="scroll-item"> Inspire audiences</span>-->
-                    <h1 class="scroll-item">Ensayo fotógrafico sobre<br> trabajo sexual masculino callejero</h1>
+                    <div class="headline-scroller">                   
+                    <h1 id="sp_lang" class="scroll-item">Ensayo fotógrafico sobre<br> trabajo sexual masculino callejero</h1>
+                    <h1 id="en_lang" class="scroll-item">Photographic Essay on<br> Male Street Sex Work</h1>
                     </div>
                 </span>
-
-                <!--<span> with our Ads </span>-->
+               
                 </div>
                 <div class="content-actions">
-                <a href="#MuestraVirtual" class="button-link primary">VER GALERIA</a>
+                <a href="#MuestraVirtual" id="sp_lang" class="button-link primary">VER GALERIA</a>
+                <a href="#MuestraVirtual" id="en_lang" class="button-link primary">SEE GALLERY</a>
                 </div>
-            </header>
-            <!--<a href="#SobreElProyecto" aria-label="Scroll" class="scroll-btn">
-                <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                >
-                <path
-                    d="M13.0001 16.1716L18.3641 10.8076L19.7783 12.2218L12.0001 20L4.22192 12.2218L5.63614 10.8076L11.0001 16.1716V4H13.0001V16.1716Z"
-                ></path>
-                </svg>
-            </a>-->
-            
+            </header>           
             </div>
         </section>
 
@@ -189,56 +125,44 @@
             </div>
         </section>
 
-
-
         <!---   recursos   -->
         
         <div class="recursos">
             <div class="container">
-                <h2>RECURSOS E INFORMACIÓN SOBRE TRABAJO SEXUAL MASCULINO</h2>
+                <h2 id="sp_lang">RECURSOS E INFORMACIÓN SOBRE TRABAJO SEXUAL MASCULINO</h2>
+                <h2 id="en_lang">RESOURCES AND INFORMATION ON MALE SEX WORK</h2>
                 <div class="rec">
-                    <a href="./entrevistas.html" class="item">
+                    <a href="./entrevistas.html" id="sp_lang" class="item">
                         entrevistas</a>
-                        <!--<svg height="50" width="100%" xmlns="http://www.w3.org/2000/svg">
-                            <line x1="0" y1="10" x2="100%" y2="10" style="stroke:black;stroke-width:1" /> 
-                            <path d="M 845 30 A 5 5 0 0 0 875 30" fill="transparent" stroke="black" stroke-width="1" />                       
-                        </svg>-->
+                    <a href="./entrevistas.html" id="en_lang" class="item">
+                        interviews</a>                            
 
+                        <svg height="50" width="100%" xmlns="http://www.w3.org/2000/svg">                           
+                            <line x1="0" y1="10" x2="100%" y2="10" style="stroke:black;stroke-width:1" />                           
+                            <!--<path d="M 47 10 A 5 5 0 0 1 53 10" fill="transparent" stroke="black" stroke-width="1" />                    
+                            <line x1="53%" y1="10" x2="100%" y2="10" style="stroke:black;stroke-width:1" />-->     
+                        </svg>                   
+                    <a href="./textos.html" id="sp_lang" class="item">
+                        textos</a>
+                    <a href="./textos.html" id="en_lang" class="item">
+                        texts</a>
                         <svg height="50" width="100%" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Línea izquierda antes del semicírculo -->
-                            <line x1="0" y1="10" x2="47%" y2="10" style="stroke:black;stroke-width:1" />
-                          
-                            <!-- Semicírculo hacia arriba, unido a la línea principal -->
-                            <path d="M 47 10 A 5 5 0 0 1 53 10" fill="transparent" stroke="black" stroke-width="1" />
-                          
-                            <!-- Línea derecha después del semicírculo -->
-                            <line x1="53%" y1="10" x2="100%" y2="10" style="stroke:black;stroke-width:1" />
-                          </svg>
-                          
-                        
-                          
-                       
-                          
-                          
-                        
-                        
+                            <line x1="0" y1="10" x2="100%" y2="10" style="stroke:black;stroke-width:1" />                        
+                        </svg>
                     
-                    <a href="./textos.html" class="item">
-                        textos
+                    <a href="./audiovisuales.html" id="sp_lang" class="item">
+                        audiovisuales</a>
+                    <a href="./audiovisuales.html" id="en_lang" class="item">
+                        audiovisuals</a>
                         <svg height="50" width="100%" xmlns="http://www.w3.org/2000/svg">
                             <line x1="0" y1="10" x2="100%" y2="10" style="stroke:black;stroke-width:1" />                        
                         </svg>
-                    </a>
-                    <a href="./audiovisuales.html" class="item">
-                        audiovisuales
-                        <svg height="50" width="100%" xmlns="http://www.w3.org/2000/svg">
-                            <line x1="0" y1="10" x2="100%" y2="10" style="stroke:black;stroke-width:1" />                        
-                        </svg>
-                    </a>
-                    <a href="./organizaciones.html" class="item">
-                        organizaciones
-                        
-                    </a>
+                    
+                    <a href="./organizaciones.html" id="sp_lang" class="item">
+                        organizaciones</a>
+                    <a href="./organizaciones.html" id="en_lang" class="item">
+                        organizations</a>    
+                    
                 </div>
             </div>
         </div>
@@ -248,8 +172,8 @@
         <section class="contacto" id="Contacto">
             <div class="container">
                 
-                    <h2>&nbsp;&nbsp;CONTACTO &nbsp;&nbsp;</h2>
-                   
+                    <h2 id="sp_lang">&nbsp;&nbsp;CONTACTO &nbsp;&nbsp;</h2>
+                    <h2 id="en_lang">&nbsp;&nbsp;CONTACT &nbsp;&nbsp;</h2>                  
                     <svg class="line_contact" height="50" width="90%"; xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="10" x2="100%" y2="10" style="stroke:black;" /></svg>
                 
             </div>
@@ -258,16 +182,18 @@
         <section class="form_contacto">
             <div class="form-container">
                 <form action="#" method="post">
-                    <label for="nombre">Nombre y Apellido:</label><input type="text" id="nombre" name="nombre" required>
+                    <label for="nombre" id="sp_lang">Nombre y Apellido:</label>
+                    <label for="nombre" id="en_lang">Name & Surname:</label><input type="text" id="nombre" name="nombre" required>            
                     
-                    
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <label for="email" id="sp_lang">Email:</label>
+                    <label for="email" id="en_lang">Email:</label><input type="email" id="email" name="email" required>
         
-                    <label for="mensaje">Déjanos tu mensaje:</label>
+                    <label for="mensaje" id="sp_lang">Déjanos tu mensaje:</label>
+                    <label for="mensaje" id="en_lang">Leave us your message:</label>
                     <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
         
-                    <button  type="submit">Enviar</button>
+                    <button type="submit" id="sp_lang">Enviar</button>
+                    <button type="submit" id="en_lang">Send</button>
                 </form>
             </div>           
 
@@ -276,7 +202,8 @@
         <section>
             <div class="aportes">
                 <div class="flex-container">
-                    <div ><h3>Aportes para sostener el sitio:</h3></div>
+                    <div id="sp_lang"><h3>Aportes para sostener el sitio:</h3></div>
+                    <div id="en_lang"><h3>Contributions to support the site:</h3></div>
                     <div ><img src="./img/paypal.png" alt=""></div>
                     <div ><img src="./img/cafecito.png" alt=""></div>
                 </div>
@@ -284,15 +211,10 @@
         </section>
 
         <section >
-            <footer>
-                <!--<div class="flex-container">
-                    <div style="flex-grow: 4;"><img src="./img/TAXIBOY_LOGO-BLANCO.png" alt=""></div>
-                    <div style="flex-grow: 1"><h6>Argentina 2004</h6></div>
-                    <div style="flex-grow: 5"><img src="./img/imagen1.png" alt=""></div>
-                </div>-->
+            <footer>              
                 <div class="footer-container">
                     <div class="footer-logo">
-                        <img src="./img/TAXIBOY_LOGO-BLANCO.png" alt="Taxiboy Logo"> <!-- Asegúrate de reemplazar "logo.png" por la ruta de la imagen correcta -->
+                        <img src="./img/TAXIBOY_LOGO-BLANCO.png" alt="Taxiboy Logo"> 
                         <span>ARGENTINA, 2024</span>
                     </div>
                     <div class="footer-icons">
@@ -301,176 +223,12 @@
                         <a href="#" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
                         <a href="#" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
                         <a href="#" target="_blank"><i class="fab fa-solid fa-m fa-2x"></i></a>
-                        <a href="#" target="_blank"><i class="fas fa-link fa-2x"></i></a>
-                                             
+                        <a href="#" target="_blank"><i class="fas fa-link fa-2x"></i></a>                                             
                     </div>
-                </div>
-                
+                </div>                
             </footer>
         </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-       
-        <!--<section class="sobreelproyecto" id="SobreElProyecto">
-            <div class="container">
-                <div class="superior_proyecto">
-                    <div class="header_proyecto">
-                        <div class="logo">
-                            <img src="./img/TAXIBOY_LOGO-NEGRO.png" alt="Logo Taxiboy">                        
-                        </div>
-                        <div class="description">
-                            <h3>Es un ensayo fotográfico que se propone visibilizar una realidad ignorada</h3>
-                        </div>
-                    </div>
-
-                    <div class="content">
-                        <div class="cards">
-                            <div class="card">
-                                <img src="./img/piaf.png" alt="Verbo Tello">
-                                <div class="staff">VERO TELLO<br>fotógrafa</div>
-                            </div>
-                            <div class="card">
-                                <img src="./img/piaf.png" alt="Paco Ros Flores">
-                                <div class="staff">PACO ROS FLORES<br>fotógrafo</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pie_proyecto">
-                    <img src="./img/imagen1.png" alt="Logo Fondo Metropolitano">
-                    <img src="./img/imagen2.png" alt="Logo Fondo Nacional de las Artes">
-                    <img src="./img/imagen3.png" alt="Logo Mecenazgo">
-                </div>
-
-            </div>
-        </section>
-        <br>
-        <br>
-        
-
-        
-        <h2 class="heading" id="MuestraVirtual">Collecciones</h2>
-        <section class="muestravirtual">               
-    
-        <div class='gallery'>
-          <div class='item' data-pos='0'><img src='https://images.unsplash.com/photo-1708247874023-f6d71a45113a?q=80&w=2344&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'></div>
-          <div class='item' data-pos='1'><img src='https://images.unsplash.com/photo-1437751059337-ea72d4f73fcf?q=80&w=2322&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'></div>
-          <div class='item' data-pos='2'><img src='https://images.unsplash.com/photo-1515594515116-863345d8507c?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'></div>
-          <div class='item' data-pos='3'><img src='https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'></div>
-          <div class='item' data-pos='4'><img src='https://images.unsplash.com/photo-1517953377824-516f2dca803b?q=80&w=2378&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'></div>
-        </div>
-      
-      </section>
-      <br>
-      <br>
-      <br>
-        
-        
-            
-           
-            
-
-       
-        <h2 class="heading">Recursos</h2>
-        <section class="recursos" id="Recursos">            
-                <br>
-                <br>         
-                
-               
-           
-            <div class="menu2">
-                <button class="menu2-button"><a href="./entrevistas.html">entrevistas</a></button>
-                <button class="menu2-button"><a href="./textos.html">textos</a></button>
-                <button class="menu2-button"><a href="./audiovisuales.html">audiovisuales</a></button>
-                <button class="menu2-button"><a href="./organizaciones.html">organizaciones</a></button>
-            </div>
-        </section>
-
-     
-        <section class="contacto" id="Contacto">
-            <h2 class="heading">Contacto</h2>
-            <br>
-            <br>          
-               
-                <div id="container">                   
-                    <form action="https://formsubmit.co/pagliaccicesar@gmail.com" method="POST">           
-                        
-                        <div id="part-1">                         
-                          <label for="first-name">Tu nombre</label>
-                          <input type="text" name="first-name" placeholder="juan perez" id="first-name" required>                         
-                          
-                        </div>            
-                        
-                        <div id="part-2">                          
-                          <label for="email">Tu email</label>
-                          <input type="email" name="email" placeholder="cuenta@email.com" id="email" required>                          
-                        </div>                       
-                       
-                        <div id="part-3">
-                            <label for="email">Dejanos tu mensaje</label>                        
-                          <textarea rows="5" cols="50" id="message" tabindex="-1"></textarea>
-                        </div>                       
-                       
-                        <input type="submit" id="submitButton" name="submitButton" value="Enviar">
-                        <input type="reset" id="resetButton" value="Resetear info" tabindex="-1">
-                     
-                    </form>
-                    
-                  
-                </div>
-                              
-                    <div class="social-media">                    
-                        <div class="social-icons">
-                          <a href="#" target="_blank">
-                            <i class="fab fa-whatsapp"></i>
-                          </a>                      
-                          <a href="#" target="_blank">
-                            <i class="fab fa-instagram"></i>
-                          </a>
-                          <a href="#" target="_blank">
-                            <i class="fab fa-facebook"></i>
-                          </a>
-                        </div>
-                      </div>
-                            
-            
-        </section>-->
-
-        </main>
-    
+        </main>    
 
         <script src="./main.js"></script>
         
