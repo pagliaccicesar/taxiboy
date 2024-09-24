@@ -11,153 +11,468 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"/>    
-    
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">    
     
 </head>
     <body>
-        <nav id="nav" class="nav">
-            <div class="nav-container">
-                <!--<a href="#" class="logo-wrapper">
-                <img
-                    class="logo-img" src="./img/TAXIBOY_LOGO-NEGRO.png"                
-                    alt="Taxiboy logo"
-                    width="160"
-                    height="29.44"
-                />
-                </a>-->
-                <div class="menu-wrapper">
-                <div class="mobile-wrapper">
-                    <div class="mobile-mobile-head">
-                        <!--<a href="#" class="logo-wrapper">
-                            <img
-                            class="logo-img"
-                            src="./img/TAXIBOY_LOGO-NEGRO.png"
-                            alt="Taxiboy logo"
-                            width="160"
-                            height="29.44"
-                            />
-                        </a>-->
-                        <button
-                            class="icon-btn"
-                            aria-label="Close Menu"
-                            onclick="nav.classList.remove('open')"
+    <nav id="nav" class="nav">
+        <div class="nav-container">
+            <!--<a href="#" class="logo-wrapper">
+            <img
+                class="logo-img" src="./img/TAXIBOY_LOGO-NEGRO.png"                
+                alt="Taxiboy logo"
+                width="160"
+                height="29.44"
+            />
+            </a>-->
+            <div class="menu-wrapper">
+            <div class="mobile-wrapper">
+                <div class="mobile-mobile-head">
+                    <!--<a href="#" class="logo-wrapper">
+                        <img
+                        class="logo-img"
+                        src="./img/TAXIBOY_LOGO-NEGRO.png"
+                        alt="Taxiboy logo"
+                        width="160"
+                        height="29.44"
+                        />
+                    </a>-->
+                    <button
+                        class="icon-btn"
+                        aria-label="Close Menu"
+                        onclick="nav.classList.remove('open')"
+                    >
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
                         >
-                            <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                            >
-                            <path
-                                d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"
-                            ></path>
-                            </svg>
-                        </button>
-                    </div>
-                    <menu class="menu">   
-    
-                        <li><a href="#SobreElProyecto" class="nav-link">SOBRE EL PROYECTO</a></li>                    
-                        <li><a href="#Contacto" class="nav-link">CONTACTO</a></li>                    
-                            <a href="./index.html" class="logo-wrapper">
-                                <img
-                                    class="logo-img" src="./img/TAXIBOY_LOGO-NEGRO.png"                
-                                    alt="Taxiboy logo"
-                                    width="160"
-                                    height="29.44"
-                                />
-                            </a>                    
-                        <li><a href="#MuestraVirtual" class="nav-link">MUESTRA VIRTUAL</a></li>                    
-                        <li><a href="#Recursos" class="nav-link">RECURSOS</a></li>         
-                    </menu>
+                        <path
+                            d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"
+                        ></path>
+                        </svg>
+                    </button>
                 </div>
-    
-                <div class="actions">               
-                    <div class="social-media">                    
-                        <div class="social-icons">
-                          <a href="#" target="_blank">
-                            <i class="fab fa-whatsapp"></i>
-                          </a>                      
-                          <a href="#" target="_blank">
-                            <i class="fab fa-instagram"></i>
-                          </a>
-                          <a href="#" target="_blank">
-                            <i class="fab fa-facebook"></i>
-                          </a>
-                        </div>
+                <menu class="menu">   
+
+                    <li><a href="#SobreElProyecto" class="nav-link">SOBRE EL PROYECTO</a></li>                    
+                    <li><a href="#Contacto" class="nav-link">CONTACTO</a></li>                    
+                        <a href="./index.html" class="logo-wrapper">
+                            <img
+                                class="logo-img" src="./img/TAXIBOY_LOGO-NEGRO.png"                
+                                alt="Taxiboy logo"
+                                width="160"
+                                height="29.44"
+                            />
+                        </a>                    
+                    <li><a href="#MuestraVirtual" class="nav-link">MUESTRA VIRTUAL</a></li>                    
+                    <li><a href="#Recursos" class="nav-link">RECURSOS</a></li>         
+                </menu>
+            </div>
+
+            <div class="actions">               
+                <div class="social-media">                    
+                    <div class="social-icons">
+                      <a href="#" target="_blank" id="face">
+                        <i class="fab fa-facebook"  ></i>
+                      </a>                      
+                      <a href="#" target="_blank"  id="tw">
+                        <i class="fa-brands fa-x-twitter"></i>
+                      </a>
+                      <a href="#" target="_blank"  id="ig">
+                        <i class="fab fa-instagram"></i>
+                      </a>                     
+                      <a href="#" target="_blank"id="you">
+                        <i class="fab fa-youtube" ></i>
+                      </a>
+                      <a href="#" target="_blank" id="mail">
+                        <i class="fa-solid fa-m"></i>
+                      </a>
+                      <a href="#" target="_blank" id="link">
+                        <i class="fas fa-link"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            </div>
+
+            <button class="icon-btn" aria-label="Open Menu" onclick="nav.classList.add('open')">
+            <svg
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path>
+            </svg>
+            </button>
+        </div>
+        </nav>
+
+        <!--   index   -->
+        <style>
+            
+            .cabecera {
+                display: flex;
+                align-items: center;
+                margin: 0 35px 10px;
+                font-family: 'Poppins', sans-serif;
+                padding-top: 20px;
+            }
+            .cabecera .back-button {
+                padding-top: 8px;
+            }
+            .cabecera h1 {
+                font-weight: 300;
+                color: black;
+                font-size: 300%;
+                padding-left: 15px;
+            }
+            /* Contenedor principal */
+           .container {
+                padding-top: 40px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 40px;
+                flex-wrap: wrap; /* Hace que sea responsive */
+                color: black;
+            }               
+
+            /* Estilos para la columna izquierda */
+            .left-content {
+                flex: 1;
+                min-width: 300px;
+                margin:  0 85px;
+            }
+            
+            .left-content h2 {
+                font-size: 20px;
+                font-weight: bold;                    
+                margin-bottom: 15px;
+                color: black;                    
+            }
+
+            .left-content p {
+                font-size: 14px;
+                margin-top: 20px;
+                /*margin-bottom: 15px;*/
+            }
+
+            .v-line{
+            border-left: thin solid #000;
+            height:20%;
+            left: 50%;
+            position: absolute;
+            }
+
+            /* Estilos para la columna derecha */
+            .right-content {
+                flex: 1;
+                min-width: 300px;
+                padding-left: 130px;
+            }
+            .right-content p {
+                font-size: 14px;
+                margin-top: 10px;
+                /*margin-bottom: 15px;*/
+            }
+            /* Media query para hacer el diseño responsive */
+            @media (max-width: 918px) {
+                .container {
+                    flex-direction: column; /* Las columnas se apilan una debajo de otra en pantallas pequeñas */
+                }
+                .v-line{ 
+                    display: none;
+                }
+                .left-content h1 {
+                    font-size: 36px;
+                }
+                .right-content {               
+                padding-left: 80px;
+            }            
+            }
+            @media (max-width: 630px) {
+                .cabecera {
+                display: flex;
+                align-items: center;
+                margin: 0 35px;               
+                padding-top: 0px;
+            }
+                .left-content {                
+                margin:  0 35px;
+            }
+                .right-content {   
+                padding-left: 35px;
+            }            
+            }
+            section footer {
+                position: relative;
+                top: 1px;                
+            }
+           
+     
+        </style>
+        <div class="container">
+            <div class="cabecera">
+                <a href="#" class="back-button">
+                    <svg width="35" height="35" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="45" fill="#000" />
+                        <polygon points="57.5,30 35,50 57.5,70" fill="#fff" />
+                    </svg>
+                </a>
+                <h1>audiovisuales</h1>           
+            </div>
+        </div>
+        <section class="text-audiovisuales">  
+        <div class="container">            
+            <!-- Columna izquierda -->
+            <div class="left-content">                
+                <p>A continuación se presenta un listado de films de ficción y documental sobre trabajo sexual masculino. Este listado no pretende ser definitivo 
+                    sino una guía para acceder a diferentes representaciones audiovisuales sobre la cuestión.</p>               
+            </div>
+
+            <div class="v-line"></div>   
+
+            <!-- Columna derecha -->
+            <div class="right-content">
+                <p>Below is a list of fiction and documentary films on male sex work. This list is not intended to be definitive, but rather a guide to accessing
+                    different audiovisual representations on the issue.</p>
+            </div>
+        </div>
+        </section>
+        </div>
+
+
+        <section class="videos">
+            <div class="carousel-container">
+                <button class="carousel-arrow left-arrow" onclick="prevSlide()">&#9664;</button>
+                
+                <div class="carousel">
+                  <div class="carousel-track">
+                    <!-- Primera serie de 9 cards -->
+                    <div class="carousel-item">
+                      <img src="./img/eva otoñal.jpg" alt="Flesh">
+                      <div class="info">
+                        <h3>Flesh</h3>
+                        <p>1968</p>
+                        <img class="flag" src="https://cdn3.iconfinder.com/data/icons/finalflags/256/United-Kingdom-flag.png" style="width: 24px;height: 24px;" alt="USA flag">
                       </div>
                     </div>
-                </div>
-                </div>
-    
-                <button class="icon-btn" aria-label="Open Menu" onclick="nav.classList.add('open')">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-                    <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path>
-                </svg>
-                </button>
-            </div>
-            </nav>
-    
-            <!--   index   -->
-    
-            <main class="main">
-            <section class="hero">
-               
-    
-                <div class="hero-content">
-                <header class="hero-header">
-                    <div class="headline1">
-                    <span class="headline-container">
-                        <div class="headline-scroller">
-                        <!--<span class="scroll-item">Elevate your brand</span>
-                        <span class="scroll-item"> Increase Sales</span>
-                        <span class="scroll-item"> Inspire audiences</span>-->
-                        <h1 class="scroll-item">Ensayo fotógrafico sobre<br> trabajo sexual masculino callejero</h1>
-                        </div>
-                    </span>
-    
-                    <!--<span> with our Ads </span>-->
+                    <div class="carousel-item">
+                      <img src="./img/eva otoñal.jpg" alt="Flesh">
+                      <div class="info">
+                        <h3>Sauvage</h3>
+                        <p>2018</p>
+                        <img class="flag" src="https://cdn3.iconfinder.com/data/icons/finalflags/256/United-Kingdom-flag.png" style="width: 24px;height: 24px;" alt="USA flag">
+                      </div>
                     </div>
-                    <div class="content-actions">
-                    <a href="#MuestraVirtual" class="button-link primary">VER GALERIA</a>
+                    <!-- Card 3 -->
+                <div class="carousel-item">
+                    <img src="./img/eva otoñal.jpg" alt="Flesh">
+                    <div class="info">
+                        <h3>Flesh</h3>
+                        <p>1968</p>
+                        <img class="flag" src="https://cdn3.iconfinder.com/data/icons/finalflags/256/United-Kingdom-flag.png" style="width: 24px;height: 24px;" alt="USA flag">
                     </div>
-                </header>
-                <!--<a href="#SobreElProyecto" aria-label="Scroll" class="scroll-btn">
-                    <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    >
-                    <path
-                        d="M13.0001 16.1716L18.3641 10.8076L19.7783 12.2218L12.0001 20L4.22192 12.2218L5.63614 10.8076L11.0001 16.1716V4H13.0001V16.1716Z"
-                    ></path>
-                    </svg>
-                </a>-->
-                
                 </div>
-            </section>
-    
-          
-            <section >
-                <footer>
-                    <!--<div class="flex-container">
-                        <div style="flex-grow: 4;"><img src="./img/TAXIBOY_LOGO-BLANCO.png" alt=""></div>
-                        <div style="flex-grow: 1"><h6>Argentina 2004</h6></div>
-                        <div style="flex-grow: 5"><img src="./img/imagen1.png" alt=""></div>
-                    </div>-->
-                    <div class="footer-container">
-                        <div class="footer-logo">
-                            <img src="./img/TAXIBOY_LOGO-BLANCO.png" alt="Taxiboy Logo"> <!-- Asegúrate de reemplazar "logo.png" por la ruta de la imagen correcta -->
-                            <span>ARGENTINA, 2024</span>
-                        </div>
-                        <div class="footer-icons">
-                            <a href="#" target="_blank"><i class="fab fa-whatsapp fa-3x"></i></a>  
-                            <a href="#" target="_blank"><i class="fab fa-instagram fa-3x"></i></a>
-                            <a href="#" target="_blank"><i class="fab fa-facebook fa-3x"></i></a>                     
-                        </div>
+                    <!-- Card 4 -->
+                <div class="carousel-item">
+                    <img src="./img/eva otoñal.jpg" alt="Flesh">
+                    <div class="info">
+                        <h3>Flesh</h3>
+                        <p>1968</p>
+                        <img class="flag" src="https://cdn3.iconfinder.com/data/icons/finalflags/256/United-Kingdom-flag.png" style="width: 24px;height: 24px;" alt="USA flag">
                     </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="carousel-item">
+                    <img src="./img/eva otoñal.jpg" alt="Flesh">
+                    <div class="info">
+                        <h3>Sauvage</h3>
+                        <p>2018</p>
+                        <img class="flag" src="https://cdn3.iconfinder.com/data/icons/finalflags/256/United-Kingdom-flag.png" style="width: 24px;height: 24px;" alt="USA flag">
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="carousel-item">
+                    <img src="./img/eva otoñal.jpg" alt="Flesh">
+                    <div class="info">
+                        <h3>Midnight Cowboy</h3>
+                        <p>1969</p>
+                        <img class="flag" src="https://cdn3.iconfinder.com/data/icons/finalflags/256/United-Kingdom-flag.png" style="width: 24px;height: 24px;" alt="USA flag">
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="carousel-item">
+                    <img src="./img/eva otoñal.jpg" alt="Flesh">
+                    <div class="info">
+                        <h3>Flesh</h3>
+                        <p>1968</p>
+                        <img class="flag" src="https://cdn3.iconfinder.com/data/icons/finalflags/256/United-Kingdom-flag.png" style="width: 24px;height: 24px;" alt="USA flag">
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="carousel-item">
+                    <img src="./img/eva otoñal.jpg" alt="Flesh">
+                    <div class="info">
+                        <h3>Sauvage</h3>
+                        <p>2018</p>
+                        <img class="flag" src="https://cdn3.iconfinder.com/data/icons/finalflags/256/United-Kingdom-flag.png" style="width: 24px;height: 24px;" alt="USA flag">
+                    </div>
+                </div>
+
+                <!-- Card 9 -->
+                <div class="carousel-item">
+                    <img src="./img/eva otoñal.jpg" alt="Flesh">
+                    <div class="info">
+                        <h3>Midnight Cowboy</h3>
+                        <p>1969</p>
+                        <img class="flag" src="https://cdn3.iconfinder.com/data/icons/finalflags/256/United-Kingdom-flag.png" style="width: 24px;height: 24px;" alt="USA flag">
+                    </div>
+                </div>
+
+                    <!-- Repite este bloque hasta completar 9 cards -->                    
                     
-                </footer>
-            </section>   
-    </body>
+                 <!--    <div class="carousel-item">
+                      <img src="./img/blondie.jpg" alt="Image 1">
+                      <div class="info">
+                        <h3>Ronda Nocturna</h3>
+                        <p>2005</p>
+                        <img class="flag" src="https://cdn3.iconfinder.com/data/icons/finalflags/256/United-Kingdom-flag.png" style="width: 24px;height: 24px;" alt="USA flag">
+                      </div>
+                    </div>                  
+                
+                
+                 
+                    <div class="carousel-item">
+                       <img src="./img/blondie.jpg" alt="Image 1">
+                        <div class="info">
+                            <h3>Sauvage</h3>
+                            <p>2018</p>
+                            <img class="flag" src="https://cdn3.iconfinder.com/data/icons/finalflags/256/United-Kingdom-flag.png" style="width: 24px;height: 24px;" alt="USA flag">
+                        </div>
+                    </div>
+
+       
+                    <div class="carousel-item">
+                        <img src="./img/blondie.jpg" alt="Image 1">
+                        <div class="info">
+                            <h3>Midnight Cowboy</h3>
+                            <p>1969</p>
+                            <img class="flag" src="https://cdn3.iconfinder.com/data/icons/finalflags/256/United-Kingdom-flag.png" style="width: 24px;height: 24px;" alt="USA flag">
+                        </div>
+                    </div>
+
+             
+                    <div class="carousel-item">
+                        <img src="./img/blondie.jpg" alt="Image 1">
+                        <div class="info">
+                            <h3>Flesh</h3>
+                            <p>1968</p>
+                            <img class="flag" src="https://cdn3.iconfinder.com/data/icons/finalflags/256/United-Kingdom-flag.png" style="width: 24px;height: 24px;" alt="USA flag">
+                        </div>
+                    </div>
+
+         
+                    <div class="carousel-item">
+                        <img src="./img/blondie.jpg" alt="Image 1">
+                        <div class="info">
+                            <h3>Sauvage</h3>
+                            <p>2018</p>
+                            <img class="flag" src="https://cdn3.iconfinder.com/data/icons/finalflags/256/United-Kingdom-flag.png" style="width: 24px;height: 24px;" alt="USA flag">
+                        </div>
+                    </div>
+
+                
+                    <div class="carousel-item">
+                        <img src="./img/blondie.jpg" alt="Image 1">
+                        <div class="info">
+                            <h3>Midnight Cowboy</h3>
+                            <p>1969</p>
+                            <img class="flag" src="https://cdn3.iconfinder.com/data/icons/finalflags/256/United-Kingdom-flag.png" style="width: 24px;height: 24px;" alt="USA flag">
+                        </div>
+                    </div>
+
+               
+                    <div class="carousel-item">
+                        <img src="./img/blondie.jpg" alt="Image 1">
+                        <div class="info">
+                            <h3>Flesh</h3>
+                            <p>1968</p>
+                            <img class="flag" src="https://cdn3.iconfinder.com/data/icons/finalflags/256/United-Kingdom-flag.png" style="width: 24px;height: 24px;" alt="USA flag">
+                        </div>
+                    </div>
+
+         
+                    <div class="carousel-item">
+                        <img src="./img/blondie.jpg" alt="Image 1">
+                        <div class="info">
+                            <h3>Sauvage</h3>
+                            <p>2018</p>
+                            <img class="flag" src="https://cdn3.iconfinder.com/data/icons/finalflags/256/United-Kingdom-flag.png" style="width: 24px;height: 24px;" alt="USA flag">
+                        </div>
+                    </div>
+
+             
+                    <div class="carousel-item">
+                        <img src="./img/blondie.jpg" alt="Image 1">
+                        <div class="info">
+                            <h3>Midnight Cowboy</h3>
+                            <p>1969</p>
+                            <img class="flag" src="https://cdn3.iconfinder.com/data/icons/finalflags/256/United-Kingdom-flag.png" style="width: 24px;height: 24px;" alt="USA flag">
+                        </div>
+                    </div>-->
+
+
+
+
+
+                  </div>
+                </div>
+              
+                <button class="carousel-arrow right-arrow" onclick="nextSlide()">&#9654;</button>
+              </div>
+              
+
+         
+           
+        </section>
+           
+
+      
+        <section>
+            <footer>
+                <!--<div class="flex-container">
+                    <div style="flex-grow: 4;"><img src="./img/TAXIBOY_LOGO-BLANCO.png" alt=""></div>
+                    <div style="flex-grow: 1"><h6>Argentina 2004</h6></div>
+                    <div style="flex-grow: 5"><img src="./img/imagen1.png" alt=""></div>
+                </div>-->
+                <div class="footer-container">
+                    <div class="footer-logo">
+                        <img src="./img/TAXIBOY_LOGO-BLANCO.png" alt="Taxiboy Logo"> <!-- Asegúrate de reemplazar "logo.png" por la ruta de la imagen correcta -->
+                        <span>ARGENTINA, 2024</span>
+                    </div>
+                    <div class="footer-icons">
+                        <a href="#" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-x-twitter fa-2x"></i></a> 
+                        <a href="#" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-solid fa-m fa-2x"></i></a>
+                        <a href="#" target="_blank"><i class="fas fa-link fa-2x"></i></a>                                             
+                    </div>
+                </div>
+                
+            </footer>
+            <script src="./main.js"></script>
+        </section>   
+
+
+</body>
 </html>
+
+

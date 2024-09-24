@@ -44,3 +44,29 @@ document.addEventListener("DOMContentLoaded", function () {
       }
   }
 });
+
+/***   carousel de audiovisuales  ***/
+
+let currentSlide = 1;
+
+function nextSlide() {
+  const track = document.querySelector('.carousel-track');
+  
+  if (currentSlide === 1) {
+    track.style.transform = 'translateX(-100%)'; /* Mueve el track para mostrar las siguientes 9 cards */
+    currentSlide = 2;
+  }
+}
+
+function prevSlide() {
+  const track = document.querySelector('.carousel-track');
+  
+  if (currentSlide === 2) {
+    track.style.transform = 'translateX(0)'; /* Regresa el track para mostrar las primeras 9 cards */
+    currentSlide = 1;
+  }
+}
+
+
+
+
