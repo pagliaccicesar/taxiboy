@@ -59,8 +59,10 @@
                     </div>
                     <menu class="menu">   
     
-                        <li><a href="#SobreElProyecto" class="nav-link">SOBRE EL PROYECTO</a></li>                    
-                        <li><a href="#Contacto" class="nav-link">CONTACTO</a></li>                    
+                        <li><a href="#SobreElProyecto" id="sp_lang" class="nav-link">SOBRE EL PROYECTO</a></li>
+                        <li><a href="#SobreElProyecto" id="en_lang" class="nav-link">ABOUT THE PROJECT</a></li>                    
+                        <li><a href="#Contacto" id="sp_lang" class="nav-link">CONTACTO</a></li>
+                        <li><a href="#Contacto" id="en_lang" class="nav-link">CONTACT</a></li>                   
                             <a href="./index.html" class="logo-wrapper">
                                 <img
                                     class="logo-img" src="./img/TAXIBOY_LOGO-NEGRO.png"                
@@ -69,8 +71,10 @@
                                     height="29.44"
                                 />
                             </a>                    
-                        <li><a href="#MuestraVirtual" class="nav-link">MUESTRA VIRTUAL</a></li>                    
-                        <li><a href="#Recursos" class="nav-link">RECURSOS</a></li>         
+                        <li><a href="#MuestraVirtual" id="sp_lang" class="nav-link">MUESTRA VIRTUAL</a></li>
+                        <li><a href="#MuestraVirtual" id="en_lang" class="nav-link">VIRTUAL EXHIBITION</a></li>                   
+                        <li><a href="#Recursos" id="sp_lang" class="nav-link">RECURSOS</a></li>
+                        <li><a href="#Recursos" id="en_lang" class="nav-link">RESOURCES</a></li>         
                     </menu>
                 </div>
     
@@ -99,7 +103,17 @@
                       </div>
                     </div>
                 </div>
+
+                <div class="idioms">                    
+                    <p class="sp">ES</p>
+                    <p>│</p>                     
+                    <p class="en">EN</p>
+                    <a href="#" class="logo-wrapper"><img class="logo-img" src="./img/TAXIBOY_LOGO-NEGRO.png" style="padding-left: 50px;" alt="Taxiboy logo" width="160" height="29.44"/></a>          
+             
                 </div>
+                </div>
+
+                
     
                 <button class="icon-btn" aria-label="Open Menu" onclick="nav.classList.add('open')">
                 <svg
@@ -219,7 +233,8 @@
                         <polygon points="57.5,30 35,50 57.5,70" fill="#fff" />
                     </svg>
                 </a>
-                <h1>entrevistas</h1>
+                <h1 id="sp_lang">entrevistas</h1>
+                <h1 id="en_lang">interviews</h1>
             </div>
             <div class="container">
 
@@ -228,9 +243,12 @@
                 <div class="left-content">                
                     
                    
-                    <h2>Licencia de Producción de Pares</h2>
-                    <p>Las entrevistas que se presentan a continuación fueron producidas en el marco de la realización de la obra fotográfica TAXIBOY.</p>
-                    <p>Se permite compartir, copiar, distribuir, ejecutar y comunicar públicamente, solo las entrevistas de audio, bajo estas condiciones:</p>
+                    <h2 id="sp_lang">Licencia de Producción de Pares</h2>
+                    <h2 id="en_lang">Peer Production License</h2>
+                    <p id="sp_lang">Las entrevistas que se presentan a continuación fueron producidas en el marco de la realización de la obra fotográfica TAXIBOY.</p>
+                    <p id="en_lang">The interviews presented below were produced in the context of the creation of the photographic work TAXIBOY.</p>
+                    <p id="sp_lang">Se permite compartir, copiar, distribuir, ejecutar y comunicar públicamente, solo las entrevistas de audio, bajo estas condiciones:</p>
+                    <p id="en_lang">Sharing, copying, distributing, performing, and publicly communicating only the audio interviews is allowed under the following conditions:</p>
                 </div>
 
                 <div class="v-line"></div>
@@ -238,9 +256,12 @@
                 <!-- Columna derecha -->
                 <div class="right-content">
                     <ul>
-                        <li>Debe reconocer los créditos de la manera especificada por el autor. Con respecto a esto, se solicita comunicarse mediante el formulario de contacto o al correo electrónico del proyecto.</li>
-                        <li>Compartir bajo la misma licencia. Si altera o transforma este material, o genera una obra derivada, sólo puede distribuir la obra generada bajo una licencia idéntica a ésta.</li>
-                        <li>Todo excedente o plusvalía obtenidos por el ejercicio de los derechos concedidos por esta licencia sobre el material deben ser distribuidos por y entre los trabajadores.</li>
+                        <li id="sp_lang">Debe reconocer los créditos de la manera especificada por el autor. Con respecto a esto, se solicita comunicarse mediante el formulario de contacto o al correo electrónico del proyecto.</li>
+                        <li id="en_lang">You must give appropriate credit in the manner specified by the author. In this regard, please get in touch via the contact form or the project's email.</li>
+                        <li id="sp_lang">Compartir bajo la misma licencia. Si altera o transforma este material, o genera una obra derivada, sólo puede distribuir la obra generada bajo una licencia idéntica a ésta.</li>
+                        <li id="en_lang">Share under the same license. If you alter or transform this material, or create a derivative work, you may only distribute the resulting work under the same license.</li>
+                        <li id="sp_lang">Todo excedente o plusvalía obtenidos por el ejercicio de los derechos concedidos por esta licencia sobre el material deben ser distribuidos por y entre los trabajadores.</li>
+                        <li id="en_lang">Any surplus or profit obtained from the exercise of the rights granted by this license over the material must be distributed by and among the workers.</li>
                     </ul>
                 </div>
             </div>
@@ -279,7 +300,7 @@
                 </footer>
             </section>   
 
-
+            <script src="./main.js"></script>
     </body>
 </html>
 
