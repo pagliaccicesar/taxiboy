@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <!--<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>-->
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"/>
 
@@ -207,21 +207,30 @@
                 @media (max-width: 918px) {
                     .container {
                         flex-direction: column; /* Las columnas se apilan una debajo de otra en pantallas pequeñas */
+                        gap: 10px;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content:left;
                     }
                     .v-line{ 
                         display: none;
                     }
-
+                    .left-content {
+                        margin:  0 45px;
+                    }
                     .left-content h1 {
                         font-size: 36px;
                     }
-
                     .left-content h2 {
                         font-size: 18px;
                     }
-
+                    .right-content {
+                        width: 290px;
+                        padding: 1px 0;                        
+                    }
                     .right-content li {
                         font-size: 14px;
+                        text-align: justify;
                     }
                 }
             </style>
