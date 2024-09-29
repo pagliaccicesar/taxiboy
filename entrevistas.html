@@ -276,84 +276,6 @@
             </div>
 
             <section class="audios">
-                <!--<div class="carousel-container">                   
-                    <div class="carousel">
-                      <div class="carousel-track">
-
-                        <div class="carousel-item-entrevistas">
-                            <img src="./img/audio_fijo.png" alt="Flesh">
-                            <div class="inter">
-                                <h3>NOMBRE DEL AUDIO:<br>EN DOS LÍNEAS</h3>
-                                <p>30'</p>                            
-                            </div>
-                        </div>
-                        <div class="carousel-item-entrevistas">
-                            <img src="./img/audio_fijo.png" alt="Flesh">
-                          <div class="inter">
-                            <h3>NOMBRE DEL AUDIO:<br>EN DOS LÍNEAS</h3>
-                            <p>30'</p>                                
-                          </div>
-                        </div>
-                      
-                        <div class="carousel-item-entrevistas">
-                            <img src="./img/audio_fijo.png" alt="Flesh">
-                            <div class="inter">
-                                <h3>NOMBRE DEL AUDIO:<br>EN DOS LÍNEAS</h3>
-                                <p>30'</p>                          
-                            </div>
-                        </div>
-                          
-                        <div class="carousel-item-entrevistas">
-                            <img src="./img/audio_fijo.png" alt="Flesh">
-                            <div class="inter">
-                                <h3>NOMBRE DEL AUDIO:<br>EN DOS LÍNEAS</h3>
-                                <p>30'</p>                       
-                            </div>
-                        </div>        
-                       
-                        <div class="carousel-item-entrevistas">
-                            <img src="./img/audio_fijo.png" alt="Flesh">
-                            <div class="inter">
-                                <h3>NOMBRE DEL AUDIO:<br>EN DOS LÍNEAS</h3>
-                                <p>30'</p>                           
-                            </div>
-                        </div>        
-                      
-                        <div class="carousel-item-entrevistas">
-                            <img src="./img/audio_fijo.png" alt="Flesh">
-                            <div class="inter">
-                                <h3>NOMBRE DEL AUDIO:<br>EN DOS LÍNEAS</h3>
-                                <p>30'</p>                            
-                            </div>
-                        </div>        
-                      
-                        <div class="carousel-item-entrevistas">
-                            <img src="./img/audio_fijo.png" alt="Flesh">
-                            <div class="inter">
-                                <h3>NOMBRE DEL AUDIO:<br>EN DOS LÍNEAS</h3>
-                                <p>30'</p>                      
-                            </div>
-                        </div>    
-                   
-                    <div class="carousel-item-entrevistas">
-                        <img src="./img/audio_fijo.png" alt="Flesh">
-                        <div class="inter">
-                            <h3>NOMBRE DEL AUDIO:<br>EN DOS LÍNEAS</h3>
-                            <p>30'</p>   
-                        </div>
-                    </div>    
-                 
-                    <div class="carousel-item-entrevistas">
-                        <img src="./img/audio_fijo.png" alt="Flesh">
-                        <div class="inter">
-                            <h3>NOMBRE DEL AUDIO:<br>EN DOS LÍNEAS</h3>
-                            <p>30'</p>             
-                        </div>
-                    </div>                 
-                   
-                </div>-->
-
-
                 <div class="carousel-container">                   
                     <div class="carousel">
                       <div class="carousel-track">
@@ -370,8 +292,7 @@
                             <h3>NOMBRE DEL AUDIO:<br>EN DOS LÍNEAS</h3>
                             <p>30'</p>                                
                             </div>
-                        </div>
-                        <!-- Resto de las cards... -->
+                        </div>                       
                             <div class="carousel-item-entrevistas" onclick="openPopup('Audio 3', './audio/audio3.mp3')">
                             <img src="./img/audio_fijo.png" alt="Flesh">
                             <div class="inter">
@@ -423,28 +344,24 @@
                           </div>
                       </div>
                     </div>
-                  </div>
+                </div>                       
                   
-                  
-                       
-                  
-                  <!-- Popup structure -->
-                  <div id="popup" class="popup">
+                <!-- Popup structure -->
+                <div id="popup" class="popup">
                     <div class="popup-content">
                       <span class="close" onclick="closePopup()">&times;</span>
                       <h2 id="popup-audio-name">Nombre del audio</h2>
                       <div class="popup-center">
-                        <p class="popup-center-text">Audiovisual</p>                        
-                        <button id="playStopButton" class="play-stop-btn" onclick="toggleAudio()">Play</button>
-                        <div class="progress-bar">
-                          <input type="range" id="progress" value="0" min="0" max="100">
-                        </div>
+                            <p class="popup-center-text">Audiovisual</p>                            
+                            
+                            <button id="playStopButton" class="play-stop-btn" onclick="toggleAudio()">Play</button>
+                            <div class="progress-bar">
+                                <input type="range" id="progress" value="0" min="0" max="100">
+                            </div>
                       </div>
-                      <audio id="audio-element" src="./audio/the-cradle-of-your-soul-15700.mp3"></audio> <!-- Aquí irá el archivo de audio dinámico -->
+                      <audio id="audio-element" src=""></audio>
                     </div>
-                  </div>
-
-                  
+                </div>                 
                   
             </section>
 
