@@ -1390,17 +1390,17 @@ footer {
 
 .footer-logo {
   display: flex;
-  align-items: center;
+  align-items: center; 
 }
 
 .footer-logo img {
-  height: 90px;
-  margin-right: 20px;
+  height: 90px; 
+  margin: 0 auto;
 }
 
-.footer-logo span {
+/*.footer-logo span {
   font-size: 14px;
-}
+}*/
 
 .footer-icons {
   display: flex;
