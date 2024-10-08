@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /***   carousel de audiovisuales  ***/
 
-let currentSlide = 1;
+/*let currentSlide = 1;
 
 function nextSlide() {
   const track = document.querySelector('.carousel-track');
@@ -65,7 +65,12 @@ function prevSlide() {
     track.style.transform = 'translateX(0)'; 
     currentSlide = 1;
   }
-}
+}*/
+
+
+
+
+
 
 
 
