@@ -932,7 +932,7 @@ button:hover {
       width: 100px;
       height: auto;
       margin-right: 15px;  
-    }  
+    }    
   }
 
 
@@ -986,7 +986,7 @@ button:hover {
 .card-content h3 {
     
     margin: 10px ;
-    font-size: 1em;
+    font-size: 0.9em;
     color: #000;   
 }
 
@@ -998,8 +998,8 @@ button:hover {
 
 .card-content h4 {
     position: absolute;    
-    margin: 95px 70px 0 110px;
-    font-size: 1em;
+    margin: 99px 70px 0 110px;
+    font-size: 0.8em;
     color: #555;  
 }  
 
@@ -1013,11 +1013,11 @@ button:hover {
 }
 
 .prev {
-    left: 0;
+    left: 20px;
 }
 
 .next {
-    right: 0; 
+    right: 20px; 
 }
 
 #carousel-arrow {
@@ -1040,6 +1040,27 @@ button:hover {
   #right-arrow {
     right: 0;
     z-index: 10000;
+  }
+
+  @media (max-width:450px) {
+    .card {
+      margin: 10px;    
+      border: 1px solid red;
+      width: 290px;
+      height: 130px;      
+    }
+    .card-content .flag {
+      position: absolute;
+      right: 18px;
+      font-size: 1em;
+    }
+    
+    .prev {
+      left: 5px;
+    }
+    .next {
+      right: 5px;
+    }
   }
 
 
