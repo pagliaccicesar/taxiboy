@@ -668,8 +668,13 @@
 }*/
 
 @media (max-width: 600px) {
-  .recursos .item {
+    .recursos .item {
       font-size: 1.8em;
+  }
+    .recursos h2 {
+      left: 32px;
+      font-size: 12px;
+      font-weight: 400;
   }
 }
 
@@ -776,7 +781,7 @@ button:hover {
 
 .aportes h3 {
   color: #000000;
-  font-size: 21px;
+  font-size: 17px;
   font-weight:400;
 }
 .aportes .flex-container {
@@ -795,7 +800,7 @@ button:hover {
 
 @media (max-width: 1000px) {
 .aportes h3 {   
-    font-size: 17px;
+    font-size: 15px;
     font-weight:400;
   }
 .aportes .flex-container img {
@@ -942,7 +947,7 @@ button:hover {
 
 
 
-  .gallery {
+.gallery {
     display: flex;
     flex-direction: column;
     align-items: center;
