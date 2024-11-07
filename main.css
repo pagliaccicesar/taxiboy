@@ -93,6 +93,11 @@
   }
 }
 
+html {
+  /* CSS para desplazamiento suave en toda la página */
+  scroll-behavior: smooth;
+}
+
 /*section {
   padding-top: 120px;
 }*/
@@ -134,6 +139,7 @@
     block-size: auto;
     display: block;
     object-fit: cover;
+    cursor:auto;
   }
 
   .menu-wrapper {
