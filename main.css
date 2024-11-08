@@ -429,11 +429,12 @@ html {
   /* Main */
 
   .hero {
-    block-size: max(490px, calc(100dvb - var(--nav-block-size)));
+    block-size: max(490px, calc(70dvb - var(--nav-block-size)));
     display: grid;
     gap: var(--space-lg);
     inline-size: 100%;
-    background-image: url("./img/tb06.jpg");
+    background-image: url("./img/photo.png");
+    /*background-image: url("./img/tb06.jpg");*/
     /*background-position: center;*/
     background-repeat: no-repeat;
     background-size: cover;
@@ -574,7 +575,7 @@ html {
 /******  programas *******/
 .programas { 
   position: relative;
-  top: 45px;
+  top: 1px;
   padding-bottom: 35px;
   display: flex;
   justify-content: center;
