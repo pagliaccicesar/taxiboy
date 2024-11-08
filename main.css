@@ -429,7 +429,7 @@ html {
   /* Main */
 
   .hero {
-    block-size: max(490px, calc(70dvb - var(--nav-block-size)));
+    block-size: max(490px, calc(90dvb - var(--nav-block-size)));
     display: grid;
     gap: var(--space-lg);
     inline-size: 100%;
