@@ -433,7 +433,7 @@ html {
     display: grid;
     gap: var(--space-lg);
     inline-size: 100%;
-    background-image: url("./img/photo.png");
+    background-image: url("./img/tb06.jpg");
     /*background-image: url("./img/tb06.jpg");*/
     /*background-position: center;*/
     background-repeat: no-repeat;
@@ -548,7 +548,7 @@ html {
 }
 @media (max-width: 700px) {
   .hero {
-    block-size: max(490px, calc(100dvb - var(--nav-block-size)));
+    block-size: max(490px, calc(80dvb - var(--nav-block-size)));
     display: grid;
     /*gap: var(--space-lg);*/
     inline-size: 100%;   
@@ -605,6 +605,11 @@ html {
 }
 
 @media (max-width: 885px) {
+  .programas .flex-container > div { 
+    margin: 1px;  
+    text-align: center;
+    line-height: 15px;  
+  }
   .programas .flex-container {
     display: grid;
     row-gap: 8px;
