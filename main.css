@@ -615,6 +615,9 @@ html {
     row-gap: 8px;
     grid-template-rows: auto auto auto;
   }
+  .programas .flex-container .mecenazgo img {
+    width: 30%;
+  }
 }
 
 
@@ -650,7 +653,7 @@ html {
 .recursos h2 {
   position: absolute;
   left: 72px;
-  font-size: 12px;
+  font-size: 20px;
   font-weight: 400;
   color: #000000;
   text-align: left;
@@ -670,14 +673,8 @@ html {
   display: block;  
   font-size: 1.8em;
   color: #000000;
-  text-decoration: none;
-  /*margin-bottom: 15px;*/
-  /*position: relative;*/
+  text-decoration: none;  
 }
-
-/*.recursos .item svg {
-  margin-top: 10px;
-}*/
 
 @media (max-width: 600px) {
     .recursos .item {
@@ -685,7 +682,7 @@ html {
   }
     .recursos h2 {
       left: 32px;
-      font-size: 12px;
+      font-size: 16px;
       font-weight: 400;
   }
 }
@@ -707,16 +704,19 @@ html {
   position: absolute;
   padding-top: 3px;
   left: 72px;
-  font-size: 12px;
+  font-size: 18px;
   font-weight: 400;
   color: #000000;
   text-align: left;
   text-transform: uppercase; 
 }
-/*.contacto .line_contact svg {
-  position: absolute; 
-  max-width: 100%; 
-}*/
+@media (max-width: 600px) {
+  .contacto h2 {
+    font-weight: 400;
+    font-size: 14px;
+  } 
+}
+
 
 /****  formulario nuevo   ******/
 
