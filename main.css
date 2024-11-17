@@ -989,7 +989,7 @@ button:hover {
 .card img {
     align-items: left;    
     width: auto; 
-    height: 130px; 
+    height: 129px; 
     object-fit: cover;
 }
 
@@ -1353,7 +1353,7 @@ button:hover {
   font-size: 14px;  
   position: relative; 
   left: 5px;
-  top: 45px;
+  top: 40px;
   color: #333;
 }
 
