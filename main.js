@@ -154,6 +154,53 @@ function seekAudio(e) {
   }
 }
 
+//   js del modal de la galeria de fotos  //
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("modalGallery");
+  const openModal = document.getElementById("openModal");
+  const closeModal = document.getElementById("closeModal");
+  const slides = document.querySelectorAll(".slide");
+  const prevSlide = document.getElementById("prevSlide");
+  const nextSlide = document.getElementById("nextSlide");
+
+  let currentSlide = 0;
+
+  const showSlide = (index) => {
+      slides.forEach((slide, i) => {
+          slide.style.transform = `translateX(${100 * (i - index)}%)`;
+      });
+  };
+
+  const next = () => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+  };
+
+  const prev = () => {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+  };
+
+  openModal.addEventListener("click", (e) => {
+      e.preventDefault();
+      modal.style.display = "flex";
+      showSlide(currentSlide);
+  });
+
+  closeModal.addEventListener("click", () => {
+      modal.style.display = "none";
+  });
+
+  nextSlide.addEventListener("click", next);
+  prevSlide.addEventListener("click", prev);
+
+  // Close modal on outside click
+  modal.addEventListener("click", (e) => {
+      if (e.target === modal) modal.style.display = "none";
+  });
+});
+
+
 
  
 
