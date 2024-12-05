@@ -1245,7 +1245,7 @@ section .pie {
 
 /****    galeria de imagenes   ****/
 .galeria  {
-  margin: 40px 40px;
+  margin: 1px 40px;
 }
 
 .muestravirtual {
@@ -1280,7 +1280,7 @@ section .pie {
   /*pointer-events: none; /* Opcional: evita que el SVG interfiera con eventos de usuario */
 }
 
-/***  modal   ***/
+/***  modal de galeria  ***/
 .modal {
   display: none;
   position: fixed;
@@ -1295,15 +1295,41 @@ section .pie {
   /*overflow-y: hidden; 
   overflow-x: hidden; */
 }
-
 .modal-content {
   position: absolute;
   top: 100px;
   max-width: 50%;
-  max-height: 50%;
-  
+  max-height: 50%;  
 }
-
+.slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.slides {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+.slide {
+  min-width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+.controls {
+  color: white;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+button {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
 .cerrar {
   position: absolute;
   top: 1px;
@@ -1313,46 +1339,14 @@ section .pie {
   cursor: pointer;
   z-index: 1000;
 }
-
-.slider {
-  position: relative;
-  display: flex;
-  align-items: center;
+button:hover {
+  background: rgba(255, 255, 255, 0.8);
+  color: black;
 }
 
-.slides {
-  display: flex;
-  overflow: hidden;
-  width: 100%;
-}
-
-.slide {
-  min-width: 100%;
-  transition: transform 0.5s ease-in-out;
-}
-
-.prev, .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
-}
 @media (max-width: 1000px) {
   .modal-content {    
-    top: 150px;
+    top: 60px;
     max-width: 75%;
     max-height: 75%;
   }
