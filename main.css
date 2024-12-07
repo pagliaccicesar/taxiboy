@@ -1244,9 +1244,45 @@ section .pie {
 
 
 /****    galeria de imagenes   ****/
-.galeria  {
+.galeria {
   margin: 1px 40px;
 }
+.galeria .cabecera {
+    display: flex;
+    align-items: center;
+    margin: 0 35px 10px;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 20px;
+}
+.galeria .cabecera .back-button {
+    padding-top: 8px;
+}
+.galeria .cabecera h1 {
+    font-weight: 300;
+    color: black;
+    font-size: 300%;
+    padding-left: 15px;
+}
+.galeria .construccion {
+    display: flex;
+    align-items: center;
+    margin: 0 75px 10px;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 20px;
+}
+.galeria .construccion h2 {                     
+    padding-left: 15px;             
+    color: gray;
+    font-size: 130%;
+    font-weight: 600;
+}
+@media (max-width:550px) {
+  .galeria .cabecera h1  {
+        font-size: 36px;
+    }
+}
+
+
 
 .muestravirtual {
   position: relative; /* Habilita posicionamiento relativo para el contenedor */
