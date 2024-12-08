@@ -1079,9 +1079,6 @@ button:hover {
     }
   }
 
-
-/*****   organizaciones  ****/
-
 /*****   textos  ****/
 
 .cabecera {
@@ -1151,7 +1148,7 @@ button:hover {
 }
 
 .cards2:hover {
-  transform: scale(1.02);
+  transform: scale(1.005);
 }
 
 /* Icono de la izquierda */
@@ -1590,6 +1587,69 @@ button:hover {
   }
 }
 
+/****   seccion  organizaciones  (comparte cards con textos linea 1082)  ******/
+
+.region {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;    
+}
+
+.region h2 {  
+  position: absolute;
+  padding-top: 3px;
+  left: 92px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000;
+  text-align: left;
+  text-transform: uppercase; 
+}
+.region .line_contact {
+  text-align: right;
+  padding: 0 1px;
+  height: 50px;
+  width: 80%;
+}
+@media (max-width: 865px) {
+  .region h2 {
+    font-weight: 400;
+    font-size: 14px; 
+  }
+  .region .line_contact {
+    align-content: right;
+    padding: 0 auto;
+    right: 2px;
+    height: 50px;
+    width: 70%;
+  }
+}
+@media (max-width: 768px) {
+  .region h2 {
+    left: 22px;
+    font-weight: 400;
+    font-size: 14px;
+  }
+}
+@media (max-width: 600px) {
+  .region h2 {
+    left: 20px;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .cabecera h1  {
+    font-size: 30px;
+  }
+  .region .line_contact {   
+    padding: 0 auto;   
+    height: 50px;
+    width: 40%;
+  }
+}
 /*****   seccion de entrevistas con audios   ****/
 
 .audios {
