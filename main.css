@@ -485,7 +485,7 @@ html {
       font-weight: 500;
       line-height: 1.2;
       text-align: left;
-      /*padding: 3.5rem 0;*/
+      /*padding: 0 0.1rem;*/
       color: #ffffff;
   }
   
@@ -683,13 +683,16 @@ html {
 }
 
 @media (max-width: 600px) {
-    .recursos .item {
-      font-size: 1.8em;
+  .recursos {
+    height: 60vh;
   }
-    .recursos h2 {
-      left: 32px;
-      font-size: 16px;
-      font-weight: 400;
+  .recursos .item {
+    font-size: 1.8em;
+  }
+  .recursos h2 {
+    left: 32px;
+    font-size: 15px;
+    font-weight: 400;
   }
 }
 
@@ -716,7 +719,7 @@ html {
   text-align: left;
   text-transform: uppercase; 
 }
-@media (max-width: 600px) {
+@media (max-width: 600px) { 
   .contacto h2 {
     font-weight: 400;
     font-size: 14px;
