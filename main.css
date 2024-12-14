@@ -261,9 +261,9 @@ html {
   /*****    idiomas   *******/
   
 
-  .idioms {
-    z-index: 2000;
-   padding-bottom: 11px;
+.idioms {
+    z-index: 10000;
+    padding-bottom: 11px;
     display: grid;
     grid-auto-flow: column;
     /*gap: var(--space-md);*/
@@ -274,26 +274,24 @@ html {
     @media (width >=1056px) {
       justify-self: start;
     }
-  }
-
-  .idioms p {   
+}
+.idioms p {   
     color: #000000;
     font-size: smaller;
     text-align: center;
     line-height: 27px;
     margin-right: 0.5rem;
     transition: 0.3s;    
-  }
-
+}
 .sp, .en {
     cursor: pointer;
     opacity: 1;
     -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  }
-  #en_lang {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#en_lang {
     display: none;
   }  
 /* Language */
@@ -311,11 +309,10 @@ html {
   .idioms .logo-img {
     display: none;
   }
-} 
+}
 
-
-  /*****    redes sociales    *****/
-  .actions {
+  /*****    redes sociales menu de arriba   *****/
+.actions {
     display: grid;
     grid-auto-flow: column;
     gap: var(--space-md);
@@ -329,13 +326,11 @@ html {
     @media (width >=1056px) {
       justify-self: end;
     }
-  }
-
-  .social-icons {
+}
+.social-icons {
     display: flex;
 }
-
-  .social-icons a {
+.social-icons a {
     width: 27px;
     height: 27px;
     border-radius: 50%;
@@ -1801,20 +1796,12 @@ button:hover {
     place-items: center;
     grid-template-columns: repeat(1, 1fr);
     /*grid-row-gap: 5px; */   
-  }
-  .proyecto .segunda img {
-    grid-column: 2;
-    grid-row: 1;    
-    width: 300px;
-    height: auto;   
-  }
+  }  
   .proyecto .segunda p { 
     padding-top: 25px;   
     grid-column: 2;
     grid-row: 2;    
   }
-}
-@media screen and (max-width: 600px) {
   .proyecto .tercera { 
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -1822,23 +1809,9 @@ button:hover {
     grid-gap: 1px;
     grid-row-gap: 5px;
     grid-auto-rows: minmax(10px, auto);
-  }
-  .proyecto .tercera .pic1 {
-    grid-column: 1;
-    grid-row: 1;
-    width: 90%;    
-  }
-  .proyecto .tercera .pic2 {
-    grid-column: 1;
-    grid-row: 2;
-    width: 90%;    
-  }
-  .proyecto .tercera .pic3 {
-    grid-column: 1;
-    grid-row: 3;
-    width: 90%;    
-  }
+  }  
 }
+
 @media screen and (max-width: 800px) {
   .proyecto .cuarta {
     display: grid;
