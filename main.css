@@ -1079,7 +1079,7 @@ button:hover {
     }
   }
 
-/*****   textos  ****/
+/*****  seccion de  textos  ****/
 
 .cabecera {
   display: flex;
@@ -1109,18 +1109,25 @@ button:hover {
   padding-left: 55px;
   padding-top: 250px;  
 }
-@media (max-width:800px) {
+@media (max-width: 1285px) {
   .texto-secciontextos {
     position: absolute;
     text-align: left;
     max-width: 100%;
     padding-left: 55px;
     padding-right: 10px;
-    padding-top: 330px;    
+    padding-top: 240px;    
   }
 }
-
-
+@media (max-width:800px) {
+  .texto-secciontextos {   
+    padding-top: 360px;    
+  }
+}
+@media (max-width: 435px) {
+  .texto-secciontextos {
+    padding-top: 400px;
+  }}
 
 /* Contenedor de las tarjetas */
 .cards-container { 
@@ -1218,7 +1225,11 @@ section .pie {
       height: 30px;
   }
 }
-
+@media (max-width: 600px) { 
+  .cards-container {
+    margin-top: 360px;
+  } 
+}
 @media (max-width: 480px) {
   .cards2 {      
       flex-direction: row;
@@ -1236,354 +1247,6 @@ section .pie {
   }
   .card-text {
       padding: 10px;
-  }
-}
-
-
-/****    galeria de imagenes   ****/
-.galeria {
-  margin: 1px 40px;
-}
-.galeria .cabecera {
-    display: flex;
-    align-items: center;
-    margin: 0 35px 10px;
-    font-family: 'Poppins', sans-serif;
-    padding-top: 20px;
-}
-.galeria .cabecera .back-button {
-    padding-top: 8px;
-}
-.galeria .cabecera h1 {
-    font-weight: 300;
-    color: black;
-    font-size: 300%;
-    padding-left: 15px;
-}
-.galeria .construccion {
-    display: flex;
-    align-items: center;
-    margin: 0 75px 10px;
-    font-family: 'Poppins', sans-serif;
-    padding-top: 20px;
-}
-.galeria .construccion h2 {                     
-    padding-left: 15px;             
-    color: gray;
-    font-size: 130%;
-    font-weight: 600;
-}
-@media (max-width:550px) {
-  .galeria .cabecera h1  {
-        font-size: 36px;
-    }
-}
-
-
-
-.muestravirtual {
-  position: relative; /* Habilita posicionamiento relativo para el contenedor */
-  display: inline-block; /* Ajusta el tamaño al contenido (opcional) */
-  display: flex;               /* Utiliza flexbox para centrar */
-  justify-content: center;     /* Centra horizontalmente */
-  align-items: center;         /* Centra verticalmente */
-  height: 100%;                /* Opcional, ajusta según el diseño */
-  text-align: center;          /* Asegura que el contenido dentro del contenedor esté centrado */
-}
-.muestravirtual img {
-  max-width: 90%;            /* Hace que la imagen sea responsive */
-  height: auto;               /* Mantiene la proporción de la imagen */
-  display: block;             /* Elimina el espacio en línea por defecto */
-  margin: 0 auto;             /* Centra horizontalmente en caso de fallos */
-}
-
-
-.imagen-responsive {
-  max-width: 90%; /* Hace que la imagen sea responsive */
-  height: auto; /* Mantiene las proporciones */
-  display: block; /* Elimina espacio extra debajo de la imagen */
-}
-
-.icono-centro {
-  cursor: pointer;
-  position: absolute; /* Permite colocar el SVG sobre la imagen */
-  top: 50%; /* Centra verticalmente */
-  left: 50%; /* Centra horizontalmente */
-  transform: translate(-50%, -50%); /* Ajusta el origen al centro */
-  /*pointer-events: none; /* Opcional: evita que el SVG interfiera con eventos de usuario */
-}
-
-/***  modal de galeria  ***/
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: black;  
-  z-index: 10000;
-  justify-content: center;
-  align-items: center;
-  /*overflow-y: hidden; 
-  overflow-x: hidden; */
-}
-.modal-content {
-  position: absolute;
-  top: 100px;
-  max-width: 50%;
-  max-height: 50%;  
-}
-.slider {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-.slides {
-  display: flex;
-  overflow: hidden;
-  width: 100%;
-}
-.slide {
-  min-width: 100%;
-  transition: transform 0.5s ease-in-out;
-}
-.controls {
-  color: white;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 15px;
-}
-button {
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  font-size: 20px;
-  cursor: pointer;
-}
-.cerrar {
-  position: absolute;
-  top: 1px;
-  right: 20px;
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
-  z-index: 1000;
-}
-button:hover {
-  background: rgba(255, 255, 255, 0.8);
-  color: black;
-}
-
-@media (max-width: 1000px) {
-  .modal-content {    
-    top: 60px;
-    max-width: 75%;
-    max-height: 75%;
-  }
-}
-@media (max-width: 480px) {
-  .modal-content {    
-    top: 200px;
-    max-width: 90%;
-    max-height: 90%;
-  }
-}
- 
-
-
-
-/****   seccion sobre el proyecto    *****/
-
-.proyecto {
-  margin: 40px 40px;
-}
-.proyecto h1 {
-  color: black;
-  font-size: xx-large;
-  font-weight: 300;
-}
-.proyecto .primera , .segunda , .tercera {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1px;
-  grid-auto-rows: minmax(10px, auto);
-}
-.proyecto .primera, .segunda , .tercera p {
-  grid-column: 1;
-  grid-row: 2 / 5;
-  color: black;
-  font-size: small;
-}
-.proyecto .autores {
-  /*display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1px;
-  grid-auto-rows: minmax(10px, auto);*/
-
-  color: black;
-  font-size: small;
-  padding: 20px;
-  overflow: hidden;
-}                    
-.proyecto .fotos {                        
-  height: 16em;
-  width: 16em;                       
-  text-align: center;
-  color: #fff;                       
-  box-shadow: 0 0 10px 2px #ccc;
-  margin: auto;
-}      
-
-/*.proyecto .cuarta {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1px;
-  grid-auto-rows: minmax(10px, auto);
-}
-.proyecto .cuarta p {
-  grid-column: 1;
-  grid-row: 2 / 5;
-  color: black;
-  font-size: x-small;
-}
-
-.proyecto .quinta {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1px;
-  grid-auto-rows: minmax(10px, auto);
-}
-.proyecto .quinta p {
-  grid-column: 1;
-  grid-row: 2 / 5;
-  color: black;
-  font-size: x-small;
-}*/
-
-
-
-@media screen and (max-width: 800px) {
-  .proyecto .primera {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 1px;
-    grid-auto-rows: minmax(10px, auto);
-  }
-  .proyecto .primera p {
-    grid-column: 1;
-    grid-row: 1 / 5; 
-  }
-  .proyecto .segunda {   
-    display: grid;
-    place-items: center;
-    grid-template-columns: repeat(1, 1fr);
-    /*grid-row-gap: 5px; */   
-  }
-  .proyecto .segunda img {
-    grid-column: 2;
-    grid-row: 1;    
-    width: 300px;
-    height: auto;   
-  }
-  .proyecto .segunda p { 
-    padding-top: 25px;   
-    grid-column: 2;
-    grid-row: 2;    
-  }
-}
-@media screen and (max-width: 600px) {
-  .proyecto .tercera { 
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    place-items: center;
-    grid-gap: 1px;
-    grid-row-gap: 5px;
-    grid-auto-rows: minmax(10px, auto);
-  }
-  .proyecto .tercera .pic1 {
-    grid-column: 1;
-    grid-row: 1;
-    width: 90%;    
-  }
-  .proyecto .tercera .pic2 {
-    grid-column: 1;
-    grid-row: 2;
-    width: 90%;    
-  }
-  .proyecto .tercera .pic3 {
-    grid-column: 1;
-    grid-row: 3;
-    width: 90%;    
-  }
-}
-@media screen and (max-width: 800px) {
-  .proyecto .cuarta {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 1px;
-    grid-auto-rows: minmax(10px, auto);
-  }
-  .proyecto .cuarta p {
-    grid-column: 1;
-    grid-row: 1 / 5; 
-    }  
-}
-@media screen and (max-width: 800px) {
-  .proyecto .quinta {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 1px;
-    grid-auto-rows: minmax(10px, auto);
-  }
-  .proyecto .quinta p {
-    grid-column: 1;
-    grid-row: 1 / 5; 
-    }  
-}
-
-
-
-/* ---------------- Grid Container  ---------------- */
-/*ul {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 16px;
-}
-@media only screen and (min-width: 800px) {
-  ul {
-    grid-template-columns: 1fr 1fr;
-  }
-}*/
-
-/* ---------------- CSS Grid  ---------------- */
-.grid-card {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  grid-template-rows: auto 1fr auto;
-}
-.grid-card > .photo {
-  grid-area: 1/1/4/2;
-  margin-bottom: 16px;
-}
-@media only screen and (max-width: 800px) {
-  .grid-card > .photo {
-    justify-self: center;
-  }
-}
-.grid-card > .title,
-.grid-card > .content,
-.grid-card > .meta {
-  grid-column: 1/3;
-  margin-bottom: 16px;
-}
-@media only screen and (min-width: 800px) {
-  .grid-card > .title,
-  .grid-card > .content,
-  .grid-card > .meta {
-    grid-column: 2/3;
   }
 }
 
@@ -1615,6 +1278,70 @@ button:hover {
   height: 50px;
   width: 80%;
 }
+
+.org-icon {
+  /*background-color: #000000;*/
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
+}
+
+.org-icon img {
+  /*width: 35px;*/
+  height: 55px;
+}
+/* Responsivo */
+@media (max-width: 900px) {
+  .cards2 {
+    height: 80px;
+  }
+  .card-text p {
+      font-size: 0.8rem;
+  }
+  .card-text strong {
+      font-size: 0.6rem;
+  }
+}
+@media (max-width: 768px) { 
+  .cards-container {
+    padding: 20px 85px;
+  } 
+  .card-text p {
+      font-size: 0.6rem;
+  }
+  .card-text strong {
+      font-size: 0.5rem;
+  }
+  .org-icon img {
+      width: 30px;
+      height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cards2 {      
+      flex-direction: row;
+      text-align: left;
+  }
+  .card-text p {
+    font-size: 0.6rem;
+  }
+  .card-text strong {
+    font-size: 0.6rem;
+  }
+  .org-icon {    
+      /*width: 55px;*/
+      height: 80%;   
+  }
+  .card-text {
+      padding: 10px;
+  }
+}
+
+
 @media (max-width: 865px) {
   .region h2 {
     font-weight: 400;
@@ -1841,6 +1568,357 @@ button:hover {
   }
 }
 
+
+
+
+
+/****    galeria de imagenes y muestra virtual  ****/
+.galeria {
+  margin: 1px 40px;
+}
+.galeria .cabecera {
+    display: flex;
+    align-items: center;
+    margin: 0 35px 10px;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 20px;
+}
+.galeria .cabecera .back-button {
+    padding-top: 8px;
+}
+.galeria .cabecera h1 {
+    font-weight: 300;
+    color: black;
+    font-size: 300%;
+    padding-left: 15px;
+}
+.galeria .construccion {
+    display: flex;
+    align-items: center;
+    margin: 0 75px 10px;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 20px;
+}
+.galeria .construccion h2 {                     
+    padding-left: 15px;             
+    color: gray;
+    font-size: 130%;
+    font-weight: 600;
+}
+@media (max-width:550px) {
+  .galeria .cabecera h1  {
+        font-size: 36px;
+    }
+}
+
+
+
+.muestravirtual {
+  position: relative; /* Habilita posicionamiento relativo para el contenedor */
+  display: inline-block; /* Ajusta el tamaño al contenido (opcional) */
+  display: flex;               /* Utiliza flexbox para centrar */
+  justify-content: center;     /* Centra horizontalmente */
+  align-items: center;         /* Centra verticalmente */
+  height: 100%;                /* Opcional, ajusta según el diseño */
+  text-align: center;          /* Asegura que el contenido dentro del contenedor esté centrado */
+}
+.muestravirtual img {
+  max-width: 90%;            /* Hace que la imagen sea responsive */
+  height: auto;               /* Mantiene la proporción de la imagen */
+  display: block;             /* Elimina el espacio en línea por defecto */
+  margin: 0 auto;             /* Centra horizontalmente en caso de fallos */
+}
+
+
+.imagen-responsive {
+  max-width: 90%; /* Hace que la imagen sea responsive */
+  height: auto; /* Mantiene las proporciones */
+  display: block; /* Elimina espacio extra debajo de la imagen */
+}
+
+.icono-centro {
+  cursor: pointer;
+  position: absolute; /* Permite colocar el SVG sobre la imagen */
+  top: 50%; /* Centra verticalmente */
+  left: 50%; /* Centra horizontalmente */
+  transform: translate(-50%, -50%); /* Ajusta el origen al centro */
+  /*pointer-events: none; /* Opcional: evita que el SVG interfiera con eventos de usuario */
+}
+
+/***  modal de galeria  ***/
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;  
+  z-index: 10000;
+  justify-content: center;
+  align-items: center;
+  /*overflow-y: hidden; 
+  overflow-x: hidden; */
+}
+.modal-content {
+  position: absolute;
+  top: 100px;
+  max-width: 50%;
+  max-height: 50%;  
+}
+.slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.slides {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+.slide {
+  min-width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+.controls {
+  color: white;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+button {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.cerrar {
+  position: absolute;
+  top: 1px;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  z-index: 1000;
+}
+button:hover {
+  background: rgba(255, 255, 255, 0.8);
+  color: black;
+}
+
+@media (max-width: 1000px) {
+  .modal-content {    
+    top: 60px;
+    max-width: 75%;
+    max-height: 75%;
+  }
+}
+@media (max-width: 480px) {
+  .modal-content {    
+    top: 200px;
+    max-width: 90%;
+    max-height: 90%;
+  }
+ 
+}
+ 
+
+
+
+/****   seccion sobre el proyecto    *****/
+
+.proyecto {
+  margin: 40px 40px;
+}
+.proyecto h1 {
+  color: black;
+  font-size: xx-large;
+  font-weight: 300;
+}
+.proyecto .primera , .segunda , .tercera {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1px;
+  grid-auto-rows: minmax(10px, auto);
+}
+.proyecto .primera, .segunda , .tercera p {
+  grid-column: 1;
+  grid-row: 2 / 5;
+  color: black;
+  font-size: small;
+}
+.proyecto .autores {
+  /*display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1px;
+  grid-auto-rows: minmax(10px, auto);*/
+
+  color: black;
+  font-size: small;
+  padding: 20px;
+  overflow: hidden;
+}                    
+.proyecto .fotos {                        
+  height: 16em;
+  width: 16em;                       
+  text-align: center;
+  color: #fff;                       
+  box-shadow: 0 0 10px 2px #ccc;
+  margin: auto;
+}      
+
+/*.proyecto .cuarta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1px;
+  grid-auto-rows: minmax(10px, auto);
+}
+.proyecto .cuarta p {
+  grid-column: 1;
+  grid-row: 2 / 5;
+  color: black;
+  font-size: x-small;
+}
+
+.proyecto .quinta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1px;
+  grid-auto-rows: minmax(10px, auto);
+}
+.proyecto .quinta p {
+  grid-column: 1;
+  grid-row: 2 / 5;
+  color: black;
+  font-size: x-small;
+}*/
+
+
+
+@media screen and (max-width: 800px) {
+  .proyecto .primera {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1px;
+    grid-auto-rows: minmax(10px, auto);
+  }
+  .proyecto .primera p {
+    grid-column: 1;
+    grid-row: 1 / 5; 
+  }
+  .proyecto .segunda {   
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    /*grid-row-gap: 5px; */   
+  }
+  .proyecto .segunda img {
+    grid-column: 2;
+    grid-row: 1;    
+    width: 300px;
+    height: auto;   
+  }
+  .proyecto .segunda p { 
+    padding-top: 25px;   
+    grid-column: 2;
+    grid-row: 2;    
+  }
+}
+@media screen and (max-width: 600px) {
+  .proyecto .tercera { 
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+    grid-gap: 1px;
+    grid-row-gap: 5px;
+    grid-auto-rows: minmax(10px, auto);
+  }
+  .proyecto .tercera .pic1 {
+    grid-column: 1;
+    grid-row: 1;
+    width: 90%;    
+  }
+  .proyecto .tercera .pic2 {
+    grid-column: 1;
+    grid-row: 2;
+    width: 90%;    
+  }
+  .proyecto .tercera .pic3 {
+    grid-column: 1;
+    grid-row: 3;
+    width: 90%;    
+  }
+}
+@media screen and (max-width: 800px) {
+  .proyecto .cuarta {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1px;
+    grid-auto-rows: minmax(10px, auto);
+  }
+  .proyecto .cuarta p {
+    grid-column: 1;
+    grid-row: 1 / 5; 
+    }  
+}
+@media screen and (max-width: 800px) {
+  .proyecto .quinta {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1px;
+    grid-auto-rows: minmax(10px, auto);
+  }
+  .proyecto .quinta p {
+    grid-column: 1;
+    grid-row: 1 / 5; 
+    }  
+}
+
+
+
+/* ---------------- Grid Container  ---------------- */
+/*ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 16px;
+}
+@media only screen and (min-width: 800px) {
+  ul {
+    grid-template-columns: 1fr 1fr;
+  }
+}*/
+
+/* ---------------- CSS Grid  ---------------- */
+.grid-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr auto;
+}
+.grid-card > .photo {
+  grid-area: 1/1/4/2;
+  margin-bottom: 16px;
+}
+@media only screen and (max-width: 800px) {
+  .grid-card > .photo {
+    justify-self: center;
+  }
+}
+.grid-card > .title,
+.grid-card > .content,
+.grid-card > .meta {
+  grid-column: 1/3;
+  margin-bottom: 16px;
+}
+@media only screen and (min-width: 800px) {
+  .grid-card > .title,
+  .grid-card > .content,
+  .grid-card > .meta {
+    grid-column: 2/3;
+  }
+}
 
 
 
