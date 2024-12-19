@@ -1059,7 +1059,6 @@ button:hover {
   @media (max-width:450px) {
     .card {
       margin: 10px;    
-      border: 1px solid red;
       width: 290px;
       height: 130px;      
     }
@@ -1286,10 +1285,27 @@ section .pie {
   height: 100%;
   text-decoration: none;
 }
-
 .org-icon img {
   /*width: 35px;*/
   height: 55px;
+}
+.card-red-social {
+  padding-right: 10px;
+  justify-content: flex-start;
+  align-self: auto;
+}
+
+.card-red-social #instagram-org {
+  width: 28px;
+  color: #E1306C;
+}
+.card-red-social #facebook-org {
+  width: 28px;
+  color: blue;
+}
+.card-red-social #www-org {
+  width: 28px;
+  color: black;
 }
 /* Responsivo */
 @media (max-width: 900px) {
@@ -1608,9 +1624,6 @@ section .pie {
         font-size: 36px;
     }
 }
-
-
-
 .muestravirtual {
   position: relative; /* Habilita posicionamiento relativo para el contenedor */
   display: inline-block; /* Ajusta el tamaño al contenido (opcional) */
@@ -1626,14 +1639,11 @@ section .pie {
   display: block;             /* Elimina el espacio en línea por defecto */
   margin: 0 auto;             /* Centra horizontalmente en caso de fallos */
 }
-
-
 .imagen-responsive {
   max-width: 90%; /* Hace que la imagen sea responsive */
   height: auto; /* Mantiene las proporciones */
   display: block; /* Elimina espacio extra debajo de la imagen */
 }
-
 .icono-centro {
   cursor: pointer;
   position: absolute; /* Permite colocar el SVG sobre la imagen */
@@ -1642,7 +1652,6 @@ section .pie {
   transform: translate(-50%, -50%); /* Ajusta el origen al centro */
   /*pointer-events: none; /* Opcional: evita que el SVG interfiera con eventos de usuario */
 }
-
 /***  modal de galeria  ***/
 .modal {
   display: none;
@@ -1654,9 +1663,7 @@ section .pie {
   background: black;  
   z-index: 10000;
   justify-content: center;
-  align-items: center;
-  /*overflow-y: hidden; 
-  overflow-x: hidden; */
+  align-items: center;  
 }
 .modal-content {
   position: absolute;
@@ -1721,21 +1728,19 @@ button:hover {
   }
   .prev, .next {
     position: absolute;
-
     display: flex;
     justify-content: center;
     gap: 15px;
     max-width: 50%;
     max-height: 90%;
-
-    top: 550px;
-    /*right: 20px;*/
+    top: 550px;   
     font-size: 30px;
     color: white;
     cursor: pointer;
     z-index: 1000;
   }
 }
+
 
 
 /****   seccion sobre el proyecto    *****/
