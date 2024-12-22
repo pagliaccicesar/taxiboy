@@ -1323,6 +1323,7 @@ section .pie {
     text-align: left;   
     height: 150px;
   }
+  
   .card-text p {
       font-size: 0.8rem;
   }
@@ -1344,7 +1345,11 @@ section .pie {
 @media (max-width: 768px) { 
   .cards-container {
     padding: 20px 85px;
-  } 
+  }
+  .card-red-social {    
+    text-align: right;
+    padding-right: 23px; 
+  }
   .card-text p {
       font-size: 0.6rem;
   }
@@ -1383,9 +1388,8 @@ section .pie {
   .cards2 {      
       flex-direction: row;
       text-align: left;
-      /*width: 110%;*/
-    
-  }
+      /*width: 110%;*/    
+  }  
   .card-text p {
     font-size: 0.6rem;
   }
