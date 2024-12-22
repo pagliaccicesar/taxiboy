@@ -1321,7 +1321,7 @@ section .pie {
   .cards2 {      
     flex-direction: row;
     text-align: left;   
-    height: 180px;
+    height: 150px;
   }
   .card-text p {
       font-size: 0.8rem;
@@ -1377,9 +1377,13 @@ section .pie {
   }
 }
 @media (max-width: 480px) {
+  .cards-container {
+    padding: 20px 55px;
+  }
   .cards2 {      
       flex-direction: row;
       text-align: left;
+      /*width: 110%;*/
     
   }
   .card-text p {
