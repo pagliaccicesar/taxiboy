@@ -1266,6 +1266,8 @@ section .pie {
   font-size: 14px;
   font-weight: 400;
   color: #000000;
+  background-color: rgb(216, 216, 216);
+  padding: 2px 8px;
   text-align: left;
   text-transform: uppercase; 
 }
@@ -1273,7 +1275,7 @@ section .pie {
   text-align: right;
   padding: 0 1px;
   height: 50px;
-  width: 80%;
+  width: 100%;
 }
 
 .org-icon {
@@ -1334,13 +1336,13 @@ section .pie {
     font-weight: 400;
     font-size: 14px; 
   }
-  .region .line_contact {
+  /*.region .line_contact {
     align-content: right;
     padding: 0 auto;
     right: 2px;
     height: 50px;
     width: 70%;
-  }
+  }*/
 }
 @media (max-width: 768px) { 
   .cards-container {
@@ -1357,8 +1359,8 @@ section .pie {
       font-size: 0.5rem;
   }
   .org-icon img {
-      width: 30px;
-      height: 30px;
+      width: 65px;
+      height: 50px;
   }
   .region h2 {
     left: 22px;
@@ -1375,20 +1377,21 @@ section .pie {
   .cabecera h1  {
     font-size: 30px;
   }
-  .region .line_contact {   
-    padding: 0 auto;   
+  /*.region .line_contact {   
+   
+    padding: 0 10px;
     height: 50px;
-    width: 40%;
-  }
+    width: 50%;
+  }*/
 }
 @media (max-width: 480px) {
   .cards-container {
     padding: 20px 55px;
   }
   .cards2 {      
-      flex-direction: row;
-      text-align: left;
-      /*width: 110%;*/    
+    flex-direction: row;
+    text-align: left;
+    /*width: 110%;*/    
   }  
   .card-text p {
     font-size: 0.6rem;
@@ -1402,6 +1405,11 @@ section .pie {
   .card-text {
       padding: 10px;
   }
+}
+@media (max-width: 433px) {
+  .cards-container {
+    margin-top: 380px;
+  }  
 }
 
 
