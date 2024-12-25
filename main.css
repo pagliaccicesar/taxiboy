@@ -1117,7 +1117,8 @@ button:hover {
   }
 }
 @media (max-width:800px) {
-  .texto-secciontextos {   
+  .texto-secciontextos { 
+   
     padding-top: 360px;    
   }
 }
@@ -1335,14 +1336,7 @@ section .pie {
   .region h2 {
     font-weight: 400;
     font-size: 14px; 
-  }
-  /*.region .line_contact {
-    align-content: right;
-    padding: 0 auto;
-    right: 2px;
-    height: 50px;
-    width: 70%;
-  }*/
+  }  
 }
 @media (max-width: 768px) { 
   .cards-container {
@@ -1376,13 +1370,7 @@ section .pie {
   }
   .cabecera h1  {
     font-size: 30px;
-  }
-  /*.region .line_contact {   
-   
-    padding: 0 10px;
-    height: 50px;
-    width: 50%;
-  }*/
+  }  
 }
 @media (max-width: 480px) {
   .cards-container {
@@ -1604,11 +1592,7 @@ section .pie {
   }
 }
 
-
-
-
-
-/****    galeria o muestra vurtual de imagenes  ****/
+/****    galeria o muestra virtual de imagenes  ****/
 .galeria {
   margin: 1px 40px;
 }
@@ -1714,7 +1698,7 @@ section .pie {
   gap: 15px;
   margin-top: 15px;
 }
-button {
+button  {
   background: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
@@ -1740,6 +1724,19 @@ button:hover {
     top: 60px;
     max-width: 75%;
     max-height: 75%;
+  }}/*
+  .prev , .next {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    max-width: 50%;
+    max-height: 40%;
+    top: 850px;   
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    z-index: 10000;
   }
 }
 @media (max-width: 480px) {
@@ -1748,20 +1745,20 @@ button:hover {
     max-width: 90%;
     max-height: 90%;
   }
-  .prev, .next {
+  .prev , .next {
     position: absolute;
     display: flex;
     justify-content: center;
     gap: 15px;
     max-width: 50%;
     max-height: 90%;
-    top: 550px;   
+    top: 850px;   
     font-size: 30px;
     color: white;
     cursor: pointer;
     z-index: 1000;
   }
-}
+}*/
 
 
 

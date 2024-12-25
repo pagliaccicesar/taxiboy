@@ -157,7 +157,7 @@ function seekAudio(e) {
 //   js del modal de la galeria de fotos  //
 document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("modalGallery");
-  /*const openModal = document.getElementById("openModal");*/
+  const openModal = document.getElementById("openModal");
   const closeModal = document.getElementById("closeModal");
   const slides = document.querySelectorAll(".slide");
   const prevSlide = document.getElementById("prevSlide");
@@ -182,11 +182,11 @@ document.addEventListener("DOMContentLoaded", () => {
       showSlide(currentSlide);
   };
 
-  /*openModal.addEventListener("click", (e) => {
+  openModal.addEventListener("click", (e) => {
       e.preventDefault();
       modal.style.display = "flex";
       showSlide(currentSlide);
-  });*/
+  });
 
   closeModal.addEventListener("click", () => {
       modal.style.display = "none";
