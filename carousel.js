@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });*/
 
 const cards = document.querySelectorAll('.card');
-const prevBtn = document.querySelector('.prev');
-const nextBtn = document.querySelector('.next');
+const prevBtn = document.querySelector('.izq');
+const nextBtn = document.querySelector('.der');
 const cardsPerPage = 9;
 let currentPage = 1;
 

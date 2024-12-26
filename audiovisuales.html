@@ -115,115 +115,11 @@
         </nav>
 
         <!--   index   -->
-        <style>
-            
-            .cabecera {
-                display: flex;
-                align-items: center;
-                margin: 0 35px 10px;
-                font-family: 'Poppins', sans-serif;
-                padding-top: 20px;
-            }
-            .cabecera .back-button {
-                padding-top: 8px;
-            }
-            .cabecera h1 {
-                font-weight: 300;
-                color: black;
-                font-size: 300%;
-                padding-left: 15px;
-            }
-            /* Contenedor principal */
-           .container {
-                padding-top: 40px;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                gap: 40px;
-                flex-wrap: wrap; /* Hace que sea responsive */
-                color: black;
-            }               
-
-            /* Estilos para la columna izquierda */
-            .left-content {
-                flex: 1;
-                min-width: 300px;
-                margin:  0 85px;
-            }
-            
-            .left-content h2 {
-                font-size: 20px;
-                font-weight: bold;                    
-                margin-bottom: 15px;
-                color: black;                    
-            }
-
-            .left-content p {
-                font-size: 14px;
-                margin-top: 20px;
-                /*margin-bottom: 15px;*/
-            }
-
-            .v-line{
-            border-left: thin solid #000;
-            height:20%;
-            left: 50%;
-            position: absolute;
-            }
-
-            /* Estilos para la columna derecha */
-            .right-content {
-                flex: 1;
-                min-width: 300px;
-                padding-left: 130px;
-            }
-            .right-content p {
-                font-size: 14px;
-                margin-top: 10px;
-                /*margin-bottom: 15px;*/
-            }
-            /* Media query para hacer el diseño responsive */
-            @media (min-width: 1600px) {                    
-                    .v-line{ 
-                        left: 40%;
-                    }
-                }
-            @media (max-width: 918px) {
-                .container {
-                    flex-direction: column; /* Las columnas se apilan una debajo de otra en pantallas pequeñas */
-                }
-                .v-line{ 
-                    display: none;
-                }
-                .left-content h1 {
-                    font-size: 36px;
-                }
-                .right-content {               
-                padding-left: 80px;
-            }            
-            }
-            @media (max-width: 630px) {
-                .cabecera {
-                display: flex;
-                align-items: center;
-                margin: 0 35px;               
-                padding-top: 0px;
-            }
-                .left-content {                
-                margin:  0 35px;
-            }
-                .right-content {   
-                padding-left: 35px;
-            }            
-            }
-            section footer {
-                position: relative;
-                top: 1px;                
-            }
-           
-     
+        <style>            
+              
         </style>
-        <div class="container">
+
+        <div class="container_audiovisuales">
             <div class="cabecera">
                 <a href="#" class="back-button">
                     <svg width="35" height="35" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -235,21 +131,21 @@
             </div>
         </div>
         <section class="text-audiovisuales">  
-        <div class="container">            
-            <!-- Columna izquierda -->
-            <div class="left-content">                
-                <p>A continuación se presenta un listado de films de ficción y documental sobre trabajo sexual masculino. Este listado no pretende ser definitivo 
-                    sino una guía para acceder a diferentes representaciones audiovisuales sobre la cuestión.</p>               
-            </div>
+            <div class="container_audiovisuales">            
+                <!-- Columna izquierda -->
+                <div class="left-content">                
+                    <p>A continuación se presenta un listado de films de ficción y documental sobre trabajo sexual masculino. Este listado no pretende ser definitivo 
+                        sino una guía para acceder a diferentes representaciones audiovisuales sobre la cuestión.</p>               
+                </div>
 
-            <div class="v-line"></div>   
+                <div class="v-line"></div>   
 
-            <!-- Columna derecha -->
-            <div class="right-content">
-                <p>Below is a list of fiction and documentary films on male sex work. This list is not intended to be definitive, but rather a guide to accessing
-                    different audiovisual representations on the issue.</p>
+                <!-- Columna derecha -->
+                <div class="right-content">
+                    <p>Below is a list of fiction and documentary films on male sex work. This list is not intended to be definitive, but rather a guide to accessing
+                        different audiovisual representations on the issue.</p>
+                </div>
             </div>
-        </div>
         </section>
         </div>      
         
@@ -258,7 +154,8 @@
         <section class="videos">
            
             <section class="gallery">
-                <button class="prev" id="carousel-arrow left-arrow">&#x3C;</button>       
+                <!--<button class="prev" id="carousel-arrow left-arrow">&#x3C;</button>  -->
+                <button class="izq" id="carousel-arrow left-arrow">&#x3C;</button>       
                 <div class="card-container">
         
                     <div class="card">                        
@@ -406,8 +303,9 @@
                             <h4>2023</h4>
                         </div>
                     </div>            
-                </div>        
-                <button class="next" id="carousel-arrow right-arrow">&#x3E;</button>
+                </div>
+                <button class="der" id="carousel-arrow right-arrow">&#x3E;</button>      
+                <!--<button class="next" id="carousel-arrow right-arrow">&#x3E;</button>-->
               </section>
            
         </section>
@@ -419,7 +317,7 @@
 
       
         <section>
-            <footer>               
+            <footer  style="top: 1px;">               
                 <div class="footer-container">
                     <div class="footer-logo">
                         <img src="./img/TAXIBOY_LOGO-BLANCO.png" alt="Taxiboy Logo"> <!-- Asegúrate de reemplazar "logo.png" por la ruta de la imagen correcta -->

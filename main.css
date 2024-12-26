@@ -833,10 +833,111 @@ button:hover {
 }
 
 /****  audiovisuales   ****/
+.cabecera {
+  display: flex;
+  align-items: center;
+  margin: 0 35px 10px;
+  font-family: 'Poppins', sans-serif;
+  padding-top: 20px;
+}
+.cabecera .back-button {
+  padding-top: 8px;
+}
+.cabecera h1 {
+  font-weight: 300;
+  color: black;
+  font-size: 300%;
+  padding-left: 15px;
+}
+/* Contenedor principal */
+.container_audiovisuales {  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap; /* Hace que sea responsive */
+  color: black;
+}
+/* Estilos para la columna izquierda */
+.text-audiovisuales .left-content {
+  flex: 1;
+  
+  min-width: 300px;
+  margin:  0 85px;
+}            
+.text-audiovisuales .left-content h2 {
+  font-size: 20px;
+  font-weight: bold;                    
+  margin-bottom: 15px;
+  color: black;                    
+}
+.text-audiovisuales .left-content p {
+  font-size: 14px;
+  margin-top: 20px;
+  /*margin-bottom: 15px;*/
+}
+.text-audiovisuales .v-line{
+  border-left: thin solid #000;
+  top: 310px;
+  height: 13%;
+  left: 50%;
+  position: absolute;
+}
+
+/* Estilos para la columna derecha */
+.text-audiovisuales .right-content {
+  flex: 1;
+  min-width: 300px;
+  padding-left: 40px;
+  padding-right: 20px;
+}
+.text-audiovisuales .right-content p {
+  font-size: 14px;
+  margin-top: 20px;
+  /*margin-bottom: 15px;*/
+}
+/* Media query para hacer el diseño responsive */
+@media (min-width: 1600px) {                    
+  .text-audiovisuales .v-line{     
+      left: 50%;
+  }
+  }
+@media (max-width: 918px) {
+  .container_audiovisuales {
+      flex-direction: column; /* Las columnas se apilan una debajo de otra en pantallas pequeñas */
+  }
+  .text-audiovisuales .v-line{ 
+      display: none;
+  }
+  .text-audiovisuales .left-content h1 {
+      font-size: 36px;
+  }
+  .text-audiovisuales .right-content {               
+      padding-left: 80px;
+}            
+}
+@media (max-width: 630px) {
+  .cabecera {
+      display: flex;
+      align-items: center;
+      margin: 0 35px;               
+      padding-top: 0px;
+}
+  .cabecera h1 {
+      font-size: xx-large;
+  }
+  .text-audiovisuales .left-content {                
+      margin:  0 35px;
+    }
+.text-audiovisuales .right-content {   
+      padding-left: 35px;
+  }            
+}
+
 .videos {
-  margin-top: 50px;
-  padding-top: 60px;
-  padding-bottom: 60px;  
+  margin-top: 90px;
+  padding-top: 20px;
+  padding-bottom: 60px;
   background-color:aliceblue; 
 }
 .carousel-container {
@@ -881,12 +982,6 @@ button:hover {
   top: 85px;
   color: #333;
 }
-/*.flag {
-  position: relative;
-  font-size: small; 
-  left: 135px;
-  top: 65px;
-}*/
 .carousel-arrow {
   position: absolute;
   top: 50%;
@@ -963,14 +1058,12 @@ button:hover {
     padding: 20px;
     position: relative; 
 }
-
 .card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: 80%;
 }
-
 .card {  
     display: flex;
     flex-direction: row;
@@ -982,58 +1075,48 @@ button:hover {
     height: 130px;
     padding: 0;
 }
-
 .card img {
     align-items: left;    
     width: auto; 
     height: 129px; 
     object-fit: cover;
 }
-
 .card-content {   
     display: flex;
     flex-direction: row;  
     padding-left: 0px;
     width: 100%; 
 }
-
-.card-content h3 {
-    
+.card-content h3 {    
     margin: 10px ;
     font-size: 0.9em;
     color: #000;   
 }
-
 .card-content .flag {
     position: absolute; 
     margin: 95px 70px 0 250px;
     font-size: 1em;
 }
-
 .card-content h4 {
     position: absolute;    
     margin: 99px 70px 0 110px;
     font-size: 0.8em;
     color: #555;  
-}  
-
-.prev, .next {
-    cursor: pointer;
-    font-size: 24px;
-    position: absolute; 
-    top: 50%;
-    transform: translateY(-50%); 
-    z-index: 1; 
 }
-
-.prev {
-    left: 20px;
+.izq, .der {
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute; 
+  top: 50%;
+  transform: translateY(-50%); 
+  z-index: 1; 
 }
-
-.next {
-    right: 20px; 
+.izq {
+  left: 20px;
 }
-
+.der {
+  right: 20px; 
+}
 #carousel-arrow {
     position: absolute;
     top: 50%;
@@ -1044,18 +1127,15 @@ button:hover {
     font-size: 24px;
     cursor: pointer;
     padding: 10px;
-  }
-  
+  }  
   #left-arrow {
     left: 0;
     z-index: 10000;
-  }
-  
+  }  
   #right-arrow {
     right: 0;
     z-index: 10000;
   }
-
   @media (max-width:450px) {
     .card {
       margin: 10px;    
@@ -1066,12 +1146,11 @@ button:hover {
       position: absolute;
       right: 18px;
       font-size: 1em;
-    }
-    
-    .prev {
+    }    
+    .izq {
       left: 5px;
     }
-    .next {
+    .der {
       right: 5px;
     }
   }
@@ -1625,7 +1704,7 @@ section .pie {
     font-size: 130%;
     font-weight: 600;
 }
-@media (max-width:550px) {
+@media (max-width: 550px) {
   .galeria .cabecera h1  {
         font-size: 36px;
     }
@@ -1659,106 +1738,98 @@ section .pie {
   /*pointer-events: none; /* Opcional: evita que el SVG interfiera con eventos de usuario */
 }
 /***  modal de galeria  ***/
+
+
 .modal {
-  display: none;
+  display: flex;
   position: fixed;
+  justify-content: center;
+  align-items: center;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: black;  
+  background-color: black;
   z-index: 10000;
-  justify-content: center;
-  align-items: center;  
 }
 .modal-content {
-  position: absolute;
-  top: 100px;
-  max-width: 50%;
-  max-height: 50%;  
+  position: relative;
+  width: 80%;
+  
+  max-width: 1000px;
 }
 .slider {
   position: relative;
-  display: flex;
-  align-items: center;
+  width: 100%;
+  overflow: hidden;
 }
 .slides {
   display: flex;
-  overflow: hidden;
-  width: 100%;
-}
-.slide {
-  min-width: 100%;
+  
   transition: transform 0.5s ease-in-out;
 }
-.controls {
-  color: white;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 15px;
+.slide {
+  width: 100%;
+  
+    object-fit: cover;
 }
-button  {
+.controls button {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
   background: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
-  padding: 10px;
-  font-size: 20px;
+  padding: 10px 15px;
+  font-size: 24px;
   cursor: pointer;
+  z-index: 1001;
+}
+.controls .prev {
+  left: 15px;
+}
+
+.controls .next {
+  right: 15px;
+}
+button {
+  cursor: pointer;
+  background: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
 }
 .cerrar {
   position: absolute;
-  top: 1px;
-  right: 20px;
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
-  z-index: 1000;
-}
-button:hover {
-  background: rgba(255, 255, 255, 0.8);
-  color: black;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  background: transparent;
+  color: #fff;
 }
 @media (max-width: 1000px) {
-  .modal-content {    
-    top: 60px;
-    max-width: 75%;
-    max-height: 75%;
-  }}/*
-  .prev , .next {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    max-width: 50%;
-    max-height: 40%;
-    top: 850px;   
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-    z-index: 10000;
+  .controls {
+      position: relative;
+      margin-top: 100px;
   }
 }
 @media (max-width: 480px) {
-  .modal-content {    
-    top: 200px;
-    max-width: 90%;
-    max-height: 90%;
+  .modal-content {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
   }
-  .prev , .next {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    max-width: 50%;
-    max-height: 90%;
-    top: 850px;   
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-    z-index: 1000;
+  .slide {
+      display: block;
+      margin: auto;
   }
-}*/
+  .controls {
+      position: relative;
+      margin-top: 10px;
+  }
+}
 
 
 
