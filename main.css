@@ -1558,15 +1558,6 @@ section .pie {
     }  
   }
 
-  /* Estilos generales */
-/*.carousel-container {
-  width: 100%;
-}
-
-.carousel-item-entrevistas {
-  cursor: pointer;
-}*/
-
 /********    aca se agrego el nuevo codigo del popup de entrevistas con audios *****/
 .popup {
   display: none; 
@@ -1739,8 +1730,6 @@ section .pie {
   /*pointer-events: none; /* Opcional: evita que el SVG interfiera con eventos de usuario */
 }
 /***  modal de galeria  ***/
-
-
 .modal {
   display: flex;
   position: fixed;
@@ -1765,14 +1754,12 @@ section .pie {
   overflow: hidden;
 }
 .slides {
-  display: flex;
-  
+  display: flex;  
   transition: transform 0.5s ease-in-out;
 }
 .slide {
-  width: 100%;
-  
-    object-fit: cover;
+  width: 100%;  
+  object-fit: cover;
 }
 .controls button {
   position: fixed;
@@ -1789,22 +1776,15 @@ section .pie {
 .controls .prev {
   left: 15px;
 }
-
 .controls .next {
   right: 15px;
-}
-button {
-  cursor: pointer;
-  background: #fff;
-  border: none;
-  padding: 10px;
-  font-size: 18px;
 }
 .cerrar {
   position: absolute;
   top: 10px;
   right: 10px;
   font-size: 24px;
+  border: none;
   background: transparent;
   color: #fff;
 }
@@ -1814,6 +1794,14 @@ button {
       margin-top: 100px;
   }
 }
+@media (max-width: 700px) {
+  .controls button {    
+    color: white;
+    border: none;
+    padding: 5px;
+    font-size: 15px;
+  }  
+}
 @media (max-width: 480px) {
   .modal-content {
       height: 100%;
@@ -1821,6 +1809,17 @@ button {
       align-items: center;
       justify-content: center;
       flex-direction: column;
+  }
+  .controls button {
+    position: fixed;
+    top: 80%;
+    transform: translateY(-80%);
+  }
+  .controls .prev {
+    left: 65px;    
+  }
+  .controls .next {
+    right: 65px;   
   }
   .slide {
       display: block;
@@ -1833,9 +1832,7 @@ button {
 }
 
 
-
 /****   seccion sobre el proyecto    *****/
-
 .proyecto {
   margin: 40px 40px;
 }
