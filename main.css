@@ -760,6 +760,9 @@ button:hover {
   text-align: center;
   line-height: 35px;  
 }
+.aportes .flex-container img:hover {
+  transform: scale(1.1);
+}
 @media (max-width: 1000px) {
 .aportes h3 {   
     font-size: 15px;
