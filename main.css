@@ -209,11 +209,13 @@ html {
       grid-auto-flow: row;
       gap: var(--space-md);
       padding-inline: var(--space-md);     
-    }
-      #logo-audiovisuales {
-        display: none;
-      }   
+    }      
   }
+  @media (width < 1056px) {
+    #logo-audiovisuales {
+      display: none;
+      }
+    }
     @media (max-width: 1173px) {
       .menu p {
         display: none;        
