@@ -637,6 +637,10 @@ html {
   color: #000000;
   text-decoration: none;  
 }
+.recursos .item:hover {
+  transform: scale(1.003);
+  color:rgba(0, 0, 0, 0.4)
+}
 @media (max-width: 600px) {
   .recursos {
     height: 60vh;
@@ -710,7 +714,7 @@ textarea {
   border: 1px solid #ccc;
   color: #000000;
   background-color: white;
-  border-radius: 20px; /* Bordes redondeados */
+  border-radius: 20px; 
   font-size: 1rem;
 }
 textarea {
