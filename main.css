@@ -184,11 +184,9 @@ html {
     justify-content: space-between;
     
     @media (width >=1056px) {
-      display: none;
+      display: none;      
     }
-  }
-
-  
+  } 
 
   .menu {
     display: grid;
@@ -201,8 +199,7 @@ html {
     @media (width > 1055px) and (width < 1300px) {
       grid-auto-flow: column;
       gap: 1px;
-      margin-right: -5px;
-      
+      margin-right: -5px;      
       font-size: smaller;
       /*gap: var(--space-md);
       padding-inline: var(--space-md);    */ 
@@ -213,6 +210,9 @@ html {
       gap: var(--space-md);
       padding-inline: var(--space-md);     
     }
+      #logo-audiovisuales {
+        display: none;
+      }   
   }
     @media (max-width: 1173px) {
       .menu p {
