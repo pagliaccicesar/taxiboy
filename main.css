@@ -1850,7 +1850,7 @@ footer {
 }
 @media (max-width: 777px) {
   section footer {
-    height: 35vh;   
+    height: 31vh;   
   }
   .footer-container  {
     display: grid;
