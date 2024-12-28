@@ -1821,15 +1821,15 @@ section .pie {
 section footer {
   position: relative;
   top: 235px;
-  background-color: #111; /* Color de fondo oscuro */
-  color: white; /* Texto en blanco */
+  background-color: #111; 
+  color: white;
   display: flex;
   flex-direction: column;
-  height: 28vh;
+  height: 24vh;
 }
 footer {
   margin-top: auto;
-  background-color: #111; /* Asegura que el footer tenga un fondo oscuro */
+  background-color: #111; 
   padding: 20px;
 }
 .footer-container {
