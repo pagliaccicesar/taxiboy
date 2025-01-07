@@ -1388,6 +1388,83 @@ section .pie {
 
 
 /*****   seccion de entrevistas con audios   ****/
+/* Contenedor principal */
+.entrevistas .container {
+  padding-top: 40px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap; 
+  color: black;
+}                 
+
+.cabecera-entrevistas {
+  display: flex;
+  align-items: center;
+  margin: 0 35px 10px;
+  font-family: 'Poppins', sans-serif;
+  padding-top: 20px;
+}
+.cabecera-entrevistas .back-button {
+  padding-top: 8px;
+}
+.cabecera-entrevistas h1 {
+  font-weight: 300;
+  color: black;
+  font-size: 300%;
+  padding-left: 15px;
+}
+.left-entrevistas {
+  flex: 1;
+  min-width: 300px;
+  margin:  0 85px;
+}                
+.left-entrevistas h2 {
+  font-size: 20px;
+  font-weight: bold;                    
+  margin-bottom: 15px;
+  color: black;                    
+}
+.left-entrevistas p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.v-line-entrevistas {
+  border-left: thin solid #000;
+  height:30%;
+  left: 50%;
+  /*right: 50%;
+  left: 50%;*/
+  position: absolute;
+}
+.right-entrevistas {
+  flex: 1;
+  min-width: 300px;
+  padding-left: 130px;
+}
+
+.right-entrevistas ul {
+  list-style-type: none;
+}
+
+.right-entrevistas li {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.right-entrevistas li::before {
+  content: "›";
+  margin-right: 10px;
+  color: #000;
+  font-size: 20px;
+}
+
+
+
+
+
 .audios {
   background-color: rgb(231, 231, 231);
   padding-top: 40px;
@@ -1432,30 +1509,63 @@ section .pie {
   color: #333;
 }
 /* Estilos Responsive */
+@media (min-width: 1600px) {                    
+  .v-line-entrevistas { 
+      left: 40%;
+  }
+}
+@media (max-width: 918px) { 
+  .entrevistas .container {
+      flex-direction: column; 
+      gap: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content:left;                         
+  }
+  .v-line-entrevistas { 
+      display: none;
+  }
+  .left-entrevistas {
+      margin:  0 45px;
+  }
+  .left-entrevistas h1 {
+      font-size: 36px;
+  }
+  .left-entrevistas h2 {
+      font-size: 18px;
+  }
+  .right-entrevistas {
+      width: 290px;
+      padding: 1px 0;                        
+  }
+  .right-entrevistas li {
+      font-size: 14px;
+      text-align: justify;
+  }
+}
 @media screen and (max-width: 768px) {
   .carousel-item-entrevistas {
     width: 100%;
   }
 }
-
 @media screen and (max-width: 480px) {
   .carousel-item-entrevistas  {    
-      display: flex;
-      flex-direction: row;
-      justify-content: start;
-      align-items: left;
-      margin: 10px;
-      background: #fff;
-      border: 1px solid #ccc;
-      width: 300px;
-      padding: 0px;
-    }    
-    .carousel-item-entrevistas  img {
-      width: 100px;
-      height: auto;
-      margin-right: 15px;  
-    }  
-  }
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: left;
+    margin: 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    width: 300px;
+    padding: 0px;
+  }    
+  .carousel-item-entrevistas  img {
+    width: 100px;
+    height: auto;
+    margin-right: 15px;  
+  }  
+}
 
 /********    aca se agrego el nuevo codigo del popup de entrevistas con audios *****/
 .popup {
