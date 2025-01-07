@@ -79,7 +79,7 @@
     }
   }
 
-  body {
+body {
     -webkit-font-smoothing: antialiased;
     background-color: var(--surface-invert);
     color: var(--text-1);
@@ -88,14 +88,9 @@
   }
 }
 
-html {
-  /* CSS para desplazamiento suave en toda la página */
-  scroll-behavior: smooth;
+html {  
+  scroll-behavior: smooth; /* CSS para desplazamiento suave en toda la página */
 }
-
-/*section {
-  padding-top: 120px;
-}*/
 
 @layer App {
   .nav {
@@ -118,9 +113,8 @@ html {
     }
   @media (width < 1056px) {
       padding-inline-start: var(--space-md);
-      padding-inline-end: var(--space-sm);
-      
-  }
+      padding-inline-end: var(--space-sm);      
+    }
   }
   .logo-wrapper {
     justify-self: start;
@@ -438,11 +432,8 @@ html {
     overflow: hidden;    
   }
   .hero-content h1 {
-    font-size: 3.4rem;
-      /*font-weight: 500;*/
-      line-height: 1.2;
-    
-    /*font-size: var(--headline1-font-size);*/
+    font-size: 3.4rem;     
+    line-height: 1.2;   
     font-weight: var(--headline5-font-weight);
     text-align: center;
     display: inline-grid;
@@ -470,8 +461,7 @@ html {
       color: #ffffff;
   }  
   /*.button-link  {
-
-    margin-top: 50px;
+      margin-top: 50px;
   }*/
 
   .hero-header {
@@ -594,9 +584,6 @@ html {
 }
 
 /*****   recursos    *****/
-/*.container {
-  text-align: left; 
-}*/
 .recursos {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -998,7 +985,6 @@ button:hover {
       margin-right: 15px;  
     }    
 }
-
 .gallery {
     display: flex;
     flex-direction: column;
@@ -1071,7 +1057,6 @@ button:hover {
   }
 
 /*****  seccion de  textos  ****/
-
 .cabecera {
   display: flex;
   align-items: center;
@@ -1119,8 +1104,8 @@ button:hover {
 @media (max-width: 435px) {
   .texto-secciontextos {
     padding-top: 400px;
-  }}
-
+  }
+}
 /* Contenedor de las tarjetas */
 .cards-container { 
   position: relative; 
@@ -1131,7 +1116,6 @@ button:hover {
   margin-top: 250px;  
   padding: 30px 120px;
 }
-
 /* Diseño de las tarjetas */
 .cards2 {
   width: 100%;
@@ -1148,7 +1132,6 @@ button:hover {
 .cards2:hover {
   transform: scale(1.005);
 }
-
 /* Icono de la izquierda */
 .card-icon {
   background-color: #000000;
@@ -1180,61 +1163,12 @@ button:hover {
   font-size: 0.7rem;
   color: #666;
 }
-section .pie {
-  padding: 0 auto;
-}
 
-/* Responsivo */
-/*@media (max-width: 900px) {
-  .cards2 {    
-    height: 80px;     
-  }
-  .card-text p {
-      font-size: 0.8rem;
-  }
-  .card-text strong {
-      font-size: 0.6rem;
-  }
-}
-@media (max-width: 768px) { 
-  .cards-container {
-    padding: 20px 85px;
-  } 
-  .card-text p {
-      font-size: 0.6rem;
-  }
-  .card-text strong {
-      font-size: 0.5rem;
-  }
-  .card-icon img {
-      width: 30px;
-      height: 30px;
-  }
-}*/
 @media (max-width: 600px) { 
   .cards-container {
     margin-top: 330px;
   } 
 }
-/*@media (max-width: 480px) {
-  .cards2 {      
-      flex-direction: row;
-      text-align: left;
-  }
-  .card-text p {
-    font-size: 0.6rem;
-  }
-  .card-text strong {
-    font-size: 0.6rem;
-  }
-  .card-icon {    
-      width: 35px;
-      height: 100%;   
-  }
-  .card-text {
-      padding: 10px;
-  }
-}*/
 
 /****   seccion  organizaciones  (comparte cards con textos linea 1082)  ******/
 
@@ -1386,9 +1320,7 @@ section .pie {
   }  
 }
 
-
 /*****   seccion de entrevistas con audios   ****/
-/* Contenedor principal */
 .entrevistas .container {
   padding-top: 40px;
   padding-bottom: 50px;
@@ -1398,8 +1330,7 @@ section .pie {
   gap: 40px;
   flex-wrap: wrap; 
   color: black;
-}                 
-
+}
 .cabecera-entrevistas {
   display: flex;
   align-items: center;
@@ -1460,10 +1391,6 @@ section .pie {
   color: #000;
   font-size: 20px;
 }
-
-
-
-
 
 .audios {
   background-color: rgb(231, 231, 231);
@@ -1788,8 +1715,8 @@ section .pie {
 }
 @media (max-width: 1000px) {
   .controls {
-      position: relative;
-      margin-top: 100px;
+    position: relative;
+    margin-top: 100px;
   }
 }
 @media (max-width: 700px) {
@@ -1802,11 +1729,11 @@ section .pie {
 }
 @media (max-width: 480px) {
   .modal-content {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
   .controls button {
     position: fixed;
@@ -1982,15 +1909,5 @@ footer {
   }
   .footer-icons, .footer-logo {
     margin: 0 auto;
-  }
-}
-/*Media Query */
-@media all and (min-width: 321px) and (max-width: 480px) {  
-  #container {
-      width: 90%;
-      margin-top: 13%;
-  } 
-  #resetButton {
-      float: left;
   }
 }
