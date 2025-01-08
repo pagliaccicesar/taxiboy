@@ -1,4 +1,4 @@
-
+/*  js de audiovisuales  */
 const cards = document.querySelectorAll('.card');
 const prevBtn = document.querySelector('.izq');
 const nextBtn = document.querySelector('.der');

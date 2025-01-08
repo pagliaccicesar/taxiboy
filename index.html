@@ -37,14 +37,14 @@
                 </div>                
 
                 <menu class="menu">
-                    <li><a href="./sobreelproyecto.html" id="sp_lang" class="nav-link">SOBRE EL PROYECTO</a></li>
+                    <li><a href="./sobreelproyecto.html" id="sp_lang" class="nav-link">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
                     <li><a href="./sobreelproyecto.html" id="en_lang" class="nav-link">ABOUT THE PROJECT</a></li>
-                    <p style="cursor: auto;" class="nav-link">│</p>                
-                    <li><a href="#Contacto" id="sp_lang" class="nav-link">CONTACTO</a></li>
-                    <li><a href="#Contacto" id="en_lang" class="nav-link">CONTACT</a></li>                     
+                    <!--<p style="cursor: auto;" class="nav-link">│</p>                -->
+                    <li><a href="./sobreelproyecto.html" id="sp_lang" class="nav-link">SOBRE EL PROYECTO</a></li>
+                    <li><a href="./sobreelproyecto.html" id="en_lang" class="nav-link">ABOUT THE PROJECT</a></li>                 
                     <a href="#" class="logo-wrapper"><img class="logo-img" src="./img/TAXIBOY_LOGO-NEGRO.png" alt="Taxiboy logo" width="160" height="29.44"/></a>                    
-                    <li><a href="./galeria.html" id="sp_lang" class="nav-link">MUESTRA VIRTUAL</a></li>
-                    <li><a href="./galeria.html" id="en_lang" class="nav-link">VIRTUAL EXHIBITION</a></li>
+                    <li><a href="#Contacto" id="sp_lang" class="nav-link">CONTACTO</a></li>
+                    <li><a href="#Contacto" id="en_lang" class="nav-link">CONTACT</a></li>   
                     <li><p style="cursor: auto;" class="nav-link">│</p></li>                  
                     <li><a href="#Recursos" id="sp_lang" class="nav-link">RECURSOS</a></li>
                     <li><a href="#Recursos" id="en_lang" class="nav-link">RESOURCES</a></li>         
@@ -103,8 +103,8 @@
                
                 </div>
                 <div class="content-actions">
-                <a href="./galeria.html" id="sp_lang" class="button-link primary">VER GALERIA</a>
-                <a href="./galeria.html" id="en_lang" class="button-link primary">SEE GALLERY</a>
+                <a href="./galeria.html" id="sp_lang" class="button-link primary">MUESTRA VIRTUAL</a>
+                <a href="./galeria.html" id="en_lang" class="button-link primary">VIRTUAL EXHIBITION</a>
                 </div>
             </header>           
             </div>
@@ -179,7 +179,7 @@
 
         <section class="form_contacto">
             <div class="form-container">
-                <form action="#" method="post">
+                <form action="./send_email.php" method="post">
                     <label for="nombre" id="sp_lang">Nombre y Apellido:</label>
                     <label for="nombre" id="en_lang">Name & Surname:</label><input type="text" id="nombre" name="nombre" required>            
                     
@@ -190,10 +190,58 @@
                     <label for="mensaje" id="en_lang">Leave us your message:</label>
                     <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
         
-                    <button type="submit" id="sp_lang">Enviar</button>
-                    <button type="submit" id="en_lang">Send</button>
+                    <button type="submit" id="submit" type="submit">Enviar / Send</button>                    
                 </form>
-            </div>           
+            </div>
+            <script>
+                document.getElementById("form").addEventListener("submit", function(event) {
+                    event.preventDefault();  
+                
+                    const nombreInput = document.getElementById("nombre");
+                    const emailInput = document.getElementById("email");
+                    const mensajeInput = document.getElementById("mensaje");
+                    const submitButton = document.getElementById("submit");
+                
+                    const nombre = nombreInput.value.trim();
+                    const email = emailInput.value.trim();
+                    const mensaje = mensajeInput.value.trim();
+                
+                    if (nombre === "" || email === "" || mensaje === "") {
+                        alert("Todos los campos son obligatorios.");
+                        return;
+                    }
+                
+                    const formData = new FormData();
+                    formData.append("nombre", nombre);
+                    formData.append("email", email);
+                    formData.append("mensaje", mensaje);
+                
+                    fetch("send_email.php", {
+                        method: "POST",
+                        body: formData
+                    })
+                    .then(response => response.text())
+                    .then(data => {
+                        if (data.trim() === "success") {
+                            // Cambiar el texto del botón y limpiar los campos
+                            submitButton.value = "Nos contactaremos";
+                            nombreInput.value = "";
+                            emailInput.value = "";
+                            mensajeInput.value = "";
+                        } else if (data.trim() === "error") {
+                            alert("Hubo un error al enviar el correo. Inténtalo de nuevo.");
+                        } else if (data.trim() === "invalid") {
+                            alert("Por favor, introduce una dirección de correo válida.");                        
+                        } else {
+                            console.error("Respuesta inesperada:", data);
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Error:", error);
+                        alert("Hubo un problema al intentar enviar los datos.");
+                    });
+                });
+                </script>           
 
         </section>
 
