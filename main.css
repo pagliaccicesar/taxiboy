@@ -12,40 +12,33 @@
 @layer base {
   :root {
     color-scheme: dark;
-    font-family: "Poppins", sans-serif;    
-
+    font-family: "Poppins", sans-serif;
     --palette-hue: 249;
     --palette-hue-rotate-by: 0;
     --palette-chroma: 0;
     --black: black;
     --extend-font-size-fluid-4: clamp(3.5rem, 4.333vw, 4.5rem);
-
     --surface-1: #1D1D1B;
     --surface-invert: #ffffff;
     --text-1: #ffffff;
     --text-invert: #1D1D1B;
     --brand: var(--red);
-
     --space-xxs: var(--size-1);
     --space-xs: var(--size-2);
     --space-sm: calc(var(--size-1) + var(--size-2));
     --space-md: var(--size-3);
     --space-lg: var(--size-7);
-
     --radius-sm: var(--radius-2);
     --radius-md: var(--radius-3);
     --radius-lg: var(--radius-round);
     --border-thin: var(--border-size-1);
-
     --timing-function-slow-ease: var(--ease-1);
     --timing-function-fast-ease-in-out: var(--ease-in-out-4);
-
     --button-link-font-size: var(--font-size-1);
     --button-link-font-weight: var(--font-weight-7);
     --button-link-block-size: 3.25em;
     --button-link-min-inline-size: 7em;
-    --button-link-border: var(--border-size-1) solid currentColor;
-    /*--button-link-face: transparent;*/
+    --button-link-border: var(--border-size-1) solid currentColor;   
     --button-link-text: white;
     --button-link-hover-face: color-mix(in oklch, white, transparent 80%);
     --button-link-primary-text: white;
@@ -72,13 +65,11 @@
     @media (width < 1056px) {
       --nav-link-font-size: var(--font-size-2);
     }
-
     --nav-block-size: 100px;
     @media (width < 1056px) {
       --nav-block-size: 80px;
     }
   }
-
 body {
     -webkit-font-smoothing: antialiased;
     background-color: var(--surface-invert);
@@ -87,18 +78,15 @@ body {
     min-block-size: 100dvb;
   }
 }
-
 html {  
   scroll-behavior: smooth; /* CSS para desplazamiento suave en toda la página */
 }
-
 @layer App {
   .nav {
     display: grid;
     place-items: center;
     z-index: 1000;
   }
-
   .nav-container {
     display: grid;
     grid-auto-flow: column;
@@ -144,8 +132,7 @@ html {
       padding-block-end: var(--space-lg);
       place-items: start stretch;
       position: absolute;
-      overflow-y: auto;
-      /*z-index: var(--layer-4);*/
+      overflow-y: auto;     
       z-index: 2000;
       transition: opacity 0.3s var(--timing-function-slow-ease),
         scale 0.5s var(--timing-function-slow-ease),
@@ -225,8 +212,6 @@ html {
     text-decoration: none;
     padding-block: var(--space-sm);
     font-size: smaller;
-    /*font-size: var(--nav-link-font-size);*/
-
     &:hover {      
       background-color: #1D1D1B;
       color: white;
@@ -254,8 +239,6 @@ html {
   }}
 
   /*****    idiomas   *******/
-  
-
 .idioms {
     z-index: 10000;
     padding-bottom: 11px;
@@ -789,66 +772,33 @@ button:hover {
   padding-left: 15px;
 }
 /* Contenedor principal */
-.container_audiovisuales {  
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 40px;
-  flex-wrap: wrap; /* Hace que sea responsive */
-  color: black;
-}
-.text-audiovisuales .left-content {
-  flex: 1;  
-  min-width: 300px;
-  margin:  0 85px;
-}            
-.text-audiovisuales .left-content h2 {
-  font-size: 20px;
-  font-weight: bold;                    
-  margin-bottom: 15px;
-  color: black;                    
-}
-.text-audiovisuales .left-content p {
-  font-size: 14px;
-  font-weight: 300;
-  margin-top: 20px; 
-}
-.text-audiovisuales .v-line{
-  border-left: thin solid #000;
-  top: 310px;
-  height: 13%;
-  left: 50%;
+.texto-audiovisuales { 
   position: absolute;
+  max-width: 50%;
+  padding-left: 55px;
+  padding-top: 210px;  
 }
-.text-audiovisuales .right-content {
-  flex: 1;
-  min-width: 300px;
-  padding-left: 40px;
-  padding-right: 20px;
-}
-.text-audiovisuales .right-content p {
-  font-size: 14px;
-  font-weight: 300;
-  margin-top: 20px; 
-}
-@media (min-width: 1600px) {                    
-  .text-audiovisuales .v-line{     
-      left: 50%;
+@media (max-width: 1285px) {
+  .texto-audiovisuales {
+    position: absolute;
+    text-align: left;
+    max-width: 100%;
+    padding-left: 55px;
+    padding-right: 10px;
+    padding-top: 240px;    
   }
 }
-@media (max-width: 918px) {
-  .container_audiovisuales {
-      flex-direction: column; /* Las columnas se apilan una debajo de otra en pantallas pequeñas */
+@media (max-width:800px) {
+  .texto-audiovisuales {    
+    padding-top: 250px;
+    padding-left: 20px;
+    padding-right: 15px;  
   }
-  .text-audiovisuales .v-line{ 
-      display: none;
+}
+@media (max-width: 435px) {
+  .texto-audiovisuales {
+    padding-top: 250px;
   }
-  .text-audiovisuales .left-content h1 {
-      font-size: 36px;
-  }
-  .text-audiovisuales .right-content {               
-      padding-left: 80px;
-}            
 }
 @media (max-width: 630px) {
   .cabecera {
@@ -859,16 +809,10 @@ button:hover {
   }
   .cabecera h1 {
       font-size: xx-large;
-  }
-  .text-audiovisuales .left-content {                
-      margin:  0 35px;
-    }
-  .text-audiovisuales .right-content {   
-      padding-left: 35px;
-  }            
+  }           
 }
 .videos {
-  margin-top: 90px;
+  margin-top: 200px;
   padding-top: 20px;
   padding-bottom: 60px;
   background-color: rgb(216, 216, 216); 
@@ -1321,14 +1265,8 @@ button:hover {
 }
 
 /*****   seccion de entrevistas con audios   ****/
-.entrevistas .container {
-  padding-top: 40px;
-  padding-bottom: 50px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 40px;
-  flex-wrap: wrap; 
+.entrevistas  {
+  padding-top: 30px;  
   color: black;
 }
 .cabecera-entrevistas {
@@ -1348,44 +1286,43 @@ button:hover {
   padding-left: 15px;
 }
 .left-entrevistas {
-  flex: 1;
-  min-width: 300px;
-  margin:  0 85px;
-}                
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin: 0 95px 10px;
+  font-family: 'Poppins', sans-serif;
+  padding-top: 20px;
+}
 .left-entrevistas h2 {
   font-size: 20px;
   font-weight: bold;                    
   margin-bottom: 15px;
   color: black;                    
 }
-.left-entrevistas p {
-  font-size: 14px;
-  margin-bottom: 15px;
+.left-entrevistas p {  
+  color: #000;
+  font-weight: 300;
+  font-size: small;
+  font-family: 'Poppins', sans-serif;
 }
-.v-line-entrevistas {
-  border-left: thin solid #000;
-  height:30%;
-  left: 50%;
-  /*right: 50%;
-  left: 50%;*/
-  position: absolute;
+.puntos-entrevistas {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin: 0 55px 10px;
+  font-family: 'Poppins', sans-serif;
+  padding-top: 20px;
 }
-.right-entrevistas {
-  flex: 1;
-  min-width: 300px;
-  padding-left: 130px;
-}
-
-.right-entrevistas ul {
+.puntos-entrevistas ul {
   list-style-type: none;
+  width: 50%;
 }
-
-.right-entrevistas li {
-  font-size: 14px;
+.puntos-entrevistas li {  
+  font-weight: 300;
+  font-size: small;
   margin-bottom: 20px;
 }
-
-.right-entrevistas li::before {
+.puntos-entrevistas li::before {
   content: "›";
   margin-right: 10px;
   color: #000;
@@ -1436,41 +1373,29 @@ button:hover {
   color: #333;
 }
 /* Estilos Responsive */
-@media (min-width: 1600px) {                    
-  .v-line-entrevistas { 
-      left: 40%;
-  }
-}
-@media (max-width: 918px) { 
-  .entrevistas .container {
-      flex-direction: column; 
-      gap: 10px;
-      display: flex;
-      flex-direction: row;
-      justify-content:left;                         
-  }
-  .v-line-entrevistas { 
-      display: none;
-  }
+@media (max-width: 918px) {  
   .left-entrevistas {
       margin:  0 45px;
-  }
-  .left-entrevistas h1 {
-      font-size: 36px;
-  }
+  }  
   .left-entrevistas h2 {
       font-size: 18px;
   }
-  .right-entrevistas {
-      width: 290px;
-      padding: 1px 0;                        
+  .puntos-entrevistas {
+      margin:  0 8px;                       
   }
-  .right-entrevistas li {
+  .puntos-entrevistas ul {    
+      width: 100%;
+  }
+  .puntos-entrevistas li {
       font-size: 14px;
-      text-align: justify;
+      text-align: left;
   }
 }
 @media screen and (max-width: 768px) {
+  .cabecera-entrevistas h1 {    
+    font-size: 30px;
+    padding-left: 15px;
+  }
   .carousel-item-entrevistas {
     width: 100%;
   }
@@ -1498,12 +1423,12 @@ button:hover {
 .popup {
   display: none; 
   position: fixed;
-  z-index: 1; 
+  z-index: 100000; 
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9); 
+  background-color: black; 
 }
 .popup-content {
   width: 100%;
@@ -1570,7 +1495,7 @@ button:hover {
   cursor: pointer;
 }
 
-/* Responsive adjustments */
+/* Responsive popup de entrevistas */
 @media screen and (max-width: 768px) {
   .popup-content {
     width: 90%;
