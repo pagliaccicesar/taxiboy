@@ -1624,6 +1624,21 @@ button:hover {
   width: 100%;  
   object-fit: cover;
 }
+.slides i {
+  z-index: 100000;
+  position: fixed;
+  top: 10%;
+  right: 10%;
+}
+.popup-center-text {
+  font-size: medium;
+  color: white;
+  z-index: 100000;
+  position: fixed;
+  top: 25%;
+  right: 10%;
+
+}
 .controls button {
   position: fixed;
   top: 50%;
@@ -1656,6 +1671,12 @@ button:hover {
   .controls {
     position: relative;
     margin-top: 100px;
+  }
+}
+@media (min-width: 800px) {
+  .popup-center-text {
+    font-size: x-large;
+    color: white;      
   }
 }
 @media (max-width: 700px) {
