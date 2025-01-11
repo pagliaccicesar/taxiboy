@@ -137,6 +137,7 @@ function seekAudio(e) {
 
 
 // Selección de elementos  javascript de la galeria de fotos
+
 const modal = document.getElementById("modalGallery");
 const openModalButton = document.querySelector(".icono-centro");
 const closeModalButton = document.getElementById("closeModal");

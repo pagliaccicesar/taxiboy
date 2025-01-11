@@ -95,18 +95,59 @@
         <section class="hero">           
 
             <div class="hero-content">
-            <header class="hero-header">
-                <div class="headline1">
-                <span class="headline-container">
-                    <div class="headline-scroller"></div>
-                </span>
-               
-                </div>
-                <div class="content-actions">
-                <a href="./galeria.html" id="sp_lang" class="button-link primary">MUESTRA VIRTUAL</a>
-                <a href="./galeria.html" id="en_lang" class="button-link primary">VIRTUAL EXHIBITION</a>
-                </div>
-            </header>           
+                <header class="hero-header">
+                    <div class="headline1">
+                        <span class="headline-container">
+                            <div class="headline-scroller"></div>
+                        </span>               
+                    </div>
+
+                    <div class="content-actions">
+                        <div class="icono-centro" >
+                        <button class="button-link primary" style="border: none;">                            
+                            <div id="sp_lang"><a href="#modalGallery" id="openModal" style="text-decoration: none; color: white; font-size: medium;" >MUESTRA VIRTUAL</a></div>
+                            <div id="en_lang"><a href="#modalGallery" id="openModal" style="text-decoration: none; color: white; font-size: medium;" >VIRTUAL EXHIBITION</a></div>
+                        </button>
+                         </div>                         
+                    </div>
+
+                    <!-- Modal -->
+                    <div id="modalGallery" class="modal">
+                        <div class="modal-content">
+                            <div class="controls">
+                                <button class="prev" id="prevSlide">&#10094;</button>
+                            </div>               
+                            <div class="slider">
+                                                
+                                <div class="slides">
+                                    <img src="./img/tb07.png" alt="Imagen 1" class="slide">
+                                    <img src="./img/composicion-abstracta.png" alt="Imagen 2" class="slide">
+                                    <img src="./img/tb07.png" alt="Imagen 3" class="slide">
+                                    <img src="./img/composicion-abstracta.png" alt="Imagen 4" class="slide">
+                                    <img src="./img/tb07.png" alt="Imagen 5" class="slide">
+                                    <img src="./img/composicion-abstracta.png" alt="Imagen 6" class="slide">
+                                    <img src="./img/tb07.png" alt="Imagen 7" class="slide">
+                                    <img src="./img/composicion-abstracta.png" alt="Imagen 8" class="slide">
+                                </div>
+                                                    
+                            </div>
+                            <div class="controls">
+                                <button class="next" id="nextSlide">&#10095;</button>    
+                            </div> 
+                        </div>            
+                                <button class="cerrar" id="closeModal">&times;</button>
+                    </div>
+                    
+
+                    
+
+
+                    <!--<div class="content-actions">
+                        <a href="./galeria.html" id="sp_lang" class="button-link primary">MUESTRA VIRTUAL</a>
+                        <a href="./galeria.html" id="en_lang" class="button-link primary">VIRTUAL EXHIBITION</a>
+                    </div>-->
+
+                </header>           
             </div>
         </section>
 
@@ -272,7 +313,9 @@
                 </div>                
             </footer>
         </section>
-    </main>    
+    </main>
+    
+    
 
     <script src="./main.js"></script>
         
