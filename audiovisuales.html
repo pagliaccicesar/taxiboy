@@ -72,10 +72,32 @@
                                     height="29.44"
                                 />
                             </a>                    
-                        <li id="sp_lang"><a href="./galeria.html" class="nav-link">MUESTRA VIRTUAL</a></li>                    
-                        <li id="en_lang"><a href="./galeria.html" class="nav-link">VIRTUAL EXHIBITION</a></li>
+                            <li class="icono-entrevistas"><div id="sp_lang"><a href="#modalGallery" id="openModalSp" class="nav-link">MUESTRA VIRTUAL</a></div></li>
+                            <li class="icono-entrevistas"><div id="en_lang"><a href="#modalGallery" id="openModalEn" class="nav-link">VIRTUAL EXHIBITION</a></div></li>
                     </menu>
                 </div>
+                <!-- Modal -->             
+
+                <div id="modalGallery" class="modal" style="display: none;">
+                    <div class="modal-content">
+                        <div class="controls">
+                            <button class="prev" id="prevSlide">&#10094;</button>
+                        </div>
+                        <div class="slider">
+                            <div class="slides">
+                                <img src="./img/tb07.png" alt="Imagen 1" class="slide">
+                                <i class="fa-solid fa-person-digging fa-2x"></i>
+                                <p class="popup-center-text">En construcción!</p>
+                            </div>
+                        </div>
+                        <div class="controls">
+                            <button class="next" id="nextSlide">&#10095;</button>
+                        </div>
+                    </div>
+                            <button class="cerrar" id="closeModal">&times;</button>
+                </div>
+    
+                <script src="./galery.js"></script> 
     
                 <div class="actions">               
                     <div class="social-media">                    
@@ -104,6 +126,7 @@
                     <a href="./index.html" class="logo-wrapper"><img class="logo-img" src="./img/TAXIBOY_LOGO-NEGRO.png" style="padding-left: 50px;" alt="Taxiboy logo" width="160" height="29.44"/></a>          
              
                 </div>
+                <script src="./idiomas.js"></script>
 
               
     

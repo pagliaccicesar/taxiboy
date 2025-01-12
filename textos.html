@@ -11,6 +11,7 @@
     <title>Taxiboy textos</title>
     <link rel="icon" type="image/x-icon" href="./img/TAXIBOY_LOGO-NEGRO2.png">
     <link rel="stylesheet" href="./main.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
@@ -24,26 +25,11 @@
     <body>
         <nav id="nav" class="nav">
             <div class="nav-container">
-                <!--<a href="#" class="logo-wrapper">
-                <img
-                    class="logo-img" src="./img/TAXIBOY_LOGO-NEGRO.png"                
-                    alt="Taxiboy logo"
-                    width="160"
-                    height="29.44"
-                />
-                </a>-->
+                
                 <div class="menu-wrapper">
                 <div class="mobile-wrapper">
                     <div class="mobile-mobile-head">
-                        <!--<a href="#" class="logo-wrapper">
-                            <img
-                            class="logo-img"
-                            src="./img/TAXIBOY_LOGO-NEGRO.png"
-                            alt="Taxiboy logo"
-                            width="160"
-                            height="29.44"
-                            />
-                        </a>-->
+                        
                         <button
                             class="icon-btn"
                             aria-label="Close Menu"
@@ -62,7 +48,7 @@
                     </div>
                     <menu class="menu">   
     
-                        <!--<li><a href="#SobreElProyecto" class="nav-link">SOBRE EL PROYECTO</a></li>-->
+                        
                         <li><a href="./index.html" class="nav-link">HOME</a></li>                    
                             <a href="#" class="logo-wrapper">
                                 <img
@@ -72,114 +58,38 @@
                                     height="29.44"
                                 />
                             </a>                    
-                        <!--<li id="sp_lang"><a href="./galeria.html" class="nav-link">MUESTRA VIRTUAL</a></li>                    
-                        <li id="en_lang"><a href="./galeria.html" class="nav-link">VIRTUAL EXHIBITION</a></li>-->
-                        <li class="icono-entrevistas" id="sp_lang"><a href="#modalGallery" id="openModal" class="nav-link">MUESTRA VIRTUAL</a></li>
-                        <li class="icono-entrevistas" id="en_lang"><a href="#modalGallery" id="openModal" class="nav-link">VIRTUAL EXHIBITION</a></li>
-                    </menu>
+                                              
+                        <!--<li class="icono-entrevistas"><div id="sp_lang"><a href="#modalGallery" id="openModal" class="nav-link">MUESTRA VIRTUAL</a></div></li>
+                        <li class="icono-entrevistas"><div id="en_lang"><a href="#modalGallery" id="openModal" class="nav-link">VIRTUAL EXHIBITION</a></div></li>-->
+                        <li class="icono-entrevistas"><div id="sp_lang"><a href="#modalGallery" id="openModalSp" class="nav-link">MUESTRA VIRTUAL</a></div></li>
+                        <li class="icono-entrevistas"><div id="en_lang"><a href="#modalGallery" id="openModalEn" class="nav-link">VIRTUAL EXHIBITION</a></div></li>
+                        
+                        
+                    </menu> 
+                    
                 </div>
-                 <!-- Modal -->
-                        <div id="modalGallery" class="modal">
-                            <div class="modal-content">
-                                <div class="controls">
-                                    <button class="prev" id="prevSlide">&#10094;</button>
-                                </div>               
-                                <div class="slider">
-                                                    
-                                    <div class="slides">
-                                        <img src="./img/tb07.png" alt="Imagen 1" class="slide">
-                                        <img src="./img/composicion-abstracta.png" alt="Imagen 2" class="slide">
-                                        <img src="./img/tb07.png" alt="Imagen 3" class="slide">
-                                        <img src="./img/composicion-abstracta.png" alt="Imagen 4" class="slide">
-                                        <img src="./img/tb07.png" alt="Imagen 5" class="slide">
-                                        <img src="./img/composicion-abstracta.png" alt="Imagen 6" class="slide">
-                                        <img src="./img/tb07.png" alt="Imagen 7" class="slide">
-                                        <img src="./img/composicion-abstracta.png" alt="Imagen 8" class="slide">
-                                    </div>
-                                                        
-                                </div>
-                                <div class="controls">
-                                    <button class="next" id="nextSlide">&#10095;</button>    
-                                </div> 
-                            </div>            
-                                    <button class="cerrar" id="closeModal">&times;</button>
+                 <!-- Modal -->             
+
+                <div id="modalGallery" class="modal" style="display: none;">
+                    <div class="modal-content">
+                        <div class="controls">
+                            <button class="prev" id="prevSlide">&#10094;</button>
                         </div>
-       
-                        <script>
-                                    // Selección de elementos  javascript de la galeria de fotos
-
-                                const modal = document.getElementById("modalGallery");
-                                const openModalButton = document.querySelector(".icono-entrevistas");
-                                const closeModalButton = document.getElementById("closeModal");
-                                const prevSlideButton = document.getElementById("prevSlide");
-                                const nextSlideButton = document.getElementById("nextSlide");
-                                const slides = document.querySelectorAll(".slide");
-                                const slider = document.querySelector(".slides");
-
-                                let currentIndex = 0;
-
-                                // Función para mostrar la diapositiva actual
-                                function showSlide(index) {
-                                    // Validar que el índice esté dentro de los límites
-                                    if (index < 0) {
-                                        currentIndex = slides.length - 1; // Última diapositiva
-                                    } else if (index >= slides.length) {
-                                        currentIndex = 0; // Primera diapositiva
-                                    } else {
-                                        currentIndex = index;
-                                    }
-
-                                    // Mover el contenedor de diapositivas
-                                    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-                                }
-
-                                // Abrir modal y mostrar la primera imagen
-                                function openModal() {
-                                    modal.style.display = "flex";
-                                    showSlide(0); // Reinicia al primer slide
-                                }
-
-                                // Cerrar modal
-                                function closeModal() {
-                                    modal.style.display = "none";
-                                }
-
-                                // Cambiar de diapositiva
-                                function prevSlide() {
-                                    showSlide(currentIndex - 1);
-                                }
-
-                                function nextSlide() {
-                                    showSlide(currentIndex + 1);
-                                }
-
-                                // Eventos
-                                openModalButton.addEventListener("click", openModal);
-                                closeModalButton.addEventListener("click", closeModal);
-                                prevSlideButton.addEventListener("click", prevSlide);
-                                nextSlideButton.addEventListener("click", nextSlide);
-
-                                // Cerrar modal al hacer clic fuera de él
-                                window.addEventListener("click", (event) => {
-                                    if (event.target === modal) {
-                                        closeModal();
-                                    }
-                                });
-
-                                // Teclado: cerrar modal con "Esc" y navegar con flechas
-                                window.addEventListener("keydown", (event) => {
-                                    if (modal.style.display === "flex") {
-                                        if (event.key === "Escape") {
-                                            closeModal();
-                                        } else if (event.key === "ArrowLeft") {
-                                            prevSlide();
-                                        } else if (event.key === "ArrowRight") {
-                                            nextSlide();
-                                        }
-                                    }
-                                });
-                                closeModal()
-                        </script>
+                        <div class="slider">
+                            <div class="slides">
+                                <img src="./img/tb07.png" alt="Imagen 1" class="slide">
+                                <i class="fa-solid fa-person-digging fa-2x"></i>
+                                <p class="popup-center-text">En construcción!</p>
+                            </div>
+                        </div>
+                        <div class="controls">
+                            <button class="next" id="nextSlide">&#10095;</button>
+                        </div>
+                    </div>
+                            <button class="cerrar" id="closeModal">&times;</button>
+                </div>
+    
+                <script src="./galery.js"></script>                
 
    
     
@@ -210,6 +120,7 @@
                     <a href="./index.html" class="logo-wrapper"><img class="logo-img" src="./img/TAXIBOY_LOGO-NEGRO.png" style="padding-left: 50px;" alt="Taxiboy logo" width="160" height="29.44"/></a>          
              
                 </div>
+                <script src="./idiomas.js"></script>
 
               
     
@@ -222,8 +133,9 @@
             </div>
         </nav>            
     
-            <!--   index   -->           
-    
+            <!--   index   -->   
+               
+           
            <div class="cabecera">
                     <a href="#" class="back-button">
                         <svg width="35" height="35" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -358,7 +270,8 @@
                 </div>                    
             </footer>
 
-    <script src="./main.js"></script>            
+    <script src="./main.js"></script>
 
     </body>
 </html>
+
