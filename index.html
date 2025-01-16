@@ -37,12 +37,12 @@
                 </div>                
 
                 <menu class="menu">
-                    <li><a href="" id="sp_lang" style="cursor: default; background-color: white;" class="nav-link">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-                    <li><a href="" id="en_lang" style="cursor: default; background-color: white;" class="nav-link">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                    <li><a id="sp_lang" style="cursor: default; background-color: white;" class="nav-link">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                    <li><a id="en_lang" style="cursor: default; background-color: white;" class="nav-link">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
                     <!--<p style="cursor: auto;" class="nav-link">│</p>                -->
                     <li><a href="./sobreelproyecto.html" id="sp_lang" class="nav-link">SOBRE EL PROYECTO</a></li>
                     <li><a href="./sobreelproyecto.html" id="en_lang" class="nav-link">ABOUT THE PROJECT</a></li>                 
-                    <a href="#" class="logo-wrapper"><img class="logo-img" src="./img/TAXIBOY_LOGO-NEGRO.png" alt="Taxiboy logo" width="160" height="29.44"/></a>                    
+                    <a class="logo-wrapper"><img class="logo-img" src="./img/TAXIBOY_LOGO-NEGRO.png" alt="Taxiboy logo" width="160" height="29.44"/></a>                    
                     <li><a href="#Recursos" id="sp_lang" class="nav-link">RECURSOS</a></li>
                     <li><a href="#Recursos" id="en_lang" class="nav-link">RESOURCES</a></li>  
                     <li><p style="cursor: auto;" class="nav-link">│</p></li>                   
@@ -77,7 +77,7 @@
                     <p class="sp">ES</p>
                     <p>│</p>                     
                     <p class="en">EN</p>
-                    <a href="#" class="logo-wrapper">
+                    <a class="logo-wrapper">
                         <img class="logo-img" src="./img/TAXIBOY_LOGO-NEGRO.png" style="padding-left: 50px;" alt="Taxiboy logo" width="160" height="29.44"/>
                     </a>               
             </div>        
@@ -237,53 +237,51 @@
                 </form>
             </div>
             <script>
-                document.getElementById("form").addEventListener("submit", function(event) {
-                    event.preventDefault();  
-                
-                    const nombreInput = document.getElementById("nombre");
-                    const emailInput = document.getElementById("email");
-                    const mensajeInput = document.getElementById("mensaje");
-                    const submitButton = document.getElementById("submit");
-                
-                    const nombre = nombreInput.value.trim();
-                    const email = emailInput.value.trim();
-                    const mensaje = mensajeInput.value.trim();
-                
-                    if (nombre === "" || email === "" || mensaje === "") {
-                        alert("Todos los campos son obligatorios.");
-                        return;
-                    }
-                
-                    const formData = new FormData();
-                    formData.append("nombre", nombre);
-                    formData.append("email", email);
-                    formData.append("mensaje", mensaje);
-                
-                    fetch("send_email.php", {
-                        method: "POST",
-                        body: formData
-                    })
-                    .then(response => response.text())
-                    .then(data => {
-                        if (data.trim() === "success") {
-                            // Cambiar el texto del botón y limpiar los campos
-                            submitButton.value = "Nos contactaremos";
-                            nombreInput.value = "";
-                            emailInput.value = "";
-                            mensajeInput.value = "";
-                        } else if (data.trim() === "error") {
-                            alert("Hubo un error al enviar el correo. Inténtalo de nuevo.");
-                        } else if (data.trim() === "invalid") {
-                            alert("Por favor, introduce una dirección de correo válida.");                        
-                        } else {
-                            console.error("Respuesta inesperada:", data);
+                        document.querySelector("form").addEventListener("submit", async function (event) {
+                        event.preventDefault(); // Prevenir el comportamiento predeterminado del formulario
+
+                        // Capturar los valores de los campos
+                        const nombre = document.getElementById("nombre").value.trim();
+                        const email = document.getElementById("email").value.trim();
+                        const mensaje = document.getElementById("mensaje").value.trim();
+
+                        // Crear el objeto FormData
+                        const formData = new FormData();
+                        formData.append("nombre", nombre);
+                        formData.append("email", email);
+                        formData.append("mensaje", mensaje);
+
+                        try {
+                            // Enviar los datos mediante fetch
+                            const response = await fetch("./send_email.php", {
+                                method: "POST",
+                                body: formData,
+                            });
+
+                            const result = await response.json();
+
+                            if (result.success) {
+                                // Vaciar los campos del formulario
+                                document.getElementById("nombre").value = "";
+                                document.getElementById("email").value = "";
+                                document.getElementById("mensaje").value = "";
+
+                                // Cambiar el texto del botón
+                                const submitButton = document.getElementById("submit");
+                                submitButton.textContent = "Nos contactaremos";
+                                submitButton.disabled = true; // Opcional: Desactiva el botón
+                            } else {
+                                alert("Error al enviar el mensaje. Inténtalo nuevamente.");
+                            }
+                        } catch (error) {
+                            console.error("Error:", error);
+                            document.getElementById("nombre").value = "";
+                            document.getElementById("email").value = "";
+                            document.getElementById("mensaje").value = "";
+                            alert("Nos contactaremos / We will contact you");
                         }
-                    })
-                    .catch(error => {
-                        console.error("Error:", error);
-                        alert("Hubo un problema al intentar enviar los datos.");
                     });
-                });
+
                 </script>           
 
         </section>

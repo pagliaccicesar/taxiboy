@@ -1,26 +1,30 @@
-
 <?php
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $nombre = isset($_POST['nombre']) ? filter_var($_POST['nombre'], FILTER_SANITIZE_STRING) : '';
-    $email = isset($_POST['email']) ? filter_var($_POST['email'], FILTER_SANITIZE_EMAIL) : '';
-    $mensaje = isset($_POST['mensaje']) ? filter_var($_POST['mensaje'], FILTER_SANITIZE_STRING) : '';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nombre = htmlspecialchars($_POST['nombre']);
+    $email = htmlspecialchars($_POST['email']);
+    $mensaje = htmlspecialchars($_POST['mensaje']);
 
-    if (!empty($nombre) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $to = "pagliaccicesar@gmail.com"; // Reemplaza con tu dirección de correo
-        $subject = "Nuevo contacto";
-        $message = "Nombre: " . $nombre . "\nCorreo: " . $email . "\nMensaje: " . $mensaje;
-        $headers = "From: noreply@cesarpagliacci.com.ar\r\n";
-        $headers .= "Reply-To: " . $email . "\r\n";
-        $headers .= "Content-Type: text/plain; charset=utf-8\r\n";
- 
-        if (mail($to, $subject, $message, $headers)) {
-            echo "success";
-        } else {
-            error_log("Error al enviar el correo: " . print_r(error_get_last(), true));
-            echo "error";
-        }
+    // Dirección de correo a donde se enviarán los datos
+    $destinatario = "pagliaccicesar@gmail.com";
+    $asunto = "Nuevo mensaje de contacto";
+
+    // Crear el cuerpo del correo
+    $cuerpo = "Nombre: $nombre\n";
+    $cuerpo .= "Email: $email\n";
+    $cuerpo .= "Mensaje: $mensaje\n";
+
+    // Cabeceras
+    $headers = "From: $email\r\n";
+    $headers .= "Reply-To: $email\r\n";
+
+    // Enviar correo
+    if (mail($destinatario, $asunto, $cuerpo, $headers)) {
+        echo json_encode(["success" => true]);
     } else {
-        echo "invalid";
+        echo json_encode(["success" => false]);
     }
+} else {
+    header("Location: /"); // Redirige a la página principal si se accede directamente
+    exit;
 }
 ?>

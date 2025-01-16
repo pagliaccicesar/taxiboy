@@ -114,6 +114,7 @@ html {
     display: block;
     object-fit: cover;
     cursor:auto;
+    user-select: none;
   }
   .menu-wrapper {
     display: grid;
@@ -1604,7 +1605,7 @@ button:hover {
   width: 100%;
   height: 100%;
   background-color: black;
-  z-index: 1000000;
+  z-index: 10000000;
 }
 .modal-content {
   position: relative;
