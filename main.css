@@ -78,9 +78,9 @@ body {
     min-block-size: 100dvb;
   }
 }
-html {  
-  scroll-behavior: smooth; /* CSS para desplazamiento suave en toda la página */
-}
+/*html {  
+  scroll-behavior: smooth; /
+}*/
 @layer App {
   .nav {
     display: grid;
@@ -1593,7 +1593,6 @@ button:hover {
   /*pointer-events: none; /* Opcional: evita que el SVG interfiera con eventos de usuario */
 }
 
-
 /***  modal de galeria de fotos  ***/
 .modal {  
   display: flex;
@@ -1638,7 +1637,6 @@ button:hover {
   position: fixed;
   top: 25%;
   right: 10%;
-
 }
 .controls button {
   position: fixed;
@@ -1673,8 +1671,7 @@ button:hover {
     width: 0px !important;  
   } 
   .modal-content {    
-    background: black;
-    z-index: 800000000;
+    background: black;   
   }
   .controls {
     position: relative;
@@ -1696,8 +1693,7 @@ button:hover {
   }  
 }
 @media (max-width: 480px) {
-  .modal-content {
-    background: #000000;
+  .modal-content {   
     height: 100%;
     display: flex;
     align-items: center;
