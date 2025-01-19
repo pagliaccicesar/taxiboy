@@ -1595,7 +1595,7 @@ button:hover {
 
 
 /***  modal de galeria de fotos  ***/
-.modal {
+.modal {  
   display: flex;
   position: fixed;
   justify-content: center;
@@ -1603,25 +1603,25 @@ button:hover {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background-color: black;
-  z-index: 10000000;
+  height: 100%;  
+  background: #000000;
+  z-index: 80000000000; 
 }
-.modal-content {
+.modal-content { 
   position: relative;
   width: 80%;  
   max-width: 1000px;
+  background: #000000;
 }
-.slider {
+.slider {  
   position: relative;
-  width: 100%;
-  overflow: hidden;
+  width: 100%;  
 }
-.slides {
+.slides {  
   display: flex;  
   transition: transform 0.5s ease-in-out;
 }
-.slide {
+.slide {  
   width: 100%;  
   object-fit: cover;
 }
@@ -1644,7 +1644,7 @@ button:hover {
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
+  background: black; 
   color: white;
   border: none;
   padding: 10px 15px;
@@ -1668,7 +1668,14 @@ button:hover {
   cursor: pointer;
   color: #fff;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1000px) { 
+  html::-webkit-scrollbar {
+    width: 0px !important;  
+  } 
+  .modal-content {    
+    background: black;
+    z-index: 800000000;
+  }
   .controls {
     position: relative;
     margin-top: 100px;
@@ -1690,6 +1697,7 @@ button:hover {
 }
 @media (max-width: 480px) {
   .modal-content {
+    background: #000000;
     height: 100%;
     display: flex;
     align-items: center;
