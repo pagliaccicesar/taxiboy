@@ -183,9 +183,7 @@ body {
       grid-auto-flow: column;
       gap: 1px;
       margin-right: -5px;      
-      font-size: smaller;
-      /*gap: var(--space-md);
-      padding-inline: var(--space-md);    */ 
+      font-size: smaller;     
     }
    
     @media (width < 1056px) {
@@ -372,9 +370,7 @@ body {
     border-radius: var(--button-link-border-radius);
     block-size: var(--button-link-block-size);
     transition: background-color 0.2s var(--timing-function-slow-ease);
-    color: var(--button-link-text);
-    /*order: var(--button-link-border);*/
-    /*background-color: var(--button-link-face);*/
+    color: var(--button-link-text);   
     background-color: #1a1a1a;
     min-inline-size: var(--button-link-min-inline-size);
     display: inline-grid;
@@ -396,15 +392,12 @@ body {
   }
 
   /* Main */
-
   .hero {
     block-size: max(490px, calc(90dvb - var(--nav-block-size)));
     display: grid;
     gap: var(--space-lg);
     inline-size: 100%;
-    background-image: url("./img/tb06.jpg");
-    /*background-image: url("./img/tb06.jpg");*/
-    /*background-position: center;*/
+    background-image: url("./img/tb06.jpg");    
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -774,7 +767,6 @@ button:hover {
   font-size: 300%;
   padding-left: 15px;
 }
-/* Contenedor principal */
 .texto-audiovisuales { 
   position: absolute;
   max-width: 50%;
