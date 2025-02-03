@@ -78,9 +78,9 @@ body {
     min-block-size: 100dvb;
   }
 }
-/*html {  
-  scroll-behavior: smooth; /
-}*/
+html {  
+  scroll-behavior: smooth;
+}
 @layer App {
   .nav {
     display: grid;
@@ -1659,9 +1659,9 @@ button:hover {
   color: #fff;
 }
 @media (max-width: 1000px) { 
-  html::-webkit-scrollbar {
+  /*html::-webkit-scrollbar {
     width: 0px !important;  
-  } 
+  } */
   .modal-content {    
     background: black;   
   }
