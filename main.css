@@ -1145,6 +1145,7 @@ button:hover {
   align-items: center;
   height: 100%;
   text-decoration: none;
+  cursor: default;
 }
 .org-icon img { 
   height: 55px;
