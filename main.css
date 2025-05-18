@@ -646,7 +646,10 @@ html {
   .contacto h2 {
     font-weight: 400;
     font-size: 14px;
-  } 
+  }
+  .contacto {
+    padding-bottom: 39px;
+  }
 }
 
 /****  formulario nuevo   ******/
