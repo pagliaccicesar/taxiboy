@@ -1970,7 +1970,7 @@ footer {
 }
 @media (max-width: 777px) {
   section footer {
-    height: 35vh;   
+    height: 40vh;   
   }
   .footer-container  {
     display: grid;
@@ -1978,10 +1978,20 @@ footer {
     grid-template-rows: auto auto ;   
   }
   .footer-logo img {
-    width: 60%;
+    width: 45%;
     height: auto;
   }
+  .footer-icons {
+    display: flex;
+    gap: 21px;  
+}
   .footer-icons, .footer-logo, .design {
     margin: 0 auto;
   }
 }
+@media (max-width: 500px) {
+  section footer {
+    height: 30vh;   
+  }
+}
+
