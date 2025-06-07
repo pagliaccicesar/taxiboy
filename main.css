@@ -203,6 +203,11 @@ html {
         display: none;        
       }      
     }
+    @media (max-width: 1056px) {
+      .menu .logo-img {
+        display: none;        
+      }  
+    }
 
   .nav-link {
     z-index: 2000;
@@ -1962,6 +1967,8 @@ footer {
   color: #fff;
 }
 .design {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
   font-size: small
 }
 .design a {
