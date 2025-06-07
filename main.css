@@ -1325,7 +1325,7 @@ button:hover {
   content: "›";
   margin-right: 10px;
   color: #000;
-  font-size: 20px;
+  /*font-size: 20px;*/
 }
 
 .audios {
