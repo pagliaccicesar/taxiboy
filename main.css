@@ -1934,7 +1934,7 @@ section footer {
 footer {
   margin-top: auto;
   background-color: #111; 
-  padding: 20px;
+  padding: 1px;
 }
 .footer-container {
   display: flex;
@@ -1961,9 +1961,16 @@ footer {
 .footer-icons a {
   color: #fff;
 }
+.design {
+  font-size: small
+}
+.design a {
+  text-decoration: none;
+  color: #fff;
+}
 @media (max-width: 777px) {
   section footer {
-    height: 31vh;   
+    height: 41vh;   
   }
   .footer-container  {
     display: grid;
@@ -1974,7 +1981,7 @@ footer {
     width: 60%;
     height: auto;
   }
-  .footer-icons, .footer-logo {
+  .footer-icons, .footer-logo, .design {
     margin: 0 auto;
   }
 }
