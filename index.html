@@ -39,8 +39,7 @@
 
                 <menu class="menu">
                     <li><a id="sp_lang" style="cursor: default; background-color: white;" class="nav-link">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-                    <li><a id="en_lang" style="cursor: default; background-color: white" class="nav-link">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-                    <!--<p style="cursor: auto;" class="nav-link">│</p>  -->
+                    <li><a id="en_lang" style="cursor: default; background-color: white" class="nav-link">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>                    
                     <li><a href="./sobreelproyecto.html" id="sp_lang" class="nav-link">SOBRE EL PROYECTO</a></li>
                     <li><a href="./sobreelproyecto.html" id="en_lang" class="nav-link">ABOUT THE PROJECT</a></li>                  
                     <a class="logo-wrapper"><img class="logo-img" src="./img/TAXIBOY_LOGO-NEGRO.png" alt="Taxiboy logo" width="160" height="29.44"/></a>
@@ -119,11 +118,7 @@
                                 <button class="prev" id="prevSlide">&#10094;</button>
                             </div>               
                             <div class="slider">                                      
-                                <div class="slides">
-                                    <!--<img src="./img/tb07.png" alt="Imagen 1" class="slide">                                   
-                                    <i class="fa-solid fa-person-digging fa-2x"></i>
-                                    <p class="popup-center-text">En construcción!</p>-->                                   
-
+                                <div class="slides">                                    
                                     <img src="./img/01 TB 06.png" alt="Imagen 1" class="slide">
                                     <img src="./img/02 DSC06771.png" alt="Imagen 2" class="slide">
                                     <img src="./img/03 TXB 1.png" alt="Imagen 3" class="slide">
@@ -138,19 +133,11 @@
                             </div> 
                         </div>            
                                 <button class="cerrar" id="closeModal">&times;</button>
-                    </div>                  
-
-
-                    <!--<div class="content-actions">
-                        <a href="./galeria.html" id="sp_lang" class="button-link primary">MUESTRA VIRTUAL</a>
-                        <a href="./galeria.html" id="en_lang" class="button-link primary">VIRTUAL EXHIBITION</a>
-                    </div>-->
-
+                    </div>                    
                 </header>           
             </div>
         </section>
-
-        <!--<div id="Recursos"></div>-->
+        
         <section>
             <div class="programas">
                 <div class="flex-container">
@@ -177,8 +164,6 @@
 
                         <svg height="50" width="100%" xmlns="http://www.w3.org/2000/svg">                           
                             <line x1="0" y1="10" x2="100%" y2="10" style="stroke:black;stroke-width:1" />                           
-                            <!--<path d="M 47 10 A 5 5 0 0 1 53 10" fill="transparent" stroke="black" stroke-width="1" />                    
-                            <line x1="53%" y1="10" x2="100%" y2="10" style="stroke:black;stroke-width:1" />-->     
                         </svg>                   
                     <a href="./textos.html" id="sp_lang" class="item">
                         textos</a>
@@ -228,11 +213,9 @@
         
                     <label for="mensaje" id="sp_lang">Déjanos tu mensaje:</label>
                     <label for="mensaje" id="en_lang">Leave us your message:</label>
-                    <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
-        
-                    <!--<button type="submit" id="submit" type="submit">Enviar / Send</button>-->
-                    <button type="submit" id="submit" type="submit"><p id="sp_lang">Enviar</p><p id="en_lang">Send</p></button>
-                    <!--<button type="submit" id="submit" type="submit"><p id="en_lang">Send</p></button>-->
+                    <textarea id="mensaje" name="mensaje" rows="6" required></textarea>       
+                    
+                    <button type="submit" id="submit" type="submit"><p id="sp_lang">Enviar</p><p id="en_lang">Send</p></button>                   
                 </form>
             </div>
             <script>
@@ -320,6 +303,71 @@
     
   
     <script src="./main.js"></script>
+
+        <!-- Popup de verificación de edad -->
+        <!--<div id="age-verification" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: black; z-index: 9999; display: flex; justify-content: center; align-items: center; flex-direction: column; color: white; text-align: center;">
+            <h1>¿Eres mayor de 18 años?</h1>
+            <div style="margin-top: 20px;">
+                <button onclick="allowAccess()" style="padding: 10px 20px; margin: 10px; font-size: 18px;">Sí, soy mayor de 18</button>
+                <button onclick="denyAccess()" style="padding: 10px 20px; margin: 10px; font-size: 18px;">No, soy menor de 18</button>
+            </div>
+        </div>
+        <script>
+            function allowAccess() {
+                document.getElementById('age-verification').style.display = 'none';
+            }
+
+            function denyAccess() {
+                window.location.href = 'acceso-denegado.html';
+            }
+           
+        </script>-->
+        <div id="agePopup" style="
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            flex-direction: column;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            padding: 20px;
+            text-align: center;
+        ">
+            <h2 style="margin-bottom: 20px;">¿Eres mayor de 18 años?</h2>
+            <div>
+                <button id="btnMayor" style="margin: 10px; padding: 10px 20px; font-size: 16px;">Sí, soy mayor</button>
+                <button id="btnMenor" style="margin: 10px; padding: 10px 20px; font-size: 16px;">No, soy menor</button>
+            </div>
+        </div>
+        <script>
+            window.addEventListener('DOMContentLoaded', () => {
+                const agePopup = document.getElementById('agePopup');
+
+                // Verifica si ya se confirmó la edad
+                if (localStorage.getItem('esMayorDe18') === 'true') {
+                    agePopup.style.display = 'none';
+                }
+
+                // Botón "Sí, soy mayor"
+                document.getElementById('btnMayor').addEventListener('click', () => {
+                    localStorage.setItem('esMayorDe18', 'true');
+                    agePopup.style.display = 'none';
+                });
+
+                // Botón "No, soy menor"
+                document.getElementById('btnMenor').addEventListener('click', () => {
+                    window.location.href = 'acceso-denegado.html';
+                });
+            });
+        </script>
+
+
+
+
         
     </body>
 </html>
