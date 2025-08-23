@@ -202,71 +202,107 @@
                 
             </div>
         </section>
-
         <section class="form_contacto">
-            <div class="form-container">
-                <form action="./send_email.php" method="post">
-                    <label for="nombre" id="sp_lang">Nombre y Apellido:</label>
-                    <label for="nombre" id="en_lang">Name & Surname:</label><input type="text" id="nombre" name="nombre" required>            
-                    
-                    <label for="email" id="sp_lang">Email:</label>
-                    <label for="email" id="en_lang">Email:</label><input type="email" id="email" name="email" required>
-        
-                    <label for="mensaje" id="sp_lang">Déjanos tu mensaje:</label>
-                    <label for="mensaje" id="en_lang">Leave us your message:</label>
-                    <textarea id="mensaje" name="mensaje" rows="6" required></textarea>       
-                    
-                    <button type="submit" id="submit" type="submit"><p id="sp_lang">Enviar</p><p id="en_lang">Send</p></button>                   
-                </form>
-            </div>
-            <script>
-                        document.querySelector("form").addEventListener("submit", async function (event) {
-                        event.preventDefault(); // Prevenir el comportamiento predeterminado del formulario
+                <div class="form-container">
+                    <form action="./send_email.php" method="post">
+                        <label for="nombre" id="sp_lang">Nombre y Apellido:</label>
+                        <label for="nombre" id="en_lang">Name & Surname:</label>
+                        <input type="text" id="nombre" name="nombre" required>            
+                        
+                        <label for="email" id="sp_lang">Email:</label>
+                        <label for="email" id="en_lang">Email:</label>
+                        <input type="email" id="email" name="email" required>
 
-                        // Capturar los valores de los campos
-                        const nombre = document.getElementById("nombre").value.trim();
-                        const email = document.getElementById("email").value.trim();
-                        const mensaje = document.getElementById("mensaje").value.trim();
+                        <label for="mensaje" id="sp_lang">Déjanos tu mensaje:</label>
+                        <label for="mensaje" id="en_lang">Leave us your message:</label>
+                        <textarea id="mensaje" name="mensaje" rows="6" required></textarea>       
+                        
+                        <button type="submit" id="submit"><p id="sp_lang">Enviar</p><p id="en_lang">Send</p></button>                   
+                    </form>
+                </div>
 
-                        // Crear el objeto FormData
-                        const formData = new FormData();
-                        formData.append("nombre", nombre);
-                        formData.append("email", email);
-                        formData.append("mensaje", mensaje);
+                <!-- POPUP -->
+                <div id="popup" class="popup-overlay">
+                <div class="popup-content">
+                    <p>✅ Pronto nos contactaremos.<br>We will contact you soon.</p>
+                </div>
+                </div>
+                <style>
+                    .form_contacto .popup-overlay {
+                        position: fixed;
+                        top: 0; left: 0;
+                        width: 100%; height: 60%;
+                        background: rgba(0,0,0,0.6);
+                        display: none; /* Oculto por defecto */
+                        justify-content: center;
+                        align-items: center;
+                        z-index: 9999;
+                    }
 
-                        try {
-                            // Enviar los datos mediante fetch
-                            const response = await fetch("./send_email.php", {
-                                method: "POST",
-                                body: formData,
-                            });
+                    /* Caja del popup */
+                    .form_contacto .popup-content {
+                        background: #fff;
+                        padding: 20px 30px;
+                        border-radius: 12px;
+                        text-align: center;
+                        max-width: 300px;                    
+                        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+                        font-size: 1.1rem;
+                        color: #333; /* 👈 Importante: asegura que el texto sea visible */
+                    }
 
-                            const result = await response.json();
+                </style>
 
-                            if (result.success) {
-                                // Vaciar los campos del formulario
-                                document.getElementById("nombre").value = "";
-                                document.getElementById("email").value = "";
-                                document.getElementById("mensaje").value = "";
+                
 
-                                // Cambiar el texto del botón
-                                const submitButton = document.getElementById("submit");
-                                submitButton.textContent = "Nos contactaremos";
-                                submitButton.disabled = true; // Opcional: Desactiva el botón
-                            } else {
-                                alert("Error al enviar el mensaje. Inténtalo nuevamente.");
-                            }
-                        } catch (error) {
-                            console.error("Error:", error);
+                <script>
+                document.querySelector("form").addEventListener("submit", async function (event) {
+                    event.preventDefault(); // Prevenir el comportamiento predeterminado del formulario
+
+                    // Capturar los valores de los campos
+                    const nombre = document.getElementById("nombre").value.trim();
+                    const email = document.getElementById("email").value.trim();
+                    const mensaje = document.getElementById("mensaje").value.trim();
+
+                    // Crear el objeto FormData
+                    const formData = new FormData();
+                    formData.append("nombre", nombre);
+                    formData.append("email", email);
+                    formData.append("mensaje", mensaje);
+
+                    try {
+                        // Enviar los datos mediante fetch
+                        const response = await fetch("./send_email.php", {
+                            method: "POST",
+                            body: formData,
+                        });
+
+                        const result = await response.json();
+
+                        if (result.success) {
+                            // Vaciar los campos del formulario
                             document.getElementById("nombre").value = "";
                             document.getElementById("email").value = "";
                             document.getElementById("mensaje").value = "";
-                            alert("Gracias por escribirnos. Te contactaremos a la brevedad. / Thank you for reaching out. We will respond shortly.");
+
+                            // Mostrar popup
+                            const popup = document.getElementById("popup");
+                            popup.style.display = "flex";
+
+                            // Cerrar popup después de 2 segundos
+                            setTimeout(() => {
+                                popup.style.display = "none";
+                            }, 2000);
+
+                        } else {
+                            alert("Error al enviar el mensaje. Inténtalo nuevamente.");
                         }
-                    });
-
-                </script>           
-
+                    } catch (error) {
+                        console.error("Error:", error);
+                        alert("Gracias por escribirnos. Te contactaremos a la brevedad.");
+                    }
+                });
+                </script>
         </section>
 
         <section>
@@ -279,6 +315,9 @@
                 </div>
             </div>
         </section>
+
+
+        
 
         <section>
             <footer>              

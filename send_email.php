@@ -1,5 +1,4 @@
 <?php
-// Cargar PHPMailer
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -7,11 +6,9 @@ require 'PHPMailer/src/Exception.php';
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 
-// Configuración de respuesta JSON
 header('Content-Type: application/json');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Capturar y sanitizar datos del formulario
     $nombre  = isset($_POST['nombre']) ? trim($_POST['nombre']) : '';
     $email   = isset($_POST['email']) ? trim($_POST['email']) : '';
     $mensaje = isset($_POST['mensaje']) ? trim($_POST['mensaje']) : '';
@@ -21,24 +18,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    // Crear instancia de PHPMailer
     $mail = new PHPMailer(true);
 
     try {
-        // Configuración SMTP para Hostinger
         $mail->isSMTP();
         $mail->Host       = 'smtp.hostinger.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'info@taxiboy.com.ar'; // tu correo
-        $mail->Password   = 'Mi$erere11'; // <-- reemplaza con tu contraseña
+        $mail->Username   = 'info@taxiboy.com.ar';
+        $mail->Password   = 'Mi$erere11';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
 
-        // Remitente y destinatario
         $mail->setFrom('info@taxiboy.com.ar', 'Formulario Web');
-        $mail->addAddress('info@taxiboy.com.ar'); // destinatario       
+        $mail->addAddress('info@taxiboy.com.ar');
 
-        // Contenido del correo
         $mail->isHTML(true);
         $mail->Subject = 'Nuevo mensaje desde el formulario de taxiboy.com.ar';
         $mail->Body    = "
@@ -49,7 +42,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ";
         $mail->AltBody = "Nombre: {$nombre}\nEmail: {$email}\nMensaje:\n{$mensaje}";
 
-        // Enviar
         if ($mail->send()) {
             echo json_encode(['success' => true]);
         } else {
