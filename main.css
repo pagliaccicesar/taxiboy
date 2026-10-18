@@ -1713,7 +1713,7 @@ button:hover {
   display: flex;  
   transition: transform 0.5s ease-in-out; 
 }
-.slide {  
+.slide {
   width: 100%;  
   object-fit: contain;
   padding: 0 160px;
