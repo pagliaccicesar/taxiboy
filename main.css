@@ -1517,80 +1517,71 @@ button:hover {
   }
 }
 
-/*.popup {
-  display: none; 
-  position: fixed;
-  z-index: 100000; 
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black; 
+/* POPUP DE ENTREVISTAS EN CONSTRUCCIÓN */
+.construction-popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
-.popup-content {
-  width: 100%;
-  height: 75%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  text-align: center;
-  color: white;
+.construction-popup.active {
+    display: flex;
 }
-.popup-center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.construction-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    color: #fff;
 }
-.popup-center-text {
-  font-size: 32px;
-  margin-bottom: 10px;
+.construction-close {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    font-size: 42px;
+    line-height: 1;
+    color: #fff;
+    cursor: pointer;
 }
-.close {
-  position: absolute;
-  top: 20px;
-  right: 40px;
-  font-size: 36px;
-  font-weight: bold;
-  cursor: pointer;
+.construction-image {
+    display: block;
+    width: 130px;
+    max-width: 60%;
+    height: auto;
+    margin-bottom: 48px;
+    object-fit: contain;
 }
-.play-stop-btn {
-  margin-top: 350px;
-  padding: 10px 20px;
-  background-color: white;
-  color: black;
-  border: none;
-  cursor: pointer;
-  font-size: 18px;
+.construction-content p {
+    margin: 0;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
 }
-.progress-bar {  
-  margin-top: 20px;
-  width: 80%;  
+
+@media (max-width: 480px) {
+    .construction-image {
+        width: 105px;
+        margin-bottom: 44px;
+    }
+    .construction-content p {
+        font-size: 15px;
+    }
+    .construction-close {
+        top: -45px;
+        font-size: 38px;
+    }
 }
-.progress-bar input[type="range"] {   
-  -webkit-appearance: none;
-  width: 100%;
-  height: 2px; 
-  background: #ddd;
-  border-radius: 5px;
-  outline: none;
-}
-.progress-bar input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 12px;
-  height: 12px;
-  background: white;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.progress-bar input[type="range"]::-moz-range-thumb {
-  width: 12px;
-  height: 12px;
-  background: #555;
-  border-radius: 50%;
-  cursor: pointer;
-}*/
 
 /* Responsive popup de entrevistas */
 @media screen and (max-width: 768px) {
@@ -1699,25 +1690,48 @@ button:hover {
   background: #000000;
   z-index: 80000000000; 
 }
-.modal-content { 
+/*.modal-content { 
   position: relative;
   width: 80%;  
   max-width: 100%;
   background: #000000;
-}
-.slider {  
+}*/
+.modal-content { 
   position: relative;
-  width: 100%;  
+  width: 80%;
+  max-width: 100%;
+  min-height: 200px;
+  background: #000;
 }
-.slides {  
+.slider {
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+}
+/*.slides {  
   display: flex;  
   transition: transform 0.5s ease-in-out; 
-}
-.slide {
+}*/
+/*.slide {
   width: 100%;  
   object-fit: contain;
-  padding: 0 160px;
-  
+  padding: 0 160px;  
+}*/
+.slide {
+  display: block;
+  flex: 0 0 100%;
+  width: 100%;
+  height: auto;
+  max-height: 75vh;
+  /*padding: 0;*/
+  object-fit: contain;
+}
+.slides {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 200px;
+  transition: transform 0.5s ease-in-out;
 }
 .slides i {
   z-index: 100000;

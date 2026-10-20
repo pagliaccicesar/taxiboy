@@ -45,3 +45,29 @@ video.addEventListener("timeupdate", () => {
 progress.addEventListener("input", () => {
     video.currentTime = (progress.value / 100) * video.duration;
 });
+
+
+
+// CONSTRUCTION POPUP
+function openConstructionPopup() {
+    const popup = document.getElementById("constructionPopup");
+
+    if (popup) {
+        popup.classList.add("active");
+    }
+}
+function closeConstructionPopup() {
+    const popup = document.getElementById("constructionPopup");
+
+    if (popup) {
+        popup.classList.remove("active");
+    }
+}
+// Cerrar con la tecla Escape
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+        closeConstructionPopup();
+    }
+});
+
+

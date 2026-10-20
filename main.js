@@ -136,8 +136,4 @@ window.addEventListener("keydown", (event) => {
         }
     }
 });
-closeModal() 
-
-
-
-
+closeModal()
