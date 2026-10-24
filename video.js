@@ -6,7 +6,14 @@ const progress = document.getElementById("progressBar");
 
 function openPopup(title, videoSource) {
     document.getElementById("popup-video-name").textContent = title;
+
+    video.pause();
+    video.currentTime = 0;
     video.src = videoSource;
+
+    // Restablecer los controles
+    playBtn.textContent = "Play";
+    progress.value = 0;
 
     popup.style.display = "flex";
     video.load();
@@ -14,9 +21,15 @@ function openPopup(title, videoSource) {
 
 function closePopup() {
     popup.style.display = "none";
+
     video.pause();
     video.currentTime = 0;
+
+    // Restablecer los controles al cerrar
+    playBtn.textContent = "Play";
+    progress.value = 0;
 }
+
 
 /* PLAY / PAUSE */
 playBtn.addEventListener("click", () => {
@@ -63,9 +76,10 @@ function closeConstructionPopup() {
         popup.classList.remove("active");
     }
 }
-// Cerrar con la tecla Escape
+
 document.addEventListener("keydown", function (event) {
     if (event.key === "Escape") {
+        closePopup();
         closeConstructionPopup();
     }
 });
