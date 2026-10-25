@@ -1354,7 +1354,7 @@ button:hover {
   background: rgb(17, 17, 20);
   color: #ccc;
   cursor: pointer;
-  .inter h3, .inter p {
+  .inter h3, .inter p, .inter h6 {
     color: #ccc;
   }
 }
@@ -1374,9 +1374,35 @@ button:hover {
   font-size: 14px;  
   position: relative; 
   left: 5px;
-  top: 40px;
-  color: #333;
+  top: 20px;
+  color: #333; 
 }
+.inter h6 {
+  position: relative;
+  font-size: smaller;
+  text-align: center;
+  font-weight: 600;
+  text-decoration: underline;
+  left: 15px;
+  top: 29px;
+  color: #000;
+  /*border: 1px solid #333;
+  padding: -10px  -15px;
+  border-radius: 0px;*/
+}
+.inter h5 {
+  position: relative;
+  font-size: smaller;
+  text-align: center;
+  font-weight: 350;
+  left: 20px;
+  top: 29px;
+  color: #000;
+  /*border: 1px solid #333;
+  padding: -1px;  
+  border-radius: 0px;*/
+}
+
 /* Estilos Responsive */
 @media (max-width: 918px) {  
   .left-entrevistas {
